@@ -1,0 +1,160 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="~/UploadFile/nhathuoc.jpg" type="image/x-icon" />
+    <title>NHATHUOCSO1VN</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Nhúng bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous" />
+
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.css" />
+
+    @Styles.Render("~/Content/admin/index")
+
+    @Styles.Render("~/Content/admin/style.css")
+
+    @Styles.Render("~/Content/admin/custom.css")
+    @Styles.Render("~/Content/admin/base.css")
+</head>
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div>
+                <div class="logo-header d-flex justify-content-center">
+                    <a href="/Admin/AdminHome/Index">
+                        <img src="~/UploadFile/nhathuoc.jpg"
+                             alt=""
+                             class="logo" />
+                    </a>
+                    <a href="/Admin/sanpham" class="logo-title">NHATHUOCSO1VN</a>
+                </div>
+                <div class="pl-4 pr-4">
+                    <ul class="list-unstyled components mb-5">
+                        @*  <li class="tq">
+            <a href="/Admin/AdminHome/Index" class="">Tổng quan</a>
+        </li>*@
+                        <li class="sp">
+                            <a href="/Admin/sanpham">Sản phẩm</a>
+                        </li>
+                        <li class="d-bill">
+                            <a href="/Admin/donhang">Đơn hàng</a>
+                        </li>
+
+
+                        <li class="d-user">
+                            <a href="/Admin/nguoidung">Người dùng</a>
+                        </li>
+                        <li class="d-xs">
+                            <a href="/home">Xem cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+    </div>
+    <div class="content-top">
+        <div class="header-left">
+            <h4 class="hello-user">
+                <span> QUẢN LÝ NHÀ THUỐC</span>
+            </h4>
+
+            <div class="real-time">
+                <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+                <div id="today">29/05/2022</div>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="icon-user">
+                <img src="https://colorlib.com/polygon/cooladmin/images/icon/avatar-01.jpg"
+                     alt="" />
+                <div class="icon-user-fullname">Hello Admin</div>
+                <div class="icon-user-dropdown">
+                    <span class="box-triangle">
+                        <svg viewBox="0 0 20 9" role="presentation">
+                            <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                  fill="#ffffff"></path>
+                        </svg>
+                    </span>
+                 
+                    <div class="user-logout">
+                       
+                        <a href="/user/DangXuat">
+                            <i class="bx bxs-log-out"></i> Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="content" class="">
+        <div class="content-main p-4">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/admin/jquery")
+    @Scripts.Render("~/bundles/admin/popper")
+    @Scripts.Render("~/bundles/admin/bstr")
+    @Scripts.Render("~/bundles/admin/jquery")
+
+    <script>
+        @*$('.sp ul').addClass('show');*@
+ @*       $('.d-user').addClass('active');*@
+    </script>
+
+    <!-- database jquery -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+    @Scripts.Render("~/bundles/admin/main")
+    @Scripts.Render("~/bundles/admin/header")
+
+    <script>
+        fetch('/Home/GetUserInfo')
+            .then(response => response.json())
+            .then(data => {
+                $('.info-fullName').html(data.Result[0].fullName)
+                $('.info-email').html(data.Result[0].email)
+
+                /*  console.log(data.Result[0])*/
+            });
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+

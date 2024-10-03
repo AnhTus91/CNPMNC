@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<GameStore.Models.SanPham>
+@{
+    ViewBag.Title = "Games";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!----all products------>
+<div class="container2">
+
+    @if (@Model.Any())
+    {
+        <h2 class="title">@Model.First().DanhMuc.tenDM</h2>
+    }
+    else
+    { <h2 class="title">Không có sản phẩm nào</h2>}
+
+    <div class="row mb-2">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-3 mt-2 card-product">
+                <a href="/games/ChiTietSP/@item.maSP">
+                    <img class="img-product" src="~/UploadFile/@item.hinhAnh1">
+                    <div class="name-product">@item.tenSP</div>
+
+                    <div class="price-product">Giá: @item.giaTien,000 VNĐ</div>
+                </a>
+            </div>
+        }
+
+
+    </div>
+
+</div>

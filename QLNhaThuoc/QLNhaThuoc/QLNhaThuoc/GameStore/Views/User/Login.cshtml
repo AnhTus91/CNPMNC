@@ -1,0 +1,53 @@
+﻿
+@model GameStore.Models.NguoiDung
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-md-5">
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {
+            //@Html.ValidationSummary()
+            @Html.AntiForgeryToken()
+
+        <div class="card">
+
+            <div class="card-header">
+                <div class="card-title">Đăng nhập</div>
+            </div>
+            @if (ViewBag.error != null)
+            {
+        <span class="badge text-left badge-warning">Sai tên đăng nhập hoặc mật khẩu</span>
+            }
+            
+            <div class="card-body">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.username)
+                    @Html.TextBoxFor(m => m.username, "", new { @class = "form-control", @placeholder = "Tên đăng nhập" })
+                    @Html.ValidationMessageFor(m => m.username, "", new { @class = "badge badge-danger" })
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.matkhau)
+                    @Html.PasswordFor(m => m.matkhau, new { @class = "form-control", @placeholder = "Mật khẩu" })
+                    @Html.ValidationMessageFor(m => m.matkhau, "", new { @class = "badge badge-danger" })
+
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Đăng nhập</button>
+                </div>
+
+                <label class="col-12 text-center">Chưa có tài khoản? </label>
+                <div class="form-group">
+                    <a role="button" href="/user/register" class="btn btn-info">Đăng ký</a>
+                </div>
+
+            </div>
+        </div>
+          
+        }
+    </div>
+</div>

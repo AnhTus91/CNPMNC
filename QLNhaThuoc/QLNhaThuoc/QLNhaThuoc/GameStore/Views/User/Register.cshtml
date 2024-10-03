@@ -1,0 +1,69 @@
+﻿
+@model GameStore.Models.NguoiDung
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Register", "User", FormMethod.Post))
+        {
+            //@Html.ValidationSummary()
+            @Html.AntiForgeryToken()
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Đăng ký tài khoản</div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.hoTen)
+                        @Html.TextBoxFor(m => m.hoTen, "", new { @class = "form-control", @placeholder = "Họ và tên" })
+                        @Html.ValidationMessageFor(m => m.hoTen, "", new { @class = "badge badge-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.username)
+                        @Html.TextBoxFor(m => m.username, "", new { @class = "form-control", @placeholder = "Tên đăng nhập" })
+                        @Html.ValidationMessageFor(m => m.username, "", new { @class = "badge badge-danger" })
+                        @if (ViewBag.error != null)
+                        {
+                            <span class="badge badge-danger">@ViewBag.error</span>
+                        }
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.email)
+                        @Html.TextBoxFor(m => m.email, "", new { @class = "form-control", @placeholder = "Email" })
+                        @Html.ValidationMessageFor(m => m.email, "", new { @class = "badge badge-danger" })
+
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.sdt)
+                        @Html.TextBoxFor(m => m.sdt, "", new { @class = "form-control", @placeholder = "Số điện thoại" })
+                        @Html.ValidationMessageFor(m => m.sdt, "", new { @class = "badge badge-danger" })
+                      
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.matkhau)
+                        @Html.PasswordFor(m => m.matkhau, new { @class = "form-control", @placeholder = "Mật khẩu" })
+                        @Html.ValidationMessageFor(m => m.matkhau, "", new { @class = "badge badge-danger" })
+                    </div>
+                    <div class="form-group">
+
+                        <input class="d-none" value="1" name="roleID" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Đăng ký</button>
+                    </div>
+                    <label class="col-12 text-center">Đã có tài khoản? </label>
+                    <div class="form-group">
+                        <a role="button" href="/user/login" class="btn btn-info">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

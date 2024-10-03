@@ -1,0 +1,416 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" rel="stylesheet" />
+    @Styles.Render("~/Content/store")
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <title>NHATHUOCSO1VIETNAM</title>
+    <link rel="shortcut icon" href="~/UploadFile/icon.png" type="image/x-icon" />
+
+    <style>
+        .icon-cart-cus {
+            position: relative;
+        }
+
+        #cart {
+            position: absolute;
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: blue;
+            color: white;
+            border-radius: 50%;
+            right: -10px;
+            text-align: center;
+            top: -10px;
+        }
+        #MenuItems li a
+
+        {
+            color:#333;
+            font-size:15px;
+            font-weight:bold;
+        }
+            #MenuItems li a:hover {
+                color: olive;
+            }
+            .cus-icon {
+                color: #333;
+                font-size: 14px;
+                font-weight: bold;
+            }
+                .cus-icon:hover {
+                    color: olive;
+                }
+        .userlogin{
+            position:relative;
+        }
+            .userlogin:hover .userlogged{
+                display:block;
+            }
+            .userlogged {
+                position: absolute;
+                width: 150px;
+                display: none;
+                left: -35px;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                z-index: 2;
+                font-size: 14px;
+                border-radius: 5px;
+                padding: 5px 10px;
+                background-color: white;
+            }
+            .userlogged div a {
+                color: #333 !important;
+            }
+        .img-logo{
+            width:200px;
+            height:150px;
+        }
+
+
+
+
+
+
+
+        #footer-map {
+            vertical-align: bottom;
+            width: 100%;
+            height: 500px;
+            background-color: black;
+            color: #fff;
+            /* padding: 50px;*/
+        }
+
+            #footer-map .name-map {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+            }
+
+                #footer-map .name-map p {
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    margin-bottom: 8px
+                }
+
+                #footer-map .name-map a {
+                    text-decoration: none;
+                    margin-top: 50px;
+                }
+
+        #map {
+            float: left;
+            width: 29%;
+            padding: 0px;
+            margin: 3px;
+        }
+
+            #map a {
+                text-decoration: none;
+                font-size: 14px;
+            }
+
+            #map li {
+                list-style-type: none;
+                font-size: 14px;
+            }
+
+            #map h4 {
+                font-size: 18px;
+                font-weight: 500;
+                color: #fff;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+
+        #footer-comany {
+            color: #fff;
+            float: left;
+            padding-top: 150px;
+         
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+
+            <div class="navbar p-4 d-flex align-items-center">
+            
+                <nav style="height:150px">
+                    <ul id="MenuItems">
+                        <li><a href="/home/index"><img class="img-logo" src="~/UploadFile/nhathuoc.jpg"></a> <a href="/games/index">TRANG CHỦ</a> </li>
+
+                        <li class="ml-4"><a href="/games/danhmuc/1">THỰC PHẨM CHỨC NĂNG</a> </li>
+                        <li><a href="/games/danhmuc/2">DƯỢC PHẨM</a></li>
+                        <li><a href="/games/danhmuc/3">CHĂM SÓC CÁ NHÂN</a></li>
+                        <li><a href="/games/danhmuc/4">THUỐC</a></li>
+                        <li><a href="/games/danhmuc/5">THIẾT BỊ Y TẾ</a></li>
+                       
+
+
+                    </ul>
+                </nav>
+                <div style="height:150px" class="navbar-right d-flex align-items-center">
+                    <div class="search-box">
+                        <input id="search-box" onkeypress="return runScript(event)" value="" type="text" />
+                        <i class='icon-search bx bx-search'></i>
+                    </div>
+
+
+                    <a class="icon-cart-cus" style="margin-left:10px" href="/giohang"><i class='cus-icon bx bx-cart'></i> <span id="cart"></span></a>
+                    @if (Session["userLogin"] != null)
+                    {
+                        <div class="userlogin">
+                            <a style="margin-left:30px" href="/home/donhang">
+
+                                <i class='cus-icon bx bx-user-check'></i>
+
+                            </a>
+                            <div class="userlogged">
+                                <div>
+                                    <a href="/home/donhang">Đơn hàng của tôi</a>
+                                </div>
+                                <div>
+                                    <a href="/user/dangxuat">Đăng xuất</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <a style="margin-left:30px" href="/user/login"><i class='cus-icon bx bx-user'></i></a>
+                    }
+                </div>
+
+                <img src="~/UploadFile/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+
+       
+        </div>
+        <div class="main">
+            @RenderBody()
+        </div>
+
+        <!-- Button trigger modal -->
+       
+
+  
+        <footer id="footer-map">
+
+            <div class="name-map">
+                <p style="color:aliceblue"><strong>HỆ THỐNG NHÀ THUỐC</strong></p><br />
+                @*<a href="">Xem địa chỉ hệ thống cửa hàng 85 cửa hàng</a>*@
+            </div>
+            <div id="map">
+                <h4>KHU VỰC TPHCM</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=10.762730,106.686638">
+                            <img src="/Images/map.png" style="width:20px;">
+                        </a>
+                        <span>
+                            214 Nguyễn Trãi, P.Nguyễn Cư Trinh, Q1.
+                            <a href="https://www.google.com/maps/?q=10.762730,106.686638" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=10.982262,106.658024">
+                            <img src="/Images/map.png" style="width:20px;">
+                        </a>
+                        <span>
+                            Kho Pancake.
+                            <a href="https://www.google.com/maps/?q=10.982262,106.658024" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.google.com/maps/?q=10.865460,106.611968">
+                            <img src="/Images/map.png" style="width:20px;">
+                        </a>
+                        <span>
+                            158/5 Nguyễn Ảnh Thủ, xã Trung Chánh, Hóc Môn.
+                            <a href="https://www.google.com/maps/?q=10.865460,106.611968" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=10.722497380785518,106.5998704923425">
+                            <img src="/Images/map.png" style="width:20px;">
+                        </a>
+                        <span>
+                            B12/5, Trần Đại Nghĩa, Xã Tân Kiên, H.Bình Chánh, TPHCM.
+                            <a href="https://www.google.com/maps/?q=10.722497380785518,106.5998704923425" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                </ul>
+                <h4>MIỀN TRUNG & TÂY NGUYÊN</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=13.783600,109.22323">
+                            <img src="/Images/map.png" style="width:20px;">
+                        </a>
+                        <span>
+                            470 Trần Hưng Đạo, TP Quy Nhơn, Bình Định.
+                            <a href="https://www.google.com/maps/?q=13.783600,109.22323" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=13.093764,109.314781">
+                            <img src="/Images/map.png" style="width:20px;">
+                        </a>
+                        <span>
+                            116 Nguyễn Huệ, P7, Tp.Tuy Hòa, Phú Yên.
+                            <a href="https://www.google.com/maps/?q=13.093764,109.314781" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div id="map">
+                <h4>TÂY NAM BỘ</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=10.041762,105.766555">
+                            <img src="/Images/map.png" style="width:22px;">
+                        </a>
+                        <span>
+                            41G Mậu Thân, Q.Ninh Kiều, Cần Thơ.
+                            <a href="https://www.google.com/maps/?q=10.041762,105.766555" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.google.com/maps/?q=9.2873807,105.7200892">
+                            <img src="/Images/map.png" style="width:22px;">
+                        </a>
+                        <span>
+                            417 Trần Phú, Phường 7, TP Bạc Liêu.
+                            <a href="https://www.google.com/maps/?q=9.2873807,105.7200892" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=9.225696,105.421947">
+                            <img src="/Images/map.png" style="width:22px;">
+                        </a>
+                        <span>
+                            62 QL 1A, Khóm 1, P.Hộ Phòng, TX Giá Rai, Bạc Liêu.
+                            <a href="https://www.google.com/maps/?q=9.225696,105.421947" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="map">
+                <h4>ĐÔNG NAM BỘ</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=10.902378,106.699791">
+                            <img src="/Images/map.png" style="width:22px;">
+                        </a>
+                        <span>
+                            26 Châu Văn Tiếp, P.Lái Thiêu, TX.Thuận An,Bình Dương.
+                            <a href="https://www.google.com/maps/?q=10.902378,106.699791" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps/?q=10.904878,106.768214">
+                            <img src="/Images/map.png" style="width:22px;">
+                        </a>
+                        <span>
+                            208 Nguyễn An Ninh, Thị Xã Dĩ An, Bình Dương.
+                            <a href="https://www.google.com/maps/?q=10.904878,106.768214" style="color: #f04e23 !important;"> Xem bản đồ </a>
+                        </span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <br />
+            <div id="footer-comany">
+                <p>NHÀ THUỐC LONG CHÂU</p>
+                <p>Địa chỉ: Số 7 đường 3A, khu dân cư Ấp 5, X. Phong Phú, H. Bình Chánh., Tp. HCM</p>
+                <p>MST:0314746543</p>
+            </div>
+        </footer>
+
+
+   
+
+
+
+    <!----footer------>
+  
+    <!-- script for menu -->
+    <script language="JavaScript">
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            var MenuItems = document.getElementById("MenuItems");
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        const keyword = document.getElementById('search-box');
+    
+
+        const iconSearch = document.querySelector('.icon-search')
+
+       
+        iconSearch.addEventListener('click', e => {
+            if (keyword.value.trim()) {
+                window.location.href = `/games/Search?keyword=${keyword.value}`
+            }
+        })
+
+        function runScript(e) {
+            //See notes about 'which' and 'key'
+            if (e.keyCode == 13) {
+                if (keyword.value.trim()) {
+                    window.location.href = `/games/Search?keyword=${keyword.value}`
+                }
+            }
+        }
+
+        const cart = document.getElementById("cart");
+  
+
+  
+        fetch('/home/GetData')
+            .then((response) => response.json())
+            .then((data) =>   cart.innerHTML=data );
+
+    </script>
+
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+></script>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html >
+
+
+@*    @Styles.Render("~/Content/css")
+           @Scripts.Render("~/bundles/modernizr")
+
+           @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false
+    @Scripts.Render("~/bundles/bootstrap"))*@

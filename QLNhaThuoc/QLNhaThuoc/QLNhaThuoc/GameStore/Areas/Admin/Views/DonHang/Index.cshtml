@@ -1,0 +1,81 @@
+﻿
+@model IEnumerable<GameStore.Models.DonHang>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/layoutAdmin.cshtml";
+}
+
+<style>
+    #tableBill{
+        color:black;
+    }
+</style>
+<h2>Danh sách đơn hàng</h2>
+<!-- database jquery -->
+<link rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.css" />
+
+<table id="tableBill"  class="stripe"  style="width:100%">
+    <thead>
+        <tr>
+            <th>Tên khách hàng</th>
+            <th>Số điện thoại</th>
+            <th>Số lượng sản phẩm</th>
+            <th>Tổng tiền</th>
+            <th>Ngày tạo</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.NguoiDung.hoTen
+                </td>
+                <td>
+                    @item.NguoiDung.sdt
+                </td>
+                <td>
+                    @item.soLuong
+                </td>
+                <td>
+                    @item.tongTien.ToString("#,##0").Replace(',', '.').000 VNĐ
+                </td>
+                <td>
+                    @item.createdAt
+                </td>
+                <td>
+                    @item.trangThai
+                </td>
+                <td>
+                    <a href="/admin/donhang/chitiet/@item.maDH">Xem</a> |    <a href="/admin/donhang/capnhat/@item.maDH">Cập nhật</a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+@Scripts.Render("~/bundles/admin/jquery")
+<script>
+
+    $('.d-bill').addClass('active');
+</script>
+<!-- database jquery -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript"
+        src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#tableBill').DataTable();
+    });
+</script>

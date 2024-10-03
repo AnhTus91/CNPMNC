@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNhaThuoc", "GameStore\QLNhaThuoc.csproj", "{47585947-0CCD-40AC-9656-74D86A16F748}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47585947-0CCD-40AC-9656-74D86A16F748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47585947-0CCD-40AC-9656-74D86A16F748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47585947-0CCD-40AC-9656-74D86A16F748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47585947-0CCD-40AC-9656-74D86A16F748}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6099C968-572A-4692-90C5-514C12AE0101}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,170 @@
+﻿@model IEnumerable<GameStore.Models.Cart>
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon"
+          href="//theme.hstatic.net/200000321771/1000699946/14/favicon.png?v=302"
+          type="image/png" />
+    <!-- Icon -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+
+    <!-- Quicksand font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet" />
+    <title> Thanh toán đơn hàng</title>
+
+
+    @Styles.Render("~/Content/thanhtoan")
+
+</head>
+<body>
+
+
+
+
+
+    <div class="main">
+        <div class="grid">
+            <div class="checkout">
+                <div class="checkout-info">
+                    <div class="checkout-logo-text checkout-item">
+                        <a style="color:#000000" href="/"> Thông tin giao hàng</a>
+                    </div>
+                    <ul class="checkout-breadcrumb checkout-item">
+                        <li class="breadcrumb-item">
+                            <a href="/giohang" class="text-link cart">Giỏ hàng </a>
+                            <i class="icon-link bx bx-chevron-right"></i>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="text-link">Thông tin giao hàng</span>
+                            <i class="icon-link bx bx-chevron-right"></i>
+                        </li>
+
+                    </ul>
+                    <div class="checkout-text checkout-item">Thông tin giao hàng</div>
+
+                    <!-- <form  class="form-info checkout-item">-->
+                    <div class="form-info checkout-item">
+                        <div class="form-control form-item">
+                            <input placeholder="Họ và tên"  value="@Session["hoTen"]" id="fullname" type="text" name="fullName" />
+                            <small></small>
+                        </div>
+                        <div class="form-inline form-item">
+                            <div class="form-control w-2">
+                                <input placeholder="Email"  value="@Session["email"]" id="email" type="text" name="email" />
+                                <small></small>
+                            </div>
+                            <div class="form-control w-1">
+                                <input placeholder="Số điện thoại"  value="@Session["sdt"]" id="phone" name="phone" />
+                                <small></small>
+                            </div>
+                        </div>
+                        <div class="form-control form-item">
+                            <input placeholder="Địa chỉ" id="address" type="text" name="address" />
+                            <small></small>
+                        </div>
+                        <div class="form-inline form-item">
+                            <div class="form-control w-1">
+                                <select placeholder="Tỉnh/Thành phố"
+                                        id="province"
+                                        type="text">
+                                    <option value="invalid">Tỉnh/Thành phố</option>
+
+                                </select>
+                                <small></small>
+                            </div>
+                            <div class="form-control w-1">
+                                <select placeholder="Quận/Huyện" id="district" type="text">
+                                    <option value="invalid">Quận/Huyện</option>
+
+                                </select>
+                                <small></small>
+                            </div>
+                            <div class="form-control w-1">
+                                <select placeholder="Phường/Xã" id="village" type="text">
+                                    <option value="invalid">Phường/Xã</option>
+
+                                </select>
+                                <small></small>
+                            </div>
+                        </div>
+
+                        <div class="pay form-item">
+                            <a href="/giohang" class="cart">Giỏ hàng</a>
+                            <button type="button" class="btnPay" id="save_btn">
+                                THANH TOÁN
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--     </form>  -->
+                </div>
+                <div class="checkout-bill">
+                    <div class="checkout-product" id="detailProduct">
+
+                        @foreach (var item in Model)
+                        {
+
+                            <div class="product-item">
+                                <div class="item-img">
+                                    <img src="~/UploadFile/@item.Photo"
+                                         alt=""
+                                         class="img-product" />
+                                    <span class="amount">@item.Amount</span>
+                                </div>
+                                <div class="item-info " style="width:400px;">
+                                    <div class="info-left">
+                                        <div class="info-name-product">
+                                            @item.Name
+                                        </div>
+                                     
+                                    </div>
+                                    <div class="info-right">
+                                        <div class="item-money">@item.Money.ToString("#,##0").Replace(',', '.').000 VND</div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="payment">
+                        <div class="payment-total total">
+                            <div class="total-text">Tổng cộng:</div>
+                            @if (Model != null && Model.Count() > 0)
+                            {
+                            <div class="total-text total-money" id="totalMoney">@Model.Sum(m => m.Money).ToString("#,##0").Replace(',', '.').000 VND</div>   
+                            }
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    @Scripts.RenderFormat("<script src='{0}' type='module'></script>", "~/bundles/checkout")
+
+</body>
+</html>
+
+
+

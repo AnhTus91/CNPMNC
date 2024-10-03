@@ -1,0 +1,65 @@
+﻿@model IEnumerable<GameStore.Models.DonHang>
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Areas/Admin/Views/Shared/layoutAdmin.cshtml";
+}
+<style>
+    .table-responsive-sm h5{
+        font-size:14px;
+    }
+    .table-responsive-sm span {
+        font-weight: bold;
+    }
+</style>
+
+<div class="table-responsive-sm">
+    <h4 class="text-center title-detail">CHI TIẾT ĐƠN HÀNG</h4>
+    <h5 class="text-sm">Họ tên người mua hàng: <span id="fullname">@Model.FirstOrDefault().NguoiDung.hoTen</span></h5>
+    <h5 class="text-sm">Số điện thoại: <span id="phone">@Model.FirstOrDefault().NguoiDung.sdt</span></h5>
+    <h5 class="text-sm">Địa chỉ: <span id="address">@Model.FirstOrDefault().diachi</span></h5>
+    <h5 class="text-sm">Mã hóa đơn: <span id="idBill">@Model.FirstOrDefault().maDH</span></h5>
+    <h5 class="text-sm">Trạng thái đơn hàng: <span id="idBill">@Model.FirstOrDefault().trangThai</span></h5>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Giá bán</th>
+                <th scope="col">Tổng tiền</th>
+
+            </tr>
+        </thead>
+        <tbody id="renderItem">
+            @foreach (var item in Model.FirstOrDefault().ChiTietDonHang)
+            {
+                <tr>
+                    <td>@item.SanPham.tenSP</td>
+                    <td>@item.soLuong</td>
+                    <td>@item.SanPham.giaTien.ToString("#,##0").Replace(',', '.').000 VNĐ</td>
+                    <td>@item.tongTien.ToString("#,##0").Replace(',', '.').000 VNĐ</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<h5 class="text-right">Tổng cộng:<span class="fmt" id="Total"> @Model.FirstOrDefault().tongTien.ToString("#,##0").Replace(',', '.').000 VNĐ</span></h5>
+<div>
+
+    <a href="/admin/donhang/">Quay lại</a>
+
+    @if (Model.FirstOrDefault().trangThai=="Đang chờ"
+        ||Model.FirstOrDefault().trangThai=="Đã duyệt"
+        || Model.FirstOrDefault().trangThai == "Đang giao"
+        ){
+        <a href="/admin/donhang/capnhat/@Model.FirstOrDefault().maDH"> | Cập nhật</a>
+    }
+</div>
+
+@*
+    
+    đang chờ
+    đã duyệt
+    đang giao
+    thành công
+    đã hủy
+*@

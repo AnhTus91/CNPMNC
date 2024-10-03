@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b6f0a7eed76b4e14b451491aab7d1841" Name="Diagram1">
+        <EntityTypeShape EntityType="GameStoreModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.ChiTietGioHang" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.DanhMuc" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.DonHang" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.GioHang" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.HinhAnh" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.NguoiDung" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.PhanQuyen" Width="1.5" PointX="1.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.SanPham" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameStoreModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="9.625" IsExpanded="true" />
+        <AssociationConnector Association="GameStoreModel.FK_ChiTietDonHang_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.FK_ChiTietDonHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.fk_dh_sp" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.fk_ctgh" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.fk_ctgh_sp" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.fk_sanpham_danhmuc" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.FK_DonHang_NguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.fk_hinhanh_sp" ManuallyRouted="false" />
+        <AssociationConnector Association="GameStoreModel.fk_nguoidung_role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

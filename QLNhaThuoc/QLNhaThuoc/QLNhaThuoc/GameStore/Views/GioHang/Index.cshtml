@@ -1,0 +1,157 @@
+﻿
+
+@model IEnumerable<GameStore.Models.Cart>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  
+<style>
+    .img-cus{
+        width:150px;
+        height:150px;
+    }
+    .btn-update-cus {
+        margin-left:7px !important;
+        width: 100px !important;
+        font-size:12px;
+        padding:6px;
+        border:1px solid #00ffff;
+        border-radius:5px;
+        overflow:hidden;
+        cursor:pointer;
+        outline:none;
+        background-color:#0094ff;
+        color:white;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row align-items-start">
+        <div class="col-lg-7 col-md-12">
+            @if (Model == null)
+            {
+                <p class="text-info text-left">
+                    Giỏ hàng của bạn rỗng!
+                </p>
+            }
+            else
+            {
+                <p class="text-info text-left">
+                    Bạn có @Model.Count() sản phẩm trong giỏ hàng
+                </p>
+
+                foreach (var item in Model)
+                {
+
+                    <div class="row p-3">
+                        <div class="col-8 d-flex">
+                            <img class="img-cus" src="~/UploadFile/@item.Photo" />
+                            <div class="info-product-cus ml-2">
+                                <div>@item.Name</div>
+                                <form class="d-flex align-items-center" action="@Url.Action("UpdateAmount")" method="get">
+                                    <input type="hidden" name="maSP" value="@item.Id" />
+                                    <input style="width:80px" type="number" min="1" step="1" name="newAmount" value="@item.Amount" />
+                                    <button type="submit" class="btn-update-cus btn btn-primary"> Cập nhật </button>
+                                </form>
+                                <div>Giá tiền: @item.Price.ToString("#,##0").Replace(',', '.').000 VNĐ</div>
+                                <div>Thành tiền: @item.Money.ToString("#,##0").Replace(',', '.').000 VNĐ</div>
+                            </div>
+
+                        </div>
+                        <div class="col-4 ">
+                            <a href="@Url.Action("RemoveItem", new { maSP = item.Id })" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');" class="btn-rm d-block text-right cus-text">Xóa</a>
+
+                        </div>
+                  
+                    </div>
+                }
+            }
+
+            </div>
+        <div class="border pt-2 pl-4 pb-2 col-lg-4 col-md-12">
+            <div class="font-weight-bold">Thông tin đơn hàng</div>
+            @if (Model != null && Model.Count() > 0)
+            {
+                <div class="font-weight-bold mt-4">
+                    Tổng tiền:
+
+                    @Model.Sum(m => m.Money).ToString("#,##0").Replace(',', '.').000 VND
+                </div>
+                <a href="/giohang/thanhtoan" role="button" class="btn w-100 mt-2 me-auto btn-danger">Thanh toán</a>
+            }
+            else { 
+        <div class="font-weight-bold mt-4">
+            Chưa có sản phẩm nào trong giỏ hàng
+        </div>
+            }
+        </div>
+        </div>
+</div>
+@*@if (Model == null)
+    {
+        <p class="text-info text-center">
+            Giỏ hàng của bạn rỗng!
+        </p>
+    }
+    else
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Photo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Money)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <img src="~/UploadFile/@item.Photo" width="170" height="160" />
+
+                    </td>
+                    <td>
+                        <form action="@Url.Action("UpdateAmount")" method="get">
+                            <input type="hidden" name="maSP" value="@item.Id" />
+                            <input type="number" min="1" step="1" name="newAmount" value="@item.Amount" />
+                            <button type="submit" class="btn btn-primary btn-sm"> Cập nhật </button>
+                        </form>
+
+                    </td>
+                    <td> @item.Money.ToString("#,##0").Replace(',', '.') VNĐ </td>
+
+
+                    <td> <a href="@Url.Action("RemoveItem",new { maSP = item.Id})" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');" class="btn btn-danger btn-sm">Xóa</a> </td>
+
+                </tr>
+            }
+            <tr>
+                <td></td>
+                <td class="text-right">Tổng số lượng:</td>
+                <td> @Model.Sum(m => m.Amount) </td>
+                <td class="text-right">Tổng thành tiền:</td>
+                <td>@Model.Sum(m => m.Money).ToString("#,##0").Replace(',', '.') VNĐ </td>
+            </tr>
+        </table>
+    }*@
+
+
