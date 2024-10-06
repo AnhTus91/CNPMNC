@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="ThanhToanStyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Order Details Section -->
+        <div class="order-details">
+            <h2>Thông tin đặt hàng</h2>
+            <div class="product-details">
+                <img src="/HinhAnh/DayChuyenVang18K.png" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p><strong>Dây chuyền Vàng 18K</strong></p>
+                    <p>Mã: XMXMW000205</p>
+                    <p>Đơn giá: <span class="price">5,072,000₫</span></p>
+                    <div class="quantity">
+                        <label for="quantity">Số lượng:</label>
+                        <input type="number" id="quantity" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discount Code Section -->
+            <div class="discount-section">
+                <h3>Nhập mã giảm giá</h3>
+                <div class="discount-code">
+                    <input type="text" id="discount-code" placeholder="Nhập mã giảm giá">
+                    <button id="apply-discount">Áp dụng</button>
+                </div>
+            </div>
+
+            <div class="summary">
+                <p>Tạm tính: <span>5,072,000₫</span></p>
+                <p>Giao hàng: <span>Miễn phí</span></p>
+                <p>Giảm giá: <span>0₫</span></p>
+                <h3>Tổng tiền: <span>5,072,000₫</span></h3>
+            </div>
+        </div>
+
+        <!-- Customer Information Section -->
+        <div class="customer-info">
+            <h2>Thông tin người mua</h2>
+            <form>
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="gender" id="male" value="male" checked>
+                        <label for="male"><i class="fas fa-male" style="padding-right:10px;"></i> Anh</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female"><i class="fas fa-female" style="padding-right:10px;"></i> Chị</label>
+                    </div>
+                </div>
+
+                <!-- Name and Phone -->
+                <div class="form-group">
+                    <label for="name">Họ và Tên:</label>
+                    <input type="text" id="name" style="width:200px;border-radius:5px;" placeholder="Nhập họ và tên" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="text" id="phone" style="width:200px;border-radius:5px;" placeholder="Nhập số điện thoại" required>
+                </div>
+
+                <!-- Birthdate -->
+                <div class="form-group">
+                    <label for="birthdate">Ngày sinh:</label>
+                    <input type="date" id="birthdate">
+                </div>
+
+                <!-- Delivery Methods -->
+                <h3>Hình thức nhận hàng</h3>
+                <div class="delivery-options">
+                    <label>
+                        <input type="radio" name="delivery" value="delivery" checked>
+                        <i class="fas fa-truck"></i> Giao hàng tận nơi (Miễn phí toàn quốc)
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="store">
+                        <i class="fas fa-store"></i> Nhận tại cửa hàng
+                    </label>
+                </div>
+
+                <!-- Payment Methods -->
+                <h3>Phương thức thanh toán</h3>
+                <div class="form-group">
+                    <select id="payment-method" required>
+                        <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                        <option value="atm">Thanh toán thẻ ATM</option>
+                        <option value="transfer">Thanh toán chuyển khoản</option>
+                        <option value="credit-card">Thanh toán thẻ quốc tế (Visa, Master, JCB)</option>
+                        <option value="installments">Trả góp thẻ tín dụng 0%</option>
+                        <option value="vnpay">Thanh toán VNPAY</option>
+                        <option value="momo">Thanh toán bằng ví MoMo</option>
+                        <option value="qr">Payoo - QRCode</option>
+                    </select>
+                </div>
+
+                <!-- Notes -->
+                <div class="form-group">
+                    <label for="notes">Ghi chú đơn hàng:</label>
+                    <textarea id="notes" placeholder="Vui lòng ghi chú..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn"><i class="fas fa-shopping-cart"></i> Đặt hàng</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
