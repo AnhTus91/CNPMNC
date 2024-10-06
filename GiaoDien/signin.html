@@ -4,11 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Stylesheet -->
-    <link href="css/style1.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css" />
     <style>
         * {
             margin: 0;
@@ -179,7 +175,6 @@
                 margin-top: 20px;
             }
 
-       
     </style>
 </head>
 <body>
@@ -209,37 +204,39 @@
         <a href="#">Blog</a>
         <a href="#" style="color: red;">Khuyến Mãi</a>
     </div>
-    <!--------login-->
-    <div class="wrapper login-1">
-        <div class="container">
-            <div class="col-left">
-                <div class="login-text">
-                    <h2>Welcome Back</h2>
-                    <p>Create your account.<br>It's totally free.</p>
-                    <a class="btn" href="">Sign Up</a>
-                </div>
-            </div>
-            <div class="col-right">
-                <div class="login-form">
-                    <h2>Login</h2>
-                    <form>
-                        <p>
-                            <label>Username or email address<span>*</span></label>
-                            <input type="text" placeholder="Username or Email" required>
-                        </p>
-                        <p>
-                            <label>Password<span>*</span></label>
-                            <input type="password" placeholder="Password" required>
-                        </p>
-                        <p>
-                            <input type="submit" value="Sign In" />
-                        </p>
-                        <p>
-                            <a href="">Forget Password?</a>
-                        </p>
-                    </form>
-                </div>
-            </div>
+    <div class="container clearfix">
+        <div class="form registration">
+            <a class="logo" href="">
+                <img src="img/logo.png" alt="Logo" />
+            </a>
+            <form>
+                <p>
+                    <label>First name<span>*</span></label>
+                    <input type="text" required>
+                </p>
+                <p>
+                    <label>Last name<span>*</span></label>
+                    <input type="text" required>
+                </p>
+                <p>
+                    <label>Email address<span>*</span></label>
+                    <input type="email" required>
+                </p>
+                <p>
+                    <label>Password<span>*</span></label>
+                    <input type="password" required>
+                </p>
+                <p>
+                    <label>Again password<span>*</span></label>
+                    <input type="password" required>
+                </p>
+                <p>
+                    <label>
+                        <a href="index.html">Have an account</a>
+                    </label>
+                    <input type="submit" value="Signup" />
+                </p>
+            </form>
         </div>
     </div>
     <!-----footer-->
