@@ -1,0 +1,41 @@
+﻿@model GameStore.Models.NguoiDung
+@{
+    ViewBag.Title = "Xác nhận mã khôi phục";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-md-5">
+        @using (Html.BeginForm("VerifyRecoveryCode", "User", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Xác nhận mã khôi phục</div>
+                </div>
+
+                <div class="card-body">
+                    @if (ViewBag.Error != null)
+                    {
+                        <span class="badge text-left badge-danger">@ViewBag.Error</span>
+                    }
+
+                    <div class="form-group">
+                        @Html.Label("Mã khôi phục")
+                        @Html.TextBox("recoveryCode", "", new { @class = "form-control", @placeholder = "Nhập mã khôi phục" })
+                        @Html.ValidationMessage("recoveryCode", "", new { @class = "badge badge-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Xác nhận</button>
+                    </div>
+
+                    <p>
+                        @Html.ActionLink("Quay lại đăng nhập", "Login", "User")
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

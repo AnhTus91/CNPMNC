@@ -1,0 +1,78 @@
+﻿@model IEnumerable<GameStore.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/layoutAdmin.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Thêm sản phẩm", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.hinhAnh1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.giaTien)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.soLuong)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.DanhMuc.tenDM)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+
+<tr>
+    <td>
+        @if (item.hinhAnh1 != null) {
+        <img style="width:100px;" src="~/UploadFile/@item.hinhAnh1" />
+        }
+
+    </td>
+    <td>
+        <div style="width:100px;">  @item.tenSP</div>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.giaTien)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.soLuong)
+    </td>
+
+
+    <td>
+        @Html.DisplayFor(modelItem => item.DanhMuc.tenDM)
+    </td>
+    <td>
+        @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.maSP }) |
+        @Html.ActionLink("Xem chi tiết", "Details", new { id = item.maSP })|
+        @Html.ActionLink("Xóa SP", "Delete", new { id = item.maSP })
+
+
+    </td>
+</tr>
+    }
+
+</table>
+@Scripts.Render("~/bundles/admin/jquery")
+
+<script>
+        
+    $('.sp').addClass('active');
+    </script>

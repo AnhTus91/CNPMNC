@@ -1,0 +1,96 @@
+﻿@model GameStore.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/layoutAdmin.cshtml";
+}
+<style>
+    img{
+     
+        height:300px;
+    }
+</style>
+<h2>Chi tiết sản phẩm</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giaTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chitietSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chitietSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.soLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinhAnh1)
+        </dt>
+
+        <dd>
+            <img src="~/UploadFile/@Model.hinhAnh1" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinhAnh2)
+        </dt>
+
+        <dd>
+            <img src="~/UploadFile/@Model.hinhAnh2" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinhAnh3)
+        </dt>
+
+        <dd>
+            <img src="~/UploadFile/@Model.hinhAnh3" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinhAnh4)
+        </dt>
+
+        <dd>
+            <img src="~/UploadFile/@Model.hinhAnh4" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMuc.tenDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMuc.tenDM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

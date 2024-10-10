@@ -1,0 +1,41 @@
+﻿@model IEnumerable<GameStore.Models.Cart>
+
+@{
+    ViewBag.Title = "Thanh Toán";
+}
+
+<h2>Thông tin thanh toán</h2>
+
+<form method="post" action="@Url.Action("ProcessPayment", "GioHang")">
+    @foreach (var item in Model)
+    {
+        <div class="product-item">
+            <div class="item-img">
+                <img src="~/UploadFile/@item.Photo" alt="@item.Name" class="img-product" />
+                <span class="amount">@item.Amount</span>
+            </div>
+            <div class="item-info" style="width: 400px;">
+                <div class="info-left">
+                    <div class="info-name-product">
+                        @item.Name
+                    </div>
+                </div>
+                <div class="info-right">
+                    <div class="item-money">
+                        @item.Money.ToString("#,##0").Replace(',', '.') VND
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Tính tổng số tiền từ giỏ hàng -->
+    <div>
+        <label>Tổng số tiền:</label>
+        <input type="number" name="amount" value="@Model.Sum(item => item.Money)" readonly required />
+    </div>
+
+  
+
+    <button type="submit">Thanh toán qua PayPal</button>
+</form>

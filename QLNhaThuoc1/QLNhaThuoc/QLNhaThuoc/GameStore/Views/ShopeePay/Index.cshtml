@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "ShopeePay Payment";
+}
+
+<h2>Thanh Toán Bằng ShopeePay</h2>
+
+<form method="post" action="@Url.Action("CreatePayment", "ShopeePay")">
+    <div>
+        <label>Tổng số tiền: 100,000 VND</label>
+    </div>
+    <div>
+        <button type="submit">Thanh Toán</button>
+    </div>
+</form>
