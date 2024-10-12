@@ -1,0 +1,323 @@
+﻿
+<style>
+    .slider-container {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+    .slider-controls .prev, .slider-controls .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .slider-controls .prev {
+        left: 10px;
+    }
+
+    .slider-controls .next {
+        right: 10px;
+    }
+    h2.title {
+        margin-top: 20px
+    }
+
+
+    .recommended-item-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.7); /* Màu nền nhẹ cho mũi tên */
+        border-radius: 50%; /* Bo góc thành hình tròn */
+        width: 40px; /* Chiều rộng */
+        height: 40px; /* Chiều cao */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+    }
+
+        .recommended-item-control:hover {
+            background-color: rgba(255, 255, 255, 1); /* Màu nền khi hover */
+        }
+
+    .prev, .next {
+        font-size: 24px; /* Kích thước chữ lớn hơn */
+        color: #343a40; /* Màu chữ */
+        text-align: center;
+    }
+
+    .prev {
+        margin-right: 10px; /* Khoảng cách bên phải cho mũi tên trước */
+    }
+
+    .next {
+        margin-left: 10px; /* Khoảng cách bên trái cho mũi tên sau */
+    }
+
+</style>
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="~/images/banner.jpg" alt="Banner 1">
+        </div>
+        <div class="slide">
+            <img src="~/images/banner.jpg" alt="Banner 2">
+        </div>
+        <div class="slide">
+            <img src="~/images/banner.jpg" alt="Banner 3">
+        </div>
+    </div>
+    <div class="slider-controls">
+        <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+        <span class="next" onclick="moveSlide(1)">&#10095;</span>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length; // Số lượng slide chính xác
+
+    function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides; // Đảm bảo không vượt quá slide cuối
+        document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Tự động chuyển slide sau mỗi 4 giây
+    setInterval(() => {
+        moveSlide(1);
+    }, 4000);
+
+</script>
+
+
+<div class="features_items">
+    <!--features_items-->
+    <h2 class="title text-center">Sản phẩm bán chạy</h2>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/images/BongTaiVangTrangY.png" alt="" />
+                    <h2>$560</h2>
+                    <p>Bông Tai Vàng Trắng Ý</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>$560</h2>
+                        <p>Bông Tai Vàng Trắng Ý</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div><!--features_items-->
+
+<div class="category-tab">
+    <!--category-tab-->
+    <div class="col-sm-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tshirt" data-toggle="tab">Kim Cương</a></li>
+            <li><a href="#blazers" data-toggle="tab">Ngọc Trai</a></li>
+            <li><a href="#sunglass" data-toggle="tab">Vàng</a></li>
+            <li><a href="#kids" data-toggle="tab">Bạc</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="tshirt">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/images/BongTaiKimCuong.png" alt="" />
+                            <h2>$56</h2>
+                            <p>Bông Tai Kim Cương</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="blazers">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/images/BongTaiKimCuong.png" alt="" />
+                            <h2>$56</h2>
+                            <p>Bông Tai Kim Cương</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="sunglass">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/images/LacTayVangTrang.png" alt="" />
+                            <h2>$56</h2>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="kids">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/images/BongTaiVangTrangY.png" alt="" />
+                            <h2>$56</h2>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div><!--/category-tab-->
+
+<div class="recommended_items">
+    <!--recommended_items-->
+    <h2 class="title text-center">recommended items</h2>
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/images/DayChuyenVangTrangY.png" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/images/LacTayVangTrang.png" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/images/BongTaiKimCuongVangY.png" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/images/LacTayVangTrang.png" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/images/VongTayVang18k.png" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/images/BongTaiKimCuong.png" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+            <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+        </a>
+        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+            <span class="next" onclick="moveSlide(1)">&#10095;</span>
+        </a>
+        
+    </div>
+</div><!--/recommended_items-->
+</div>

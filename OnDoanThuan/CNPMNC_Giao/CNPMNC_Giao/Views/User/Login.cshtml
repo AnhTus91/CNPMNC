@@ -1,0 +1,137 @@
+﻿@model CNPMNC_Giao.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Login";
+
+}
+<style>
+    /* Đảm bảo không làm ảnh hưởng đến header và footer */
+    .login-container {
+        background-color: #f8f9fa; /* Màu nền cho toàn bộ trang */
+        font-family: Arial, sans-serif; /* Chọn font chữ dễ đọc */
+        display: flex; /* Sử dụng Flexbox để căn giữa */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        height: 50vh; /* Chiều cao toàn màn hình */
+        margin: 0; /* Bỏ margin của body */
+    }
+
+    .card {
+        width: 100%; /* Chiều rộng 100% */
+        max-width: 400px; /* Giới hạn chiều rộng tối đa */
+        border-radius: 10px; /* Bo góc cho thẻ */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng cho thẻ */
+        padding: 20px; /* Padding cho nội dung thẻ */
+    }
+
+    .card-header {
+
+        text-align: center; /* Căn giữa chữ */
+        padding: 15px; /* Padding cho tiêu đề */
+        border-top-left-radius: 10px; /* Bo góc trên bên trái */
+        border-top-right-radius: 10px; /* Bo góc trên bên phải */
+    }
+
+    .card-title {
+        font-size: 1.5rem; /* Kích thước chữ tiêu đề lớn hơn */
+        font-weight: bold; /* Chữ đậm */
+    }
+
+    .badge-warning {
+        display: block; /* Hiển thị thông báo trong một dòng riêng */
+        margin-bottom: 15px; /* Khoảng cách dưới cho thông báo */
+    }
+
+    .form-group {
+        margin-bottom: 20px; /* Tăng khoảng cách giữa các nhóm ô */
+    }
+
+    .btn {
+        width: 100%; /* Chiều rộng nút 100% */
+        border-radius: 5px; /* Bo góc cho nút */
+        font-weight: bold; /* Chữ đậm cho nút */
+        padding: 10px; /* Thêm padding cho nút */
+        font-size: 1rem; /* Kích thước chữ nút */
+    }
+
+    .btn-success {
+        background-color: #28a745; /* Màu nền nút thành công */
+        border: none; /* Bỏ viền */
+    }
+
+    .btn-info {
+        background-color: #17a2b8; /* Màu nền nút thông tin */
+        border: none; /* Bỏ viền */
+    }
+
+        .btn-success:hover, .btn-info:hover {
+            opacity: 0.9; /* Hiệu ứng mờ khi hover */
+        }
+
+    .form-control {
+        border-radius: 5px; /* Bo góc cho ô nhập */
+        border: 1px solid #ced4da; /* Viền cho ô nhập */
+        padding: 10px; /* Padding cho ô nhập */
+        font-size: 1rem; /* Kích thước chữ ô nhập */
+    }
+
+        .form-control:focus {
+            border-color: #007bff; /* Màu viền khi ô nhập được chọn */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Đổ bóng nhẹ khi ô nhập được chọn */
+        }
+
+    .text-center {
+        margin: 10px 0; /* Khoảng cách cho nhãn */
+    }
+
+    p {
+        text-align: center; /* Căn giữa văn bản */
+        margin-top: 15px; /* Khoảng cách trên cho đoạn văn */
+    }
+</style>
+
+<div class="login-container">
+    <div class="col-md-5">
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title" style=" font-weight: bold; font-size: 32px;">Đăng nhập</div>
+                </div>
+                @if (ViewBag.error != null)
+                {
+                    <span class="badge text-left badge-warning">Sai tên đăng nhập hoặc mật khẩu</span>
+                }
+                <div class="card-body">
+                    <!-- Tên đăng nhập -->
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, "Email đăng nhập")
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Tên đăng nhập" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "badge badge-danger" })
+                    </div>
+                    <!-- Mật khẩu -->
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.MatKhau, "Mật khẩu")
+                        @Html.PasswordFor(m => m.MatKhau, new { @class = "form-control", @placeholder = "Mật khẩu" })
+                        @Html.ValidationMessageFor(m => m.MatKhau, "", new { @class = "badge badge-danger" })
+                    </div>
+                    <!-- Nút đăng nhập -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Đăng nhập</button>
+                    </div>
+                    <!-- Quên mật khẩu -->
+                    <p>
+                        @Html.ActionLink("Quên mật khẩu?", "ForgotPassword", "User")
+                    </p>
+                    <!-- Đăng ký tài khoản -->
+                    <label class="col-12 text-center">Chưa có tài khoản?</label>
+                    <div class="form-group">
+                        <a role="button" href="/user/register" class="btn btn-info">Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
