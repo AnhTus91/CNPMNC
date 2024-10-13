@@ -69,12 +69,10 @@ CREATE TABLE SanPham
   MaDanhMuc INT NOT NULL,
   NgayTao date not null default GetDate(),
   MaNhaCungCap int not null,
-  MaVoucher int not null,
   PRIMARY KEY (MaSanPham),
   FOREIGN KEY (MaVatLieu) REFERENCES VatLieu(MaVatLieu),
   FOREIGN KEY (MaDanhMuc) REFERENCES DanhMuc(MaDanhMuc),
-  FOREIGN KEY (MaNhaCungCap) REFERENCES NhaCungCap(MaNhaCungCap),
-  FOREIGN KEY (MaVoucher) REFERENCES Voucher(MaVoucher)
+  FOREIGN KEY (MaNhaCungCap) REFERENCES NhaCungCap(MaNhaCungCap)
 );
 CREATE TABLE BaoHanh
 (
