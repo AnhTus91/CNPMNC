@@ -1,0 +1,168 @@
+﻿﻿@model IEnumerable<CNPMNC_Giao.Models.NhaCungCap>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="page-title">Danh sách Nhà Cung Cấp</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNhaCungCap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNhaCungCap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td class="actions">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaNhaCungCap }, new { @class = "btn btn-warning btn-sm" })
+                    @Html.ActionLink("Details", "Details", new { id = item.MaNhaCungCap }, new { @class = "btn btn-info btn-sm" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaNhaCungCap }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Quay về Sản phẩm", "Index", "SanPhams", null, new { @class = "btn btn-secondary" })
+</p>
+
+<style>
+    body {
+        background-color: #f4f7fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    .table {
+        width: 100%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+        .table thead {
+            background-color: #4a90e2;
+            color: #ffffff;
+        }
+
+        .table th, .table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        .table tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+    .btn {
+        padding: 8px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    /* Styling for the page title */
+    .page-title {
+        font-size: 2.5rem; /* Larger font size for emphasis */
+        font-weight: 600; /* Semi-bold for a clean look */
+        color: #2c3e50; /* A modern dark blue color */
+        margin-bottom: 30px; /* Extra space below the heading */
+        text-align: left; /* Align to the left for a classic look */
+        border-bottom: 3px solid #3498db; /* Blue underline for a pop of color */
+        padding-bottom: 10px; /* Space between the text and the underline */
+    }
+
+    /* Styling for the 'Tạo mới' button */
+    .btn-primary {
+        display: inline-block; /* Make it act like a button */
+        padding: 12px 30px; /* Extra padding for a larger button */
+        background-color: #3498db; /* Flat blue background color */
+        color: white; /* White text for contrast */
+        font-size: 1.1rem; /* Slightly larger font */
+        font-weight: 500; /* Medium font weight */
+        text-decoration: none; /* Remove underline */
+        border-radius: 30px; /* Fully rounded corners for a pill-shaped button */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        margin-bottom: 20px; /* Space below the button */
+        text-align: center; /* Center align the text */
+    }
+
+        /* Hover effect for the button */
+        .btn-primary:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+        }
+
+        /* Focus effect for accessibility */
+        .btn-primary:focus {
+            outline: 2px dashed #2980b9; /* Blue dashed outline when focused */
+        }
+
+    .btn-warning {
+        background-color: #f5a623;
+    }
+
+    .btn-info {
+        background-color: #50e3c2;
+    }
+
+    .btn-danger {
+        background-color: #d0021b;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    .btn:active {
+        transform: translateY(0);
+    }
+</style>
