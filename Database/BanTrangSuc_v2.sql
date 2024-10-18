@@ -167,6 +167,10 @@ CREATE TABLE KichCo
     SoLuong int not null default 1,
 	FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
 );
+ALTER TABLE KichCo
+ADD CONSTRAINT FK_KichCo_SanPham
+FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
+ON DELETE CASCADE;
 CREATE TABLE ThanhToan
 (
     MaThanhToan INT IDENTITY(1,1) PRIMARY KEY, 
