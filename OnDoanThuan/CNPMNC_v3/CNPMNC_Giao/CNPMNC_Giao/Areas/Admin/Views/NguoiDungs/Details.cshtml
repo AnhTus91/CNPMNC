@@ -1,0 +1,166 @@
+﻿@model CNPMNC_Giao.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    <style >
+    /* General body styling */
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    /* Container for the details */
+    dl.dl-horizontal {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+
+    /* Label styling */
+    dt {
+        font-weight: bold;
+        color: #34495e;
+        padding-bottom: 10px;
+        width: 25%;
+        float: left;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    /* Display value styling */
+    dd {
+        padding-bottom: 10px;
+        margin-left: 0;
+        width: 70%;
+        float: left;
+        text-align: left;
+        color: #7f8c8d;
+    }
+
+    /* Clear floats after each dt/dd pair */
+    dl:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Button and link styling */
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #3498db;
+        font-weight: 500;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* Button styling */
+        a.btn-default {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            /* Button hover effect */
+            a.btn-default:hover {
+                background-color: #2980b9;
+                transform: translateY(-1px);
+            }
+
+            /* Button active effect */
+            a.btn-default:active {
+                transform: translateY(0);
+            }
+</style>
+
+<h2>Thông tin chi tiết</h2>
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNguoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiDung)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaiKhoan.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaiKhoan.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaiKhoan.MatKhau)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaiKhoan.MatKhau)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhDaiDien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhDaiDien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChucVu.TenChucVu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChucVu.TenChucVu)
+        </dd>
+
+
+
+    </dl>
+</div>
+<p>
+
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

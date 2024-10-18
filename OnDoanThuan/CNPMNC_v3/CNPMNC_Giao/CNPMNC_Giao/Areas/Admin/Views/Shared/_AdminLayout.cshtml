@@ -1,0 +1,461 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="~/images/icons/LogoJewelry.png" type="image/x-icon" />
+    <title>ThuanTai Jewelry</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Nhúng bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous" />
+
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.css" />
+
+    @Styles.Render("~/Content/admin/index")
+
+    @Styles.Render("~/Content/admin/style.css")
+
+    @Styles.Render("~/Content/admin/custom.css")
+    @Styles.Render("~/Content/admin/base.css")
+
+    @*----------*@
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+
+
+</head>
+<body>
+    <style>
+        /* Ensure the sidebar and logo stay fixed across all pages */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 300px;
+            background-color: #ffffff;
+            color: #ffffff;
+            z-index: 1000;
+            transition: width 0.3s;
+            overflow: hidden;
+        }
+
+            #sidebar .logo-header {
+                padding: 30px 20px;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+                #sidebar .logo-header img {
+                    width: 180px;
+                    height: auto;
+                    object-fit: contain;
+                }
+
+            #sidebar .logo-title {
+                font-size: 1.2rem;
+                color: rgba(0, 0, 0, 0.2);
+                margin-top: 10px;
+                display: block;
+                font-weight: bold;
+            }
+
+            #sidebar ul.components {
+                padding: 20px 10px;
+            }
+
+                /* Sidebar links */
+                #sidebar ul.components li {
+                    border-bottom: 1px solid #d1d1d1; /* Add bottom border to each sidebar item */
+                    padding-bottom: 10px; /* Space below each item */
+                    margin-bottom: 10px; /* Space between items */
+                }
+
+                    #sidebar ul.components li a {
+                        /* padding: 12px 15px;*/
+                        font-size: 1rem;
+                        color: black;
+                        font-weight: bold;
+                        display: block;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        transition: background 0.3s, color 0.3s;
+                    }
+
+                        #sidebar ul.components li a:hover {
+                            background-color: #ffc107;
+                            color: #1f1f1f;
+                        }
+
+
+        /* Content area */
+        .content {
+            margin-left: 250px;
+            padding: 30px;
+            background-color: #f4f4f4;
+            transition: margin-left 0.3s;
+        }
+
+        /* Header with real-time clock */
+        .content-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .hello-user {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #1f1f1f;
+        }
+
+        /* Real-time clock display */
+        .real-time {
+            display: flex;
+            flex-direction: column; /* Stack clock and date vertically */
+            align-items: center; /* Center items horizontally */
+            background-color: #ffffff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            width: 300px; /* Fixed width */
+            padding: 20px; /* Spacing inside the box */
+            margin-right: 20px; /* Space between clock and user icon */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Clock styling */
+        .clock {
+            font-size: 46px; /* Adjusted font size for better readability */
+            font-weight: bold; /* Make clock bold */
+            color: #333; /* Dark color for text */
+            margin: 0; /* Remove default margin */
+            text-align: center; /* Center text */
+        }
+
+        /* Date styling */
+        .date {
+            font-size: 46px; /* Adjusted font size */
+            color: #888888; /* Lighter color for the date */
+            margin-top: 5px; /* Space above date */
+            text-align: center; /* Center text */
+        }
+        /* User icon and dropdown */
+        .icon-user {
+            display: flex;
+            width: 200px;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+            .icon-user img {
+                border-radius: 50%;
+                width: 50px;
+                margin-right: 10px;
+            }
+
+        .icon-user-fullname {
+            font-weight: bold;
+            color: #1f1f1f;
+        }
+
+        .icon-user-dropdown {
+            position: relative;
+        }
+
+            .icon-user-dropdown .box-triangle {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 5px;
+            }
+
+            .icon-user-dropdown .user-logout {
+                position: absolute;
+                top: 120%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #ffffff;
+                padding: 10px;
+                border: 1px solid #ccc;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+
+        .icon-user:hover .user-logout {
+            display: block;
+        }
+
+        /* Dropdown Item Styles */
+        .user-logout a {
+            display: block;
+            padding: 10px;
+            color: #34495e;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+        }
+
+            .user-logout a:hover {
+                background: #3498db;
+                color: #ffffff;
+            }
+
+        .sub-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+
+            .sub-menu li {
+                padding: 8px 12px;
+            }
+
+                .sub-menu li a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                    .sub-menu li a:hover {
+                        background-color: #f0f0f0;
+                    }
+
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center; /* Căn giữa văn bản và biểu tượng */
+            justify-content: space-between;
+            text-decoration: none;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .dropdown-arrow {
+            border: solid black;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 5px;
+            transform: rotate(45deg); /* Tạo hình mũi tên */
+            margin-left: 10px; /* Giãn cách giữa text và mũi tên */
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#shopDropdown').on('click', function (event) {
+                event.preventDefault();
+                $('#subMenu').toggle(); // Hiển thị hoặc ẩn menu
+                $(this).toggleClass('active'); // Thêm class cho dropdown khi mở
+            });
+
+            $(document).on('click', function (event) {
+                if (!$(event.target).closest('.dropdown').length) {
+                    $('#subMenu').hide();
+                }
+            });
+        });
+
+    </script>
+    @Scripts.Render("~/bundles/admin/jquery")
+    @Scripts.Render("~/bundles/admin/popper")
+    @Scripts.Render("~/bundles/admin/bstr")
+    @Scripts.Render("~/bundles/admin/jquery")
+
+    <script>
+       @*$('.sp ul').addClass('show');*@
+@*       $('.d-user').addClass('active');*@
+    </script>
+
+    <!-- database jquery -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+    @Scripts.Render("~/bundles/admin/main")
+    @Scripts.Render("~/bundles/admin/header")
+
+    <script>
+        fetch('/Home/GetUserInfo')
+            .then(response => response.json())
+            .then(data => {
+                $('.info-fullName').html(data.Result[0].fullName)
+                $('.info-email').html(data.Result[0].email)
+
+                /*  console.log(data.Result[0])*/
+            });
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="logo-header d-flex justify-content-center align-items-center">
+                <a href="/Admin/AdminHome/Index">
+                    <img src="~/images/LogoJewelry.jpg" style="margin-top:30px;width:200px;height:100px;margin-left:10px;" alt="" class="logo" />
+                </a>
+            </div>
+            <div class="pl-4 pr-4" style="padding-top:40px;">
+                <ul class="list-unstyled components mb-5">
+                    <li class="dropdown">
+                        <a href="#" @*class="dropdown-toggle"*@ id="shopDropdown" role="button" @*aria-haspopup="true"*@ aria-expanded="false">
+                            Quản lý Sản phẩm<img style="margin-left:5px" src="~/images/icons/chevron-down.svg" />
+                        </a>
+                        <ul class="sub-menu" id="subMenu" style="display: none;">
+                            <li>@Html.ActionLink("Sản Phẩm", "Index", "SanPhams")</li>
+                            <li>@Html.ActionLink("Danh Mục", "Index", "DanhMucs")</li>
+                            <li>@Html.ActionLink("Nhà Cung Cấp", "Index", "NhaCungCaps")</li>
+                            <li>@Html.ActionLink("Vật Liệu", "Index", "VatLieux")</li>
+                        </ul>
+                    </li>
+                    <li class="d-bill">
+                        @Html.ActionLink("Đơn Hàng", "Index", "DonHang")
+                    </li>
+                    <li class="d-user">
+                        @Html.ActionLink("Người Dùng", "Index", "NguoiDungs")
+                    </li>
+                    <li class="d-user">
+                        @Html.ActionLink("Voucher", "Index", "VOUCHERs")
+                    </li>
+                    <li class="d-xs">
+                        <a href="/home">Xem cửa hàng</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div class="content">
+            <div class="content-top">
+                <div class="header-left">
+                    <h4 class="hello-user">
+                        <span style="padding-left:50px;font-weight:bold;">Quản Lý Bán Trang Sức</span>
+                    </h4>
+                </div>
+                <div class="real-time">
+
+                    <p id="currentTime"></p>
+
+                </div>
+
+
+                <div class="header-right">
+                    <div class="icon-user">
+                        <img src="~/images/LogoJewelry.jpg" style="width:50px;" />
+                        <div class="icon-user-fullname">Hello Admin</div>
+                        <div class="icon-user-dropdown">
+                            <span class="box-triangle">
+                                <svg viewBox="0 0 20 9" role="presentation">
+                                    <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
+                                </svg>
+                            </span>
+                            <div class="user-logout">
+                                <a href="/user/DangXuat">
+                                    <i class="bx bxs-log-out"></i> Đăng xuất
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="content" class="">
+        <div class="content-main p-4">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/admin/jquery")
+    @Scripts.Render("~/bundles/admin/popper")
+    @Scripts.Render("~/bundles/admin/bstr")
+    @Scripts.Render("~/bundles/admin/jquery")
+
+    <script>
+        @*$('.sp ul').addClass('show');*@
+ @*       $('.d-user').addClass('active');*@
+    </script>
+
+    <!-- database jquery -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+    @Scripts.Render("~/bundles/admin/main")
+    @Scripts.Render("~/bundles/admin/header")
+
+
+    <script>
+        fetch('/Home/GetUserInfo')
+            .then(response => response.json())
+            .then(data => {
+                $('.info-fullName').html(data.Result[0].fullName)
+                $('.info-email').html(data.Result[0].email)
+
+                /*  console.log(data.Result[0])*/
+            });
+    </script>
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var day = String(now.getDate()).padStart(2, '0');
+            var month = String(now.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0 nên cần cộng thêm 1
+            var year = now.getFullYear();
+
+            var hours = String(now.getHours()).padStart(2, '0');
+            var minutes = String(now.getMinutes()).padStart(2, '0');
+            var seconds = String(now.getSeconds()).padStart(2, '0');
+
+            var dateTime = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+
+            document.getElementById("currentTime").innerHTML = dateTime;
+        }
+
+        setInterval(updateTime, 1000); // Cập nhật mỗi giây
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

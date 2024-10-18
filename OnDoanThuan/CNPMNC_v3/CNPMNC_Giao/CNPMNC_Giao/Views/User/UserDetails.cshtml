@@ -1,0 +1,104 @@
+﻿@model CNPMNC_Giao.Models.NguoiDung
+
+@{
+    ViewBag.Title = "UserDetails";
+}
+
+<div class="user-details">
+    <h3>@Model.TenNguoiDung</h3>
+    <p><strong>Email: </strong> @Model.TaiKhoan.Email</p>
+    <p><strong>Địa chỉ:</strong> @Model.DiaChi</p>
+    <p><strong>Số điện thoại:</strong> @Model.SDT</p>
+    <p>
+        <strong>Ảnh đại diện:</strong><br />
+        @if (!string.IsNullOrEmpty(Model.AnhDaiDien))
+        {
+            <img src="@Url.Content(Model.AnhDaiDien)" alt="Ảnh đại diện" style="width: 150px; height: 150px;" />
+
+        }
+        else
+        {
+            <span>Chưa có ảnh đại diện</span>
+        }
+    </p>
+
+    <p>@Html.ActionLink("Chỉnh sửa trang cá nhân", "EditUserDetails")</p>
+    @*<p>@Html.ActionLink("Xem lịch sử đơn hàng", "OrderHistory", "User", new { id = Model.MaNguoiDung }, new { @class = "btn btn-primary" })</p>*@
+
+</div>
+
+<style>
+    .user-details {
+        background-color: #f9f9f9; /* Light background for the card */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        padding: 20px;
+        max-width: 400px; /* Limit the width of the card */
+        margin: 20px auto; /* Center the card */
+        font-family: 'Arial', sans-serif;
+    }
+
+        .user-details h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .user-details p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .user-details strong {
+            color: #333;
+        }
+
+        .user-details img {
+            border-radius: 50%; /* Make the avatar circular */
+            margin: 10px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #ddd; /* Add a border around the avatar */
+        }
+
+        .user-details .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+            .user-details .btn-primary:hover {
+                background-color: #0056b3; /* Darken button on hover */
+            }
+
+        .user-details a {
+            background-color: #28a745; /* Green button background */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Add padding to make it look like a button */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            display: inline-block;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Smooth hover transition */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+            .user-details a:hover {
+                background-color: #218838; /* Darken the background on hover */
+            }
+
+            .user-details a:active {
+                background-color: #1e7e34; /* Even darker background when active */
+                box-shadow: none; /* Remove shadow when clicked */
+            }
+</style>
