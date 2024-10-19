@@ -1,0 +1,54 @@
+﻿@model CNPMNC_Giao.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Thông tin tài khoản</h2>
+
+<div>
+    <h4>TaiKhoan</h4>
+    <hr />
+    <dl class="dl-horizontal center-block">
+        <dt>Email tài khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>Mật khẩu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>Trạng thái tài khoản
+        </dt>
+
+        <dd>
+            @if (Model.VaiTro == false)
+            {
+
+
+                <span>Active</span>
+            }
+            else
+            {
+        <span>Inactive</span>
+            }
+
+        </dd>
+
+    </dl>
+</div>
+<p>@Html.ActionLink("Quay trở lại trang thông tin người dùng ", "Index", "NguoiDungs")
+    @using (Html.BeginForm("ChangeStatus", "TaiKhoans", FormMethod.Post))
+    {
+        @Html.Hidden("id", Model.MaTaiKhoan)
+        <button type="submit" class="btn btn-warning">
+            @(Model.VaiTro ? "Vô hiệu hóa tài khoản" : "Kích hoạt tài khoản")
+        </button>
+    }
+</p>
