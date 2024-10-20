@@ -1,0 +1,42 @@
+﻿@model CNPMNC_Giao.Models.GioHang
+
+<h2>Giỏ hàng của bạn</h2>
+
+@if (Model != null && Model.ChiTietGioHangs.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Giá bán</th>
+                <th>Số lượng</th>
+                <th>Tổng</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ChiTietGioHangs)
+            {
+                <tr>
+                    <td>@item.SanPham.TenSanPham</td>
+                    <td>@item.GiaBan</td>
+                    <td>@item.SoLuong</td>
+                    <td>@(item.GiaBan * item.SoLuong)</td>
+                    <td>
+                        <a href="@Url.Action("RemoveFromCart", "Cart", new { id = item.MaSanPham })" class="btn btn-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Tổng tiền: @Model.TongTien</h3>
+
+    <form action="@Url.Action("Checkout", "Cart")" method="post">
+        <button type="submit" class="btn btn-success">Thanh toán</button>
+    </form>
+}
+else
+{
+    <p>Giỏ hàng của bạn đang trống.</p>
+}

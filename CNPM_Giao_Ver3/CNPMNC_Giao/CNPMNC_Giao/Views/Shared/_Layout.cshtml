@@ -1,0 +1,390 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Web Bán Trang Sức</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/price-range.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+</head><!--/head-->
+
+<body>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li>
+                                    <a href="tel:0908855932" style="text-decoration: none; color: inherit;">
+                                        <img style="width:30px; padding:2px; ;" src="~/images/icons/Phone.jpg" alt="Phone" />
+                                        0908855932
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:vinhvipvodoi46@gmail.com" style="text-decoration: none; color: inherit;">
+                                        <img style="width:30px; padding:2px;" src="~/images/EmailBW.jpg" alt="Email" />
+                                        vinhvipvodoi46@gmail.com
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul style="list-style: none; padding: 0; display: flex;">
+                                <li>
+                                    <a href="https://www.facebook.com" target="_blank">
+                                        <img style="width:30px; padding:2px; margin-top:3px;" src="~/images/icons/facebook.png" alt="Facebook" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com" target="_blank">
+                                        <img style="width:30px; padding:2px; margin-top:3px;" src="~/images/icons/instagram.png" alt="Instagram" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.visa.com" target="_blank">
+                                        <img style="width:30px; padding:2px; margin-top:3px;" src="~/images/icons/visa.png" alt="Visa" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:example@example.com">
+                                        <img style="width:30px; padding:2px; margin-top:3px;" src="~/images/icons/email.png" alt="Email" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com" target="_blank">
+                                        <img style="width:30px; padding:2px; margin-top:3px;" src="~/images/icons/youtube.png" alt="YouTube" />
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="index.html"><img src="~/images/home/logo.png" alt="" /></a>
+                        </div>
+                        <div class="btn-group pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                    VietNam
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Canada</a></li>
+                                    <li><a href="#">UK</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                    VietNamDong
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Canadian Dollar</a></li>
+                                    <li><a href="#">Pound</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><img style="width:30px;padding:2px;margin-top:3px;" src="~/images/icons/heart.png" /> WishList</a></li>
+                                <li><a href="@Url.Action("XemGioHang","Cart")"><img style="width:30px;padding:2px;margin-top:3px;" src="~/images/icons/shopping-cart.png" /> Cart</a></li>
+                                @if (Session["email"] == null)
+                                {
+                                    <li style="display: flex; align-items: center; margin-right: 15px;"><a href="#"><img style="width:30px;padding:2px;margin-top:3px;" src="~/images/icons/login.png" /> @Html.ActionLink("Login", "Login", "User")</a></li>
+                                    <li><a href="#"><img style="width:30px;padding:2px;margin-top:3px;" src="~/images/icons/user.png" /> Account</a></li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a href="@Url.Action("UserDetails","User")">
+                                            <img style="width:30px;padding:2px;margin-top:3px;" src="~/images/icons/user.png" />
+
+                                          
+                                            @Session["TenNguoiDung"]
+                                            <span hidden>
+                                                @Session["hoTen"]
+                                            </span>
+
+
+                                        </a>
+                                    </li>
+                                    <li><a href="@Url.Action("DonHang","Home")"><img style="width:30px;padding:2px;margin-top:3px;" src="~/images/icons/checkout.png" /> Đơn hàng của tôi</a></li>
+
+                                    <li>@Html.ActionLink("Đăng Xuất", "DangXuat", "User")</li>
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li class="dropdown">
+                                    <a asp-controller="Product" asp-action="Index">Shop<span class="caret"></span></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a>Đơn Hàng</a></li>
+                                        <li>@Html.ActionLink("Sản Phẩm", "Index", "Product")</li>
+                                        <li>@Html.ActionLink("Thanh Toán", "ThanhToan", "GioHang")</li>
+                                        <li>@Html.ActionLink("Giỏ Hàng", "Index", "GioHang")</li>
+                                        <li>@Html.ActionLink("Login", "Login", "User")</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Blog <span class="caret"></span></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="blog.html">Blog List</a></li>
+                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="contact-us.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="search_box pull-right">
+                            @using (Html.BeginForm("Search", "Product", FormMethod.Get))
+                            {
+                                <input type="text" name="keyword" placeholder="Search" />
+                                <button type="submit" class="btn btn-default">Tìm kiếm</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+
+    </header><!--/header-->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="companyinfo">
+                            <h2><span>ThuanTai Jewelry</span></h2>
+                            <p>Website bán trang sức cao cấp</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="~/images/icons/iframe1.png" alt="Video 1" />
+                                    </div>
+                                    <div class="overlay-icon">
+                                        <i class="fa fa-play-circle-o"></i>
+                                    </div>
+                                </a>
+                                <p>Thiết kế trang sức độc đáo</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="~/images/icons/iframe1.png" alt="Video 2" />
+                                    </div>
+                                    <div class="overlay-icon">
+                                        <i class="fa fa-play-circle-o"></i>
+                                    </div>
+                                </a>
+                                <p>Đẳng cấp và tinh tế</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="~/images/icons/iframe2.png" alt="Video 3" />
+                                    </div>
+                                    <div class="overlay-icon">
+                                        <i class="fa fa-play-circle-o"></i>
+                                    </div>
+                                </a>
+                                <p>Bộ sưu tập mới nhất</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="~/images/icons/iframe2.png" alt="Video 4" />
+                                    </div>
+                                    <div class="overlay-icon">
+                                        <i class="fa fa-play-circle-o"></i>
+                                    </div>
+                                </a>
+                                <p>Chất lượng và uy tín</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="address">
+                            <img src="~/images/map.png" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Dịch vụ</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Hỗ trợ trực tuyến</a></li>
+                                <li><a href="#">Liên hệ với chúng tôi</a></li>
+                                <li><a href="#">Tình trạng đơn hàng</a></li>
+                                <li><a href="#">Đổi địa chỉ giao hàng</a></li>
+                                <li><a href="#">Câu hỏi thường gặp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Cửa hàng nhanh</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Nhẫn</a></li>
+                                <li><a href="#">Dây chuyền</a></li>
+                                <li><a href="#">Bông tai</a></li>
+                                <li><a href="#">Bộ sưu tập đặc biệt</a></li>
+                                <li><a href="#">Quà tặng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Chính sách</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Điều khoản sử dụng</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                                <li><a href="#">Chính sách hoàn tiền</a></li>
+                                <li><a href="#">Hệ thống thanh toán</a></li>
+                                <li><a href="#">Hỗ trợ khách hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Giới thiệu về PNJ</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Thông tin công ty</a></li>
+                                <li><a href="#">Cơ hội nghề nghiệp</a></li>
+                                <li><a href="#">Địa chỉ cửa hàng</a></li>
+                                <li><a href="#">Chương trình liên kết</a></li>
+                                <li><a href="#">Bản quyền</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="single-widget">
+                            <h2>Đăng ký nhận tin</h2>
+                            <form action="#" class="searchform">
+                                <input type="text" placeholder="Địa chỉ email của bạn" />
+                                <button type="submit" class="btn btn-default"><img src="~/images/icons/send.svg" /></button>
+                                <p>Nhận thông tin cập nhật mới nhất từ<br />website của chúng tôi.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2024 ThuanTai Jewelry. All rights reserved.</p>
+                    <p class="pull-right">Designed by <span><a target="_blank" href="https://www.pnj.com.vn/">ThuanTai Jewelry</a></span></p>
+                </div>
+            </div>
+        </div>
+    </footer><!--/Footer-->
+
+
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+    <script src="~/js/price-range.js"></script>
+    <script src="~/js/jquery.prettyPhoto.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>

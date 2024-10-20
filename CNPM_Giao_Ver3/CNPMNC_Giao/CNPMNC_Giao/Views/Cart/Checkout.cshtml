@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Thanh Toán";
+}
+
+<h2>Thanh Toán</h2>
+
+@using (Html.BeginForm("Checkout", "Cart", FormMethod.Post))
+{
+    <div>
+        <label for="tenNguoiNhan">Tên người nhận:</label>
+        <input type="text" name="tenNguoiNhan" required />
+    </div>
+    <div>
+        <label for="sdtNguoiNhan">SĐT người nhận:</label>
+        <input type="text" name="sdtNguoiNhan" required />
+    </div>
+    <div>
+        <label for="diaChiNguoiNhan">Địa chỉ nhận hàng:</label>
+        <input type="text" name="diaChiNguoiNhan" required />
+    </div>
+    <div>
+        <input type="submit" value="Thanh Toán" />
+    </div>
+}
