@@ -102,8 +102,8 @@ CREATE TABLE DonHang
   TongSL int not null default 0,
   TongSoTien int not null default 0,
   TienPhaiTra int not null default 0,
-  MaVoucher int not null,
-  HinhThucNhanHang NVARCHAR(50) DEFAULT 'Giao Hang',
+  MaVoucher int ,
+  HinhThucNhanHang NVARCHAR(50) not null DEFAULT 'Giao Hang',
     FOREIGN KEY (MaVoucher) REFERENCES Voucher(MaVoucher),
   FOREIGN KEY (MaNguoiGui) REFERENCES NguoiDung(MaNguoiDung),
   PRIMARY KEY (MaDonHang)
