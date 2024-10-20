@@ -1,0 +1,32 @@
+﻿@model CNPMNC_Giao.Models.KichCo
+
+@{
+    ViewBag.Title = "Tạo Kích Cỡ";
+}
+
+<h2>Tạo Kích Cỡ</h2>
+
+@using (Html.BeginForm("TaoKichCo", "SanPhams", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.MaSanPham, "Chọn Sản Phẩm:")
+        @Html.DropDownList("MaSanPham", new SelectList(ViewBag.SanPhams, "MaSanPham", "TenSanPham"), "Chọn sản phẩm", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MaSanPham)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.SoKichCo)
+        @Html.TextBoxFor(m => m.SoKichCo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.SoKichCo)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.SoLuong)
+        @Html.TextBoxFor(m => m.SoLuong, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.SoLuong)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Tạo Kích Cỡ</button>
+}

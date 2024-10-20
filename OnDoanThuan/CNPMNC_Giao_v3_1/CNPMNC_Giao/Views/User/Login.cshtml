@@ -1,0 +1,180 @@
+﻿@model CNPMNC_Giao.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Login";
+
+}
+<div class="row justify-content-md-center" style="width:1200px;justify-content:center;margin:auto">
+    <div class="col-md-5" style="width:70%;padding-left:100px;margin-left:100px;padding-bottom:50px;">
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Trang đăng nhập</div>
+                </div>
+
+                @if (ViewBag.error != null)
+                {
+                    <span class="badge text-left badge-warning">Sai tên đăng nhập hoặc mật khẩu</span>
+                }
+
+                <div class="card-body">
+                    <!-- Tên đăng nhập -->
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, "Email đăng nhập")
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Tên đăng nhập" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "badge badge-danger" })
+                    </div>
+
+                    <!-- Mật khẩu -->
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.MatKhau, "Mật khẩu")
+                        @Html.PasswordFor(m => m.MatKhau, new { @class = "form-control", @placeholder = "Mật khẩu" })
+                        @Html.ValidationMessageFor(m => m.MatKhau, "", new { @class = "badge badge-danger" })
+                    </div>
+
+                    <!-- Nút đăng nhập -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Đăng nhập</button>
+                    </div>
+
+                    <!-- Quên mật khẩu -->
+                    <p>
+                        @Html.ActionLink("Quên mật khẩu?", "ForgotPassword", "User")
+                    </p>
+
+                    <!-- Đăng ký tài khoản -->
+                    <label class="col-12 text-center">Chưa có tài khoản?</label>
+                    <div class="form-group">
+                        <a role="button" href="/user/register" class="btn btn-info">Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    /* Center the login form container */
+    .row {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    /* Style for the card */
+    .card {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        border: none;
+    }
+
+    .card-header {
+        background-color: #007bff; /* Primary color for header */
+        padding: 20px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .card-title {
+        font-size: 24px;
+        color: white; /* White text for card title */
+        text-align: center;
+        margin: 0;
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+    /* Button styles */
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+    /* Button for registration */
+    .btn-info {
+        background-color: #17a2b8;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-info:hover {
+            background-color: #138496;
+        }
+
+    /* Error message badge */
+    .badge-danger {
+        color: white;
+        background-color: #dc3545;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    /* Warning for incorrect credentials */
+    .badge-warning {
+        background-color: #ffc107;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    /* Forgot password link */
+    p a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+    /* Text center */
+    .text-center {
+        text-align: center;
+    }
+
+    /* Label for registration prompt */
+    label {
+        font-size: 16px;
+        color: #333;
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>

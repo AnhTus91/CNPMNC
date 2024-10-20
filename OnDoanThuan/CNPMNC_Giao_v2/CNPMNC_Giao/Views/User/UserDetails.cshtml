@@ -1,0 +1,27 @@
+﻿@model CNPMNC_Giao.Models.NguoiDung
+
+@{
+    ViewBag.Title = "UserDetails";
+}
+
+<div class="user-details">
+    <h3>@Model.TenNguoiDung</h3>
+    <p><strong>Địa chỉ:</strong> @Model.DiaChi</p>
+    <p><strong>Số điện thoại:</strong> @Model.SDT</p>
+    <p>
+        <strong>Ảnh đại diện:</strong><br />
+        @if (!string.IsNullOrEmpty(Model.AnhDaiDien))
+        {
+            <img src="@Url.Content(Model.AnhDaiDien)" alt="Ảnh đại diện" style="width: 150px; height: 150px;" />
+
+        }
+        else
+        {
+            <span>Chưa có ảnh đại diện</span>
+        }
+    </p>
+
+    <p>@Html.ActionLink("Edit", "EditUserDetails")</p>
+    @*<p>@Html.ActionLink("Xem lịch sử đơn hàng", "OrderHistory", "User", new { id = Model.MaNguoiDung }, new { @class = "btn btn-primary" })</p>*@
+
+</div>

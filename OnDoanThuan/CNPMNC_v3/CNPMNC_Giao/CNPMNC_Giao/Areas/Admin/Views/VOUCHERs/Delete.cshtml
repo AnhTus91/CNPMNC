@@ -1,0 +1,219 @@
+﻿@model CNPMNC_Giao.Models.VOUCHER
+
+@{
+    ViewBag.Title = "Delete";
+}
+<style>
+    /* General body styling */
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    /* Container for the details */
+    dl.dl-horizontal {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+
+    /* Label styling */
+    dt {
+        font-weight: bold;
+        color: #34495e;
+        padding-bottom: 10px;
+        width: 25%;
+        float: left;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    /* Display value styling */
+    dd {
+        padding-bottom: 10px;
+        margin-left: 0;
+        width: 70%;
+        float: left;
+        text-align: left;
+        color: #7f8c8d;
+    }
+
+    /* Clear floats after each dt/dd pair */
+    dl:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Button and link styling */
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #3498db;
+        font-weight: 500;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* Button styling */
+        a.btn-default {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            /* Button hover effect */
+            a.btn-default:hover {
+                background-color: #2980b9;
+                transform: translateY(-1px);
+            }
+
+            /* Button active effect */
+            a.btn-default:active {
+                transform: translateY(0);
+            }
+
+    .form-actions {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+        /* Delete button styling */
+        .form-actions .btn {
+            background-color: #e74c3c; /* Red for Delete */
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 15px;
+        }
+
+            /* Hover effect for Delete button */
+            .form-actions .btn:hover {
+                background-color: #c0392b;
+                transform: translateY(-1px);
+            }
+
+            /* Active effect for Delete button */
+            .form-actions .btn:active {
+                transform: translateY(0);
+            }
+
+        /* Styling for the "Trở về danh sách" link */
+        .form-actions a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+            /* Hover effect for the link */
+            .form-actions a:hover {
+                color: #2980b9;
+            }
+</style>
+
+<h2>Xoá Voucher</h2>
+
+<h3>Bạn có muốn xoá Voucher này?</h3>
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGianBatDau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGianBatDau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGianKetThuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGianKetThuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DieuKienApDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DieuKienApDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về danh sách", "Index")
+        </div>
+    }
+</div>

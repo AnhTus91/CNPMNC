@@ -69,12 +69,10 @@ CREATE TABLE SanPham
   MaDanhMuc INT NOT NULL,
   NgayTao date not null default GetDate(),
   MaNhaCungCap int not null,
-  MaVoucher int not null,
   PRIMARY KEY (MaSanPham),
   FOREIGN KEY (MaVatLieu) REFERENCES VatLieu(MaVatLieu),
   FOREIGN KEY (MaDanhMuc) REFERENCES DanhMuc(MaDanhMuc),
-  FOREIGN KEY (MaNhaCungCap) REFERENCES NhaCungCap(MaNhaCungCap),
-  FOREIGN KEY (MaVoucher) REFERENCES Voucher(MaVoucher)
+  FOREIGN KEY (MaNhaCungCap) REFERENCES NhaCungCap(MaNhaCungCap)
 );
 CREATE TABLE BaoHanh
 (
@@ -169,6 +167,10 @@ CREATE TABLE KichCo
     SoLuong int not null default 1,
 	FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
 );
+ALTER TABLE KichCo
+ADD CONSTRAINT FK_KichCo_SanPham
+FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
+ON DELETE CASCADE;
 CREATE TABLE ThanhToan
 (
     MaThanhToan INT IDENTITY(1,1) PRIMARY KEY, 

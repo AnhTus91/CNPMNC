@@ -1,0 +1,91 @@
+﻿@model CNPMNC_Giao.Models.NguoiDung
+
+@{
+    ViewBag.Title = "EditUserDetails";
+}
+<style>
+    /* CSS for form */
+    h2 {
+        text-align: center;
+        color: #4CAF50;
+    }
+    form {
+        justify-content:center
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .control-label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+</style>
+<h2>Chỉnh Sửa Thông Tin Người Dùng</h2>
+@using (Html.BeginForm("EditUserDetails", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.MaNguoiDung)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TenNguoiDung, htmlAttributes: new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.TenNguoiDung, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.DiaChi, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SDT, htmlAttributes: new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.SDT, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("ImageFile", "Hình ảnh", new { @class = "control-label" })
+        <div class="input-group">
+            <input type="file" name="ImageFile" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+    </div>
+}
+

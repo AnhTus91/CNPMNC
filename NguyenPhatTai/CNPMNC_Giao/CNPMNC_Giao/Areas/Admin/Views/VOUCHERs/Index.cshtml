@@ -1,0 +1,119 @@
+﻿@model IEnumerable<CNPMNC_Giao.Models.VOUCHER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<style>
+    /* Style for the table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 1em;
+        font-family: 'Arial', sans-serif;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+        /* Style for the table header */
+        table thead th {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            padding: 12px 15px;
+        }
+
+        /* Style for table body rows */
+        table tbody td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        /* Style for alternating row colors */
+        table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        /* Hover effect for rows */
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+    /* Style for action links (Edit, Details, Delete) */
+    .action-links a {
+        text-decoration: none;
+        color: #009879;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .action-links a:hover {
+            background-color: #009879;
+            color: #ffffff;
+        }
+</style>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThoiGianBatDau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThoiGianKetThuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DieuKienApDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaTri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThoiGianBatDau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThoiGianKetThuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayTao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DieuKienApDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaVoucher }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaVoucher }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaVoucher })
+            </td>
+        </tr>
+    }
+
+</table>
