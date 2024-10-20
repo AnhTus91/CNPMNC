@@ -1,4 +1,4 @@
-﻿using CNPMNC_Giao.Models;
+using CNPMNC_Giao.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -71,6 +71,7 @@ namespace CNPMNC_Giao.Controllers
                         if (nguoiDung == null)
                         {
                             TempData["email"] = email; // Lưu email vào TempData để sử dụng trên trang tạo thông tin
+                            Session["Email"] = email;
                             return RedirectToAction("CreateUserDetails", "User");
                         }
 
@@ -268,7 +269,15 @@ namespace CNPMNC_Giao.Controllers
         {
             // Lấy email từ TempData nếu có
             ViewBag.Email = TempData["email"] as string;
-            return View();
+            string email = Session["Email"]?.ToString();
+
+            TaiKhoan taiKhoan = db.TaiKhoans.FirstOrDefault(tk => tk.Email == email);
+            NguoiDung nguoiDung = new NguoiDung
+            {
+                MaTaiKhoan = taiKhoan.MaTaiKhoan,
+
+            };
+            return View(nguoiDung);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -280,7 +289,7 @@ namespace CNPMNC_Giao.Controllers
                 if (ImageFile != null && ImageFile.ContentLength > 0)
                 {
                     string fileName = Path.GetFileName(ImageFile.FileName);
-                    string directoryPath = Server.MapPath("~/AnhSanPham");
+                    string directoryPath = Server.MapPath("~/Images");
 
                     // Create the directory if it doesn't exist
                     if (!Directory.Exists(directoryPath))
@@ -290,11 +299,12 @@ namespace CNPMNC_Giao.Controllers
                     nguoiDung.MaChucVu = 1;
                     string path = Path.Combine(directoryPath, fileName);
                     ImageFile.SaveAs(path);
-                    nguoiDung.AnhDaiDien = "/AnhSanPham/" + fileName; // Save the path to the image in the model
+                    nguoiDung.AnhDaiDien = "/Images/" + fileName; // Save the path to the image in the model
 
                 }
 
-                // Lưu thông tin người dùng mới
+               
+
                 db.NguoiDungs.Add(nguoiDung);
                 db.SaveChanges();
 
@@ -302,12 +312,10 @@ namespace CNPMNC_Giao.Controllers
                 Session["UserID"] = nguoiDung.MaNguoiDung;
                 Session["TenNguoiDung"] = nguoiDung.TenNguoiDung;
                 Session["DiaChi"] = nguoiDung.DiaChi;
-                Session["SDT"] = nguoiDung.SDT;
-                Session["email"] = nguoiDung.TaiKhoan.Email; // Lưu email
-
-                // Chuyển hướng đến TrangChu
-                return RedirectToAction("TrangChu", "SanPhams");
+                Session["SDT"] = nguoiDung.SDT;// Lưu email
+                return RedirectToAction("UserDetails", "User");
             }
+
             return View(nguoiDung);
         }
     
