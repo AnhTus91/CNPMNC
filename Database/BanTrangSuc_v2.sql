@@ -42,6 +42,7 @@ CREATE TABLE NhaCungCap (
 );
 CREATE TABLE VOUCHER(
 MaVoucher INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	TenVoucher nvarchar(max) not null,
 GiaTri int not null,
 ThoiGianBatDau datetime not null default getdate(),
 ThoiGianKetThuc datetime not null default getdate(),
