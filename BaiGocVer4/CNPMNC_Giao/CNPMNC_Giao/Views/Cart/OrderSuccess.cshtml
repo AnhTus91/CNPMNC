@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Đặt hàng thành công";
+}
+
+<h2>Đặt hàng thành công!</h2>
+
+<p>Cảm ơn bạn đã đặt hàng. Mã đơn hàng của bạn là: <strong>@ViewBag.OrderId</strong></p>
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary">Quay về trang chủ</a>

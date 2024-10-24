@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37d59b75bc1842c486084bbb8bc18e16" Name="Diagram1">
+        <EntityTypeShape EntityType="DAPMModel.BaoHanh" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.BinhLuan" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.ChiTietGioHang" Width="1.5" PointX="8.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.ChucVu" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.DanhGiaSanPham" Width="1.5" PointX="5.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.DanhMuc" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.DonHang" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.GioHang" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.HoaDon" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.KichCo" Width="1.5" PointX="5.25" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.LichSuGiamGiaSanPham" Width="1.5" PointX="5.25" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.LichSuGiaSanPham" Width="1.5" PointX="5.25" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.MauSac" Width="1.5" PointX="5.25" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.NguoiDung" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.SanPham" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.SanPhamYeuThich" Width="1.5" PointX="8.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.TaiKhoan" Width="1.5" PointX="1.5" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.ThanhToan" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.VatLieu" Width="1.5" PointX="0.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.VOUCHER" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="DAPMModel.FK__BaoHanh__MaNguoi__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__BaoHanh__MaSanPh__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__BinhLuan__MaNguo__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__BinhLuan__MaSanP__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__ChiTietDo__MaDon__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__ChiTietDo__MaSan__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__ChiTietGi__MaGio__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__ChiTietGi__MaSan__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__NguoiDung__MaChu__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__DanhGiaSa__MaNgu__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__DanhGiaSa__MaSan__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__SanPham__MaDanhM__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__DonHang__MaNguoi__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__DonHang__MaVouch__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__HoaDon__MaDonHan__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__ThanhToan__MaDon__22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__GioHang__MaNguoi__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__HoaDon__MaNguoiD__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__HoaDon__MaThanhT__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__KichCo__MaSanPha__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK_KichCo_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__LichSuGia__MaSan__3A4CA8FD" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__LichSuGia__MaSan__367C1819" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__MauSac__MaSanPha__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__NguoiDung__MaTai__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__SanPhamYe__MaNgu__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__SanPham__MaNhaCu__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__SanPham__MaVatLi__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__SanPhamYe__MaSan__31B762FC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

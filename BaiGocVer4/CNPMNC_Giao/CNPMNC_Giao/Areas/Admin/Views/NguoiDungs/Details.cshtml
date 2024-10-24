@@ -1,0 +1,66 @@
+﻿@model CNPMNC_Giao.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NguoiDung</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNguoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhDaiDien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhDaiDien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChucVu.TenChucVu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChucVu.TenChucVu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaiKhoan.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaiKhoan.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaNguoiDung }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

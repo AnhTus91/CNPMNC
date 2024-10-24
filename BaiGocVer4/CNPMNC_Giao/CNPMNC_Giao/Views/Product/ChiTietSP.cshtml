@@ -1,0 +1,140 @@
+﻿@model CNPMNC_Giao.Models.SanPham
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .product-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .product-images {
+        width: 50%; /* Increased image section width */
+        position: relative;
+    }
+
+
+    .product-details {
+        width: 40%; /* Adjusted product details width */
+        padding: 20px; /* Added padding for spacing */
+        margin-top: 10px;
+    }
+
+        .product-details p {
+            margin-bottom: 5px; /* Thêm khoảng cách giữa các đoạn văn */
+        }
+
+        .product-details button {
+            margin-right: 10px; /* Spacing between buttons */
+            padding: 10px 15px; /* Increased button size */
+            border: none;
+            border-radius: 5px;
+            background-color: orange; /* Button background color */
+            color: white;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size */
+            margin-top: 10px;
+        }
+
+            .product-details button:hover {
+                background-color: darkorange; /* Darker shade on hover */
+            }
+
+    .description {
+        margin-top: 5px
+    }
+
+    .reviews {
+        margin-top: 20px; /* Khoảng cách trên */
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+    }
+
+    .star {
+        cursor: pointer;
+        font-size: 24px; /* Kích thước sao */
+        color: #ccc; /* Màu sao chưa được chọn */
+    }
+
+        .star:hover, .star:hover ~ .star {
+            color: orange; /* Màu sao khi hover */
+        }
+
+        .star.selected {
+            color: orange; /* Màu sao đã được chọn */
+        }
+</style>
+<h1>Chi Tiết Sản Phẩm</h1>
+
+<div class="container">
+    <h2>@Model.TenSanPham</h2>
+    <div class="product-info">
+        <div class="product-images">
+            <img src="~/AnhSanPham/@Model.AnhSP" alt="@Model.TenSanPham" style="width:350px" />
+        </div>
+
+        <div class="product-details">
+            <p class="price"><strong>Giá Mới:</strong> @Model.GiaTienMoi VND</p>
+            <p><strong>Giá Cũ:</strong> <del>@Model.GiaTienCu VND</del></p>
+            <form action="@Url.Action("AddToCart", "Cart")" method="post">
+                <input type="hidden" name="id" value="@Model.MaSanPham" />
+
+                <div class="form-group">
+                    <label for="size">Chọn kích cỡ:</label>
+                    <select name="size" id="size" class="form-control">
+                        @foreach (var kichCo in Model.KichCoes)
+                        {
+                            <option value="@kichCo.MaKichCo">@kichCo.SoKichCo - Còn lại: @kichCo.SoLuong</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="SoLuong">Số lượng:</label>
+                    <input type="number" id="SoLuong" name="SoLuong" value="1" min="1" />
+                </div>
+
+                <input type="submit" value="Thêm vào giỏ hàng" class="btn btn-primary" />
+            </form>
+
+            <div class="description">
+                <h3>Mô tả sản phẩm</h3>
+                <p><strong>Thương hiệu:</strong> @Model.NhaCungCap.TenNhaCungCap</p>
+                <p><strong>Mã sản phẩm:</strong> @Model.MaSanPham</p>
+                <p><strong>Chất liệu:</strong> @Model.VatLieu.TenVatlieu</p>
+                <p><strong>Mô tả:</strong> @Model.MoTa</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Index", "Product")">Quay lại danh sách sản phẩm</a>
+
+</div><!--/category-tab-->
+<div class="recommended_items">
+    <!--recommended_items-->
+    <h2 class="title text-center">Gợi Ý Sản Phẩm</h2>
+
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                @Html.Action("RecommendedItems", "Product", new { categoryId = Model.MaDanhMuc })
+            </div>
+        </div>
+    </div>
+</div><!--/recommended_items-->
