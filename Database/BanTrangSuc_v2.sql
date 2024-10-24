@@ -1,5 +1,5 @@
-create database DAPM_1
-use DAPM_1
+create database DAPM
+use DAPM
 
 CREATE TABLE TaiKhoan
 (
@@ -91,7 +91,7 @@ CREATE TABLE BaoHanh
 
 CREATE TABLE DonHang
 (
-  MaDonHang Varchar(20) NOT NULL,
+  MaDonHang varchar(250) NOT NULL,
   NgayDatHang DATE NOT NULL,
   TrangThai NVARCHAR(50) NOT NULL,
   PhiVanChuyen FLOAT NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE DonHang
 CREATE TABLE ChiTietDonHang
 (
 MaChiTietDonHang int identity(1,1) not null primary key,
-  MaDonHang Varchar(20)   NOT NULL,
+  MaDonHang Varchar(250)   NOT NULL,
   MaSanPham int  NOT NULL,
   Soluong int not null default 0,
   DonGia int not null default 0,
@@ -175,7 +175,7 @@ ON DELETE CASCADE;
 CREATE TABLE ThanhToan
 (
     MaThanhToan INT IDENTITY(1,1) PRIMARY KEY, 
-    MaDonHang Varchar(20) NOT NULL,                      
+    MaDonHang Varchar(250) NOT NULL,                      
     PhuongThucThanhToan NVARCHAR(50) NOT NULL,   
 	NgayThanhToan DATETIME DEFAULT GETDATE(),    
     TongTien FLOAT NOT NULL,                     
@@ -185,7 +185,7 @@ CREATE TABLE ThanhToan
 CREATE TABLE HoaDon
 (
     MaHoaDon varchar(20) PRIMARY KEY,      
-    MaDonHang Varchar(20) NOT NULL,                      
+    MaDonHang Varchar(250) NOT NULL,                      
     MaNguoiDung INT NOT NULL,                    
     NgayXuatHoaDon DATETIME DEFAULT GETDATE(),   
     TongTien FLOAT NOT NULL,                     
