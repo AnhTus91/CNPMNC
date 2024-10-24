@@ -1,0 +1,193 @@
+﻿﻿@model IEnumerable<CNPMNC_Giao.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<div class="d-flex justify-content-between align-items-center">
+    <!-- Nút tạo mới -->
+    <p>
+        @Html.ActionLink("Tạo mới Sản phẩm", "Create", null, new { @class = "btn-create" })
+    </p>
+    <p>
+        @Html.ActionLink("Tạo mới Kích cỡ ", "TaoKichCo")
+    </p>
+
+    <!-- Form tìm kiếm -->
+    <form method="get" action="@Url.Action("Index")" class="form-inline">
+        <div class="form-group">
+            <input type="text" name="searchString" class="form-control" placeholder="Tìm kiếm sản phẩm" />
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </div>
+    </form>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Tên Sản Phẩm</th>
+            <th>Giá Tiền Mới</th>
+            <th>Giá Tiền Cũ</th>
+            <th>Mô Tả</th>
+            <th>Ảnh Sản Phẩm</th>
+            <th>Ngày Tạo</th>
+            <th>Danh Mục</th>
+            <th>Nhà Cung Cấp</th>
+            <th>Vật Liệu</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.TenSanPham)</td>
+                <td>@Html.DisplayFor(modelItem => item.GiaTienMoi)</td>
+                <td>@Html.DisplayFor(modelItem => item.GiaTienCu)</td>
+                <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
+                <td><img width="100" src="~/AnhSanPham/@item.AnhSP" /></td>
+                <td>@item.NgayTao.ToString("dd/MM/yyyy")</td>
+                <td>@Html.DisplayFor(modelItem => item.DanhMuc.TenDanhMuc)</td>
+                <td>@Html.DisplayFor(modelItem => item.NhaCungCap.TenNhaCungCap)</td>
+                <td>@Html.DisplayFor(modelItem => item.VatLieu.TenVatlieu)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaSanPham }, new { @class = "btn btn-warning btn-sm" })
+                    @Html.ActionLink("Details", "Details", new { id = item.MaSanPham }, new { @class = "btn btn-info btn-sm" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaSanPham }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .form-inline {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+        .form-inline .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-inline .form-control {
+            margin-right: 10px;
+            width: 300px;
+        }
+
+    .btn {
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-right: 10px;
+        width: 100px; /* Đặt chiều rộng cố định cho tất cả các nút */
+        display: inline-block; /* Đảm bảo các nút được đặt trên cùng một dòng */
+        text-align: center; /* Căn giữa văn bản trong nút */
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        font: 14px roboto;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    .table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+        .table th, .table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .table th {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table .actions a {
+        margin: 0; /* Bỏ khoảng cách giữa các nút */
+    }
+
+    /* Styling for the heading */
+    h2 {
+        font-size: 2.5rem; /* Larger font size for emphasis */
+        font-weight: 600; /* Semi-bold for a clean look */
+        color: #2c3e50; /* A modern dark blue color */
+        margin-bottom: 30px; /* Extra space below the heading */
+        text-align: left; /* Align to the left for a classic look */
+        border-bottom: 3px solid #3498db; /* Blue underline for a pop of color */
+        padding-bottom: 10px; /* Space between the text and the underline */
+    }
+
+    /* Styling for the action link button */
+    p a {
+        display: inline-block; /* Make it act like a button */
+        padding: 12px 30px; /* Extra padding for a larger button */
+        background-color: #3498db; /* Flat blue background color */
+        color: white; /* White text for contrast */
+        font-size: 1.1rem; /* Slightly larger font */
+        font-weight: 500; /* Medium font weight */
+        text-decoration: none; /* Remove underline */
+        border-radius: 30px; /* Fully rounded corners for a pill-shaped button */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+        margin-bottom: 20px; /* Space below the button */
+        text-align: center; /* Center align the text */
+    }
+
+        /* Hover effect for the button */
+        p a:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+        }
+
+        /* Focus effect for accessibility */
+        p a:focus {
+            outline: 2px dashed #2980b9; /* Blue dashed outline when focused */
+        }
+</style>

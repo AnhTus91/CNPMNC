@@ -1,0 +1,182 @@
+﻿﻿@model IEnumerable<CNPMNC_Giao.Models.DonHang>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif; /* Thay đổi font chữ */
+        background-color: #f4f4f4; /* Màu nền trang */
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333; /* Màu chữ tiêu đề */
+    }
+
+    #tableBill {
+        width: 100%;
+        border-collapse: collapse; /* Gộp các đường viền */
+        margin: 0 auto; /* Căn giữa bảng */
+        background-color: #fff; /* Màu nền cho bảng */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho bảng */
+    }
+
+        #tableBill th, #tableBill td {
+            padding: 12px; /* Padding cho ô */
+            text-align: left; /* Căn trái cho văn bản */
+            border-bottom: 1px solid #ddd; /* Đường viền dưới cho ô */
+        }
+
+        #tableBill th {
+            background-color: #007bff; /* Màu nền cho tiêu đề cột */
+            color: white; /* Màu chữ tiêu đề cột */
+            font-weight: bold; /* Chữ đậm cho tiêu đề */
+        }
+
+        #tableBill tr:hover {
+            background-color: #f1f1f1; /* Màu nền khi hover */
+        }
+
+        #tableBill a {
+            color: #007bff; /* Màu chữ cho liên kết */
+            text-decoration: none; /* Bỏ gạch chân */
+        }
+
+            #tableBill a:hover {
+                text-decoration: underline; /* Gạch chân khi hover */
+            }
+
+        #tableBill td:last-child {
+            white-space: nowrap; /* Không ngắt dòng trong ô hành động */
+        }
+</style>
+
+<h2>Danh sách đơn hàng</h2>
+<!-- database jquery -->
+<link rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.css" />
+
+<table id="tableBill" class="stripe" style="width:100%">
+    <thead>
+        <tr>
+            <th>Tên khách hàng</th>
+            <th>Số điện thoại</th>
+            <th>Tổng tiền</th>
+            <th>Ngày đặt hàng</th>
+            <th>Trạng thái</th>
+            <th>Hình thức giao hàng</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.NguoiDung.TenNguoiDung
+                </td>
+                <td>
+                    @item.NguoiDung.SDT
+                </td>
+
+                <td>
+                    @item.TongTien.ToString("#,##0").Replace(',', '.') VNĐ
+                </td>
+                <td>
+                    @item.NgayDatHang
+                </td>
+                <td>
+                    <select class="form-control trang-thai" data-id="@item.MaDonHang" @(item.TrangThai == "Đã hủy" ? "disabled" : "")>
+                        <option value="Chờ xử lý" @(item.TrangThai == "Chờ xử lý" ? "selected" : "")>Chờ xử lý</option>
+                        <option value="Đang chuẩn bị" @(item.TrangThai == "Đang chuẩn bị" ? "selected" : "")>Chuẩn bị</option>
+                        <option value="Đang giao" @(item.TrangThai == "Đang giao" ? "selected" : "")>Đang giao</option>
+                        <option value="Thành công" @(item.TrangThai == "Thành công" ? "selected" : "")>Thành công</option>
+                        <option value="Đã hủy" @(item.TrangThai == "Đã hủy" ? "selected" : "")>Hủy</option>
+                    </select>
+
+                </td>
+                <td>
+                
+                    @item.HinhThucNhanHang
+                </td>
+                <td>
+                    <a href="/admin/donhang/chitiet/@item.MaDonHang">Xem</a> |    <a class="btn btn-capnhat" data-id="@item.MaDonHang">Cập nhật</a>
+                    <button class="btn btn-danger btn-huy" data-id="@item.MaDonHang">Hủy</button>
+
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+@Scripts.Render("~/bundles/admin/jquery")
+<script>
+
+    $('.d-bill').addClass('active');
+</script>
+<!-- database jquery -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript"
+        src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.11.5/b-2.2.2/b-html5-2.2.2/b-print-2.2.2/datatables.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#tableBill').DataTable();
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#tableBill').DataTable();
+
+        // Xử lý sự kiện Cập nhật trạng thái
+        $('.btn-capnhat').click(function () {
+            var maDonHang = $(this).data('id');
+            var trangThai = $(this).closest('tr').find('.trang-thai').val();
+
+            $.ajax({
+                url: '/admin/donhang/CapNhatTrangThai',
+                type: 'POST',
+                data: { id: maDonHang, trangThai: trangThai },
+                success: function () {
+                    alert('Cập nhật thành công!');
+                    location.reload();
+                },
+                error: function () {
+                    alert('Có lỗi xảy ra khi cập nhật.');
+                }
+            });
+        });
+
+        // Xử lý sự kiện Hủy đơn hàng
+        $('.btn-huy').click(function () {
+            var maDonHang = $(this).data('id');
+
+            if (confirm('Bạn có chắc chắn muốn hủy đơn hàng này?')) {
+                $.ajax({
+                    url: '/admin/donhang/HuyDonHang',
+                    type: 'POST',
+                    data: { id: maDonHang },
+                    success: function () {
+                        alert('Đơn hàng đã được hủy.');
+
+                        // Tìm <select> liên quan và set value là "Đã hủy"
+                        var select = $('select[data-id="' + maDonHang + '"]');
+                        select.val("Đã hủy").prop('disabled', true);
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi hủy đơn hàng.');
+                    }
+                });
+            }
+        });
+    });
+</script>
