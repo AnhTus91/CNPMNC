@@ -1,0 +1,150 @@
+﻿<style>
+
+    .slider-container {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+    .slider-controls .prev, .slider-controls .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .slider-controls .prev {
+        left: 10px;
+    }
+
+    .slider-controls .next {
+        right: 10px;
+    }
+
+    h2.title {
+        margin-top: 20px
+    }
+</style>
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="~/images/banner.jpg" alt="Banner 1">
+        </div>
+        <div class="slide">
+            <img src="~/images/banner.jpg" alt="Banner 2">
+        </div>
+        <div class="slide">
+            <img src="~/images/banner.jpg" alt="Banner 3">
+        </div>
+    </div>
+    <div class="slider-controls">
+        <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+        <span class="next" onclick="moveSlide(1)">&#10095;</span>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length; // Số lượng slide chính xác
+
+    function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides; // Đảm bảo không vượt quá slide cuối
+        document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Tự động chuyển slide sau mỗi 4 giây
+    setInterval(() => {
+        moveSlide(1);
+    }, 4000);
+
+</script>
+<div class="features_items">
+    <h2 class="title text-center">Sản phẩm mới</h2>
+
+    @*@foreach (var item in Model)
+        {
+            <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/AnhSanPham/@item.AnhSP" alt="@item.TenSanPham" style="width: 250px; height: 250px;" />
+                            <h2>@item.GiaTienMoi VND</h2>
+                            <p>@item.TenSanPham</p>
+                            <a href="#" class="btn btn-default add-to-cart"><img src="~/images/AddCart.jpg" style="width: 20px; padding: 2px; margin-right: 2px;">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }*@
+    <div>
+        @Html.Action("RecommendedItemsByDate", "Product")
+    </div>
+
+</div>
+<!--recommended_items Nhẫn-->
+<div class="slider-container">
+    <img src="~/images/banner.jpg">
+</div>
+<div class="recommended_items">
+    <h2 class="title text-center">Nhẫn</h2>
+
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                @Html.Action("RecommendedItems", "Product", new { categoryId = 2 })
+            </div>
+        </div>
+    </div>
+</div>
+<!--recommended_items Vòng-->
+<div class="slider-container">
+    <img src="~/images/banner.jpg">
+</div>
+<div class="recommended_items">
+    <h2 class="title text-center">Vòng</h2>
+
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                @Html.Action("RecommendedItems", "Product", new { categoryId = 3 })
+            </div>
+        </div>
+    </div>
+</div>
+<!--recommended_items Bông Tai-->
+<div class="slider-container">
+    <img src="~/images/banner.jpg">
+</div>
+<div class="recommended_items">
+    <h2 class="title text-center">Bông Tai</h2>
+
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                @Html.Action("RecommendedItems", "Product", new { categoryId = 1 })
+            </div>
+        </div>
+    </div>
+</div>
