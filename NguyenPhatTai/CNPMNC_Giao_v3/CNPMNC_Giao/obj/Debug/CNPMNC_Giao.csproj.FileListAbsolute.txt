@@ -1,0 +1,374 @@
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.dll.config
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.pdb
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.exe
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.exe.config
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.rsp
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.exe
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.exe.config
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.rsp
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Managed.Core.targets
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.AppContext.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Collections.Immutable.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Console.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Globalization.Calendars.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.IO.Compression.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.IO.FileSystem.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Net.Http.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Net.Sockets.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Reflection.Metadata.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.ValueTuple.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Xml.XmlDocument.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Xml.XPath.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.exe
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.exe.config
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.rsp
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\VBCSCompiler.exe
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\VBCSCompiler.exe.config
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\Antlr3.Runtime.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.SqlServer.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Web.Infrastructure.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Helpers.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Mvc.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Optimization.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Razor.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Deployment.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Razor.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\WebGrease.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.SqlServer.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Helpers.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Mvc.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Optimization.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Razor.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Deployment.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Razor.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\Antlr3.Runtime.pdb
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.AssemblyReference.cache
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.CoreCompileInputs.cache
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.CopyComplete
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.dll
+C:\CNTT\Nam3\CNPM-NC\LT\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.pdb
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.dll.config
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.pdb
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.exe
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.exe.config
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.rsp
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.exe
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.exe.config
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.rsp
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Managed.Core.targets
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Collections.Immutable.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Reflection.Metadata.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.exe
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.exe.config
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.rsp
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\VBCSCompiler.exe
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\VBCSCompiler.exe.config
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\Antlr3.Runtime.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.SqlServer.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Web.Infrastructure.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Helpers.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Mvc.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Optimization.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Razor.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Deployment.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Razor.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\WebGrease.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.SqlServer.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Helpers.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Mvc.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Optimization.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Razor.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Deployment.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Razor.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\Antlr3.Runtime.pdb
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.AssemblyReference.cache
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.CoreCompileInputs.cache
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_G.71C3EB8D.Up2Date
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.pdb
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Buffers.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Memory.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Numerics.Vectors.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.Resources.ValidationMessage.resources
+D:\cnpmnc\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.GenerateResource.cache
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.AssemblyReference.cache
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.Resources.ValidationMessage.resources
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.GenerateResource.cache
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.csproj.CoreCompileInputs.cache
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_Giao.pdb
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.dll.config
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\CNPMNC_Giao.pdb
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.exe
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.exe.config
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csc.rsp
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.exe
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.exe.config
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\csi.rsp
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Buffers.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Collections.Immutable.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Memory.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Numerics.Vectors.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Reflection.Metadata.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.exe
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.exe.config
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\vbc.rsp
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\VBCSCompiler.exe
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\roslyn\VBCSCompiler.exe.config
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Antlr3.Runtime.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.SqlServer.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Web.Infrastructure.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Helpers.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Mvc.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Optimization.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Razor.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Deployment.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Razor.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\WebGrease.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\EntityFramework.SqlServer.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Helpers.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Mvc.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Razor.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Deployment.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.WebPages.Razor.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Web.Optimization.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Antlr3.Runtime.pdb
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\obj\Debug\CNPMNC_G.71C3EB8D.Up2Date
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.DiaSymReader.Native.x86.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\BouncyCastle.Crypto.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\BouncyCastle.Cryptography.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\itextsharp.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Antiforgery.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authentication.Core.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authorization.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Cors.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.DataProtection.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.JsonPatch.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Localization.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Core.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Localization.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Razor.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.RazorPages.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Razor.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Razor.Language.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Razor.Runtime.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Routing.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.WebUtilities.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.CSharp.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.Razor.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Caching.Memory.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.DependencyModel.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.FileProviders.Composite.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Localization.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.ObjectPool.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Options.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Primitives.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.WebEncoders.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Net.Http.Headers.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Win32.Registry.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.Bson.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Rotativa.AspNetCore.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Buffers.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Collections.Immutable.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.ComponentModel.Annotations.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Memory.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Numerics.Vectors.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Reflection.Metadata.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Security.AccessControl.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Security.Cryptography.Xml.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Security.Permissions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Security.Principal.Windows.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Text.Encoding.CodePages.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Text.Encodings.Web.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Threading.Tasks.Extensions.dll
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\BouncyCastle.Cryptography.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\itextsharp.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Antiforgery.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authentication.Core.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authorization.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Cors.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.DataProtection.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.JsonPatch.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Localization.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Core.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Localization.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Razor.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.RazorPages.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.TagHelpers.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Razor.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Razor.Language.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Razor.Runtime.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Routing.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.AspNetCore.WebUtilities.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.pdb
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.CSharp.pdb
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.CSharp.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.CodeAnalysis.Razor.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Caching.Memory.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.FileProviders.Composite.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Localization.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Localization.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.ObjectPool.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Options.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.Primitives.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Extensions.WebEncoders.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Microsoft.Net.Http.Headers.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\Newtonsoft.Json.Bson.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Buffers.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Collections.Immutable.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Memory.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Numerics.Vectors.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Reflection.Metadata.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Text.Encodings.Web.xml
+D:\Cô Giao\CNPMNC_Giao\CNPMNC_Giao\bin\System.Threading.Tasks.Extensions.xml

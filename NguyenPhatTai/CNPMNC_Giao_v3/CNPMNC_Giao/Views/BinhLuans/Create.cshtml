@@ -1,0 +1,149 @@
+﻿@model CNPMNC_Giao.Models.BinhLuan
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tạo bình luận mới</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Tạo mới bình luận</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <!-- Dropdown chọn sản phẩm -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaSanPham, "Sản phẩm", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("MaSanPham", null, "Chọn sản phẩm", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.MaSanPham, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <!-- Dropdown chọn người dùng -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaNguoiDung, "Người dùng", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("MaNguoiDung", null, "Chọn người dùng", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.MaNguoiDung, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <!-- Nội dung bình luận -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.NoiDung, "Nội dung", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NoiDung, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <!-- Ngày bình luận -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.NgayBinhLuan, "Ngày bình luận", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NgayBinhLuan, new { htmlAttributes = new { @class = "form-control", @type = "datetime-local" } })
+                    @Html.ValidationMessageFor(model => model.NgayBinhLuan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <!-- Nút submit -->
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Tạo bình luận" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Liên kết quay lại trang danh sách bình luận -->
+    <div>
+        @Html.ActionLink("Quay lại danh sách bình luận", "Index", null, new { @class = "btn btn-secondary" })
+    </div>
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    h4 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-horizontal {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .control-label {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .text-danger {
+        color: #d9534f;
+        font-size: 0.9em;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+</style>

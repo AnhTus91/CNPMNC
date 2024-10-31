@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CNPMNC_Giao.Models.DonHang>
+
+@{
+    ViewBag.Title = "Quản lý đơn hàng";
+}
+
+<h2>Danh sách đơn hàng</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã đơn hàng</th>
+            <th>Ngày đặt hàng</th>
+            <th>Trạng thái</th>
+            <th>Tổng tiền</th>
+            <th>Người nhận</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaDonHang</td>
+                <td>@item.NgayDatHang.ToShortDateString()</td>
+                <td>@item.TrangThai</td>
+                <td>@String.Format("{0:C}", item.TongTien)</td>
+                <td>@item.TenNguoiNhan</td>
+                <td>
+                    @Html.ActionLink("Chi Tiết", "ChiTiet", new { id = item.MaDonHang }) |
+                    @Html.ActionLink("Cập Nhật", "CapNhat", new { id = item.MaDonHang }) |
+                    @Html.ActionLink("Duyệt", "ChapNhan", new { id = item.MaDonHang }) |
+                    @Html.ActionLink("Hủy", "Huy", new { id = item.MaDonHang }) |
+                    @Html.ActionLink("Giao Hàng", "GiaoHang", new { id = item.MaDonHang }) |
+                    @Html.ActionLink("Hoàn Thành", "ThanhCong", new { id = item.MaDonHang })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
