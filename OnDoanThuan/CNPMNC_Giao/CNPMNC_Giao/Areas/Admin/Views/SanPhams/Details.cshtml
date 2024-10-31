@@ -1,0 +1,200 @@
+﻿@model CNPMNC_Giao.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    <style >
+    /* General body styling */
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    /* Container for the details */
+    dl.dl-horizontal {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+
+    /* Label styling */
+    dt {
+        font-weight: bold;
+        color: #34495e;
+        padding-bottom: 10px;
+        width: 25%;
+        float: left;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    /* Display value styling */
+    dd {
+        padding-bottom: 10px;
+        margin-left: 0;
+        width: 70%;
+        float: left;
+        text-align: left;
+        color: #7f8c8d;
+    }
+
+    /* Clear floats after each dt/dd pair */
+    dl:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Button and link styling */
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #3498db;
+        font-weight: 500;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* Button styling */
+        a.btn-default {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            /* Button hover effect */
+            a.btn-default:hover {
+                background-color: #2980b9;
+                transform: translateY(-1px);
+            }
+
+            /* Button active effect */
+            a.btn-default:active {
+                transform: translateY(0);
+            }
+</style>
+
+<h2>Thông tin chi tiết</h2>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTienMoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTienMoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTienCu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTienCu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMuc.TenDanhMuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMuc.TenDanhMuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhaCungCap.TenNhaCungCap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaCungCap.TenNhaCungCap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VatLieu.TenVatlieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VatLieu.TenVatlieu)
+        </dd>
+        <h4>Kích cỡ:</h4>
+        <ul>
+            @foreach (var kichCo in ViewBag.KichCos)
+            {
+                <li>Kích cỡ: @kichCo.SoKichCo - Số lượng: @kichCo.SoLuong</li>
+            }
+        </ul>
+    </dl>
+</div>
+@*<div>
+    <h4>Kích Cỡ</h4>
+    @Html.DropDownList("KichCoDropdown", (SelectList)ViewBag.KichCos, "Chọn Kích Cỡ", new { @class = "form-control" })
+</div>
+
+<div>
+    <a href="@Url.Action("TaoKichCo", "SanPhams", new { id = Model.MaSanPham })" class="btn btn-primary">Tạo Kích Cỡ Mới</a>
+</div>*@
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaSanPham }) |
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

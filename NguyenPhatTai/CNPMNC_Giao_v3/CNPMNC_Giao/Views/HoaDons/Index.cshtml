@@ -1,0 +1,65 @@
+﻿@model IEnumerable<CNPMNC_Giao.Models.HoaDon>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayXuatHoaDon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TongTien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonHang.TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NguoiDung.TenNguoiDung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThanhToan.MaDonHang)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayXuatHoaDon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongTien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonHang.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NguoiDung.TenNguoiDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThanhToan.MaDonHang)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.MaHoaDon }) |
+                @Html.ActionLink("Details", "Details", new { id=item.MaHoaDon }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.MaHoaDon })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

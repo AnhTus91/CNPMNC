@@ -54,20 +54,61 @@ namespace CNPMNC_Giao.Controllers
             // Nếu không có từ khóa, trả về toàn bộ sản phẩm
             return RedirectToAction("Index");
         }
+        /// <summary>
+        /// //////////
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult ChiTietSP(int? id)
         {
             //var sanPham = db.SanPhams.Find(id);
-            var sanPham = db.SanPhams.Include(s => s.KichCoes).FirstOrDefault(s => s.MaSanPham == id);
+            var sanPham = db.SanPhams
+                .Include(s => s.KichCoes)
+                 .Include(s => s.DanhMuc) // Bao gồm thông tin danh mục
+                .Include(s => s.VatLieu) // Bao gồm thông tin vật liệu
+                .Include(s => s.NhaCungCap) // Bao gồm thông tin nhà cung cấp
+                .Include(s => s.DanhGiaSanPhams) // Bao gồm danh sách đánh giá của sản phẩm
+
+                .FirstOrDefault(s => s.MaSanPham == id);
+
+           
 
             if (sanPham == null)
             {
                 ViewBag.error = "Sản phẩm không tồn tại";
                 return RedirectToAction("Index","Home");
             }    
-            var ListKichCo = db.KichCoes.Where(kc => kc.MaSanPham == id).ToList();
-            ViewBag.ListKichCo = ListKichCo;
-            return View(sanPham);
+            
+            var goiYSP = db.SanPhams
+      .Where(sp => sp.MaDanhMuc == sanPham.MaDanhMuc && sp.MaSanPham != sanPham.MaSanPham)
+      .OrderByDescending(sp => sp.NgayTao)
+      .Take(5)
+      .ToList();
+
+            var goiYTheoGiaCaoNhat = db.SanPhams
+                .Where(sp => sp.MaDanhMuc == sanPham.MaDanhMuc && sp.MaSanPham != sanPham.MaSanPham)
+                .OrderByDescending(sp => sp.GiaTienMoi)
+                .Take(5)
+                .ToList();
+
+            // Calculate average rating
+            var diemTrungBinh = sanPham.DanhGiaSanPhams.Any()
+                ? sanPham.DanhGiaSanPhams.Average(dg => dg.DiemDanhGia)
+                : 0;
+            var viewModel = new ChiTietSanPhamViewModels
+            {
+                SanPham = sanPham,
+                GoiYSanPhams = goiYSP,
+                GoiYSanPhamsTheoGiaCaoNhat = goiYTheoGiaCaoNhat,
+                DiemTrungBinh = diemTrungBinh
+            };
+            return View("ChiTietSP", viewModel);
         }
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
         public ActionResult RecommendedItems(int categoryId)
         {
             // Lấy danh sách sản phẩm theo danh mục

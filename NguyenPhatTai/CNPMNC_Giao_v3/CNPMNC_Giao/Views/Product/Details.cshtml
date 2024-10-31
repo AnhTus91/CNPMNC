@@ -1,0 +1,206 @@
+﻿@model CNPMNC_Giao.Models.SanPham
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    /*  .container {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }*/
+
+    .product-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .description {
+        margin-top: 5px;
+    }
+
+    .reviews {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+    }
+
+    .star {
+        cursor: pointer;
+        font-size: 24px;
+        color: #ccc;
+    }
+
+        .star:hover, .star:hover ~ .star {
+            color: orange;
+        }
+
+        .star.selected {
+            color: orange;
+        }
+    /* Sắp xếp phần hình ảnh và chi tiết sản phẩm thành hai cột song song */
+    .product-info {
+        display: flex; /* Hiển thị các phần tử con theo hàng ngang */
+        justify-content: space-between; /* Giữa các cột */
+        align-items: flex-start; /* Căn đỉnh của hai phần tử */
+        gap: 20px; /* Khoảng cách giữa hai cột */
+        max-width: 100%; /* Đặt chiều rộng tối đa của container */
+        margin-bottom: 40px; /* Khoảng cách dưới với phần tử khác */
+    }
+
+    /* Phần hình ảnh */
+    .product-images {
+        flex: 1; /* Đặt phần hình ảnh chiếm 1 phần của hàng ngang */
+        text-align: center; /* Căn giữa hình ảnh trong khung */
+        padding: 20px; /* Khoảng cách bên trong */
+        border: 1px solid #ccc; /* Đường viền cho khung */
+        border-radius: 8px; /* Bo tròn các góc */
+        background-color: #f9f9f9; /* Màu nền cho khung */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+        max-width: 400px; /* Đặt chiều rộng tối đa cho khung */
+    }
+
+        .product-images img {
+            width: 100%; /* Đặt hình ảnh chiếm hết khung */
+            max-width: 350px; /* Giới hạn chiều rộng tối đa cho hình ảnh */
+            border-radius: 8px; /* Bo tròn góc cho hình ảnh */
+        }
+
+    /* Phần chi tiết sản phẩm */
+    .product-details {
+        padding-top: 30px;
+        flex: 1; /* Đặt phần chi tiết sản phẩm chiếm 1 phần của hàng ngang */
+        padding: 20px; /* Khoảng cách bên trong */
+        border: 1px solid #ccc; /* Khung ngoài */
+        border-radius: 8px; /* Bo tròn góc */
+        background-color: #ffffff; /* Màu nền trắng */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+        width: 100%; /* Đặt chiều rộng đầy đủ */
+    }
+
+    /* Giá */
+    .price {
+        font-size: 20px; /* Kích thước chữ cho giá */
+        color: #dd2f2c; /* Màu chữ cho giá */
+        margin-bottom: 15px; /* Khoảng cách dưới với các phần tử khác */
+    }
+
+    /* Nhóm form */
+    .form-group {
+        margin-bottom: 15px; /* Khoảng cách dưới cho các nhóm form */
+    }
+
+    /* Label và Input */
+    label {
+        display: block; /* Đảm bảo label chiếm một dòng */
+        margin-bottom: 5px; /* Khoảng cách dưới cho label */
+    }
+
+    input[type="number"], select {
+        width: 100%; /* Chiều rộng đầy đủ cho input và select */
+        padding: 10px; /* Khoảng cách bên trong */
+        border: 1px solid #ccc; /* Đường viền cho input và select */
+        border-radius: 4px; /* Bo tròn góc */
+    }
+
+
+    .btn:hover {
+        background-color: #0056b3; /* Màu nền khi di chuột qua nút */
+    }
+
+    /* Mô tả sản phẩm */
+    .description {
+        margin-top: 20px; /* Khoảng cách trên cho phần mô tả */
+    }
+</style>
+<h1>Chi Tiết Sản Phẩm</h1>
+
+<div class="container">
+    <h2>@Model.TenSanPham</h2>
+    <div class="product-info">
+        <div class="product-images">
+            <img src="~/AnhSanPham/@Model.AnhSP" alt="@Model.TenSanPham" style="width:350px" />
+        </div>
+
+        <div class="product-details">
+            <p class="price"><strong>Giá Mới:</strong> @Model.GiaTienMoi VND</p>
+            <p><strong>Giá Cũ:</strong> <del>@Model.GiaTienCu VND</del></p>
+            <form action="@Url.Action("AddToCart", "Cart")" method="post">
+                <input type="hidden" name="id" value="@Model.MaSanPham" />
+
+                <div class="form-group">
+                    <label for="size">Chọn kích cỡ:</label>
+                    <select name="size" id="size" class="form-control">
+                        @foreach (var kichCo in Model.KichCoes)
+                        {
+                            <option value="@kichCo.MaKichCo">@kichCo.SoKichCo - Còn lại: @kichCo.SoLuong</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="SoLuong">Số lượng:</label>
+                    <input type="number" id="SoLuong" name="SoLuong" value="1" min="1" />
+                </div>
+
+                <input type="submit" value="Thêm vào giỏ hàng" class="btn btn-primary" />
+            </form>
+
+            <div class="description">
+                <h3>Mô tả sản phẩm</h3>
+                <p><strong>Thương hiệu:</strong> @Model.NhaCungCap.TenNhaCungCap</p>
+                <p><strong>Mã sản phẩm:</strong> @Model.MaSanPham</p>
+                <p><strong>Chất liệu:</strong> @Model.VatLieu.TenVatlieu</p>
+                <p><strong>Mô tả:</strong> @Model.MoTa</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Index", "Product")">Quay lại danh sách sản phẩm</a>
+
+</div><!--/category-tab-->
+<h3>Bình luận</h3>
+<ul>
+    @foreach (var binhLuan in Model.BinhLuans)
+    {
+        <li>
+            <strong>@binhLuan.NguoiDung.TenNguoiDung</strong>: @binhLuan.NoiDung <br />
+            <small>@binhLuan.NgayBinhLuan.ToString("dd/MM/yyyy HH:mm")</small>
+        </li>
+    }
+</ul>
+
+<h3>Thêm bình luận</h3>
+@using (Html.BeginForm("PostComment", "Product", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="productId" value="@Model.MaSanPham" />
+    <div class="form-group">
+        <label for="content">Nội dung:</label>
+        <textarea name="content" class="form-control" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+}
+
+<div class="recommended_items">
+    <!--recommended_items-->
+    <h2 class="title text-center">Gợi Ý Sản Phẩm</h2>
+
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                @Html.Action("RecommendedItems", "Product", new { categoryId = Model.MaDanhMuc })
+            </div>
+        </div>
+    </div>
+</div><!--/recommended_items-->
+

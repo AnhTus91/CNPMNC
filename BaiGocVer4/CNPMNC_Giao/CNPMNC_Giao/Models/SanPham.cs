@@ -20,7 +20,6 @@ namespace CNPMNC_Giao.Models
             this.BaoHanhs = new HashSet<BaoHanh>();
             this.BinhLuans = new HashSet<BinhLuan>();
             this.ChiTietDonHangs = new HashSet<ChiTietDonHang>();
-            this.ChiTietGioHangs = new HashSet<ChiTietGioHang>();
             this.DanhGiaSanPhams = new HashSet<DanhGiaSanPham>();
             this.KichCoes = new HashSet<KichCo>();
             this.KichCoes1 = new HashSet<KichCo>();
@@ -47,8 +46,6 @@ namespace CNPMNC_Giao.Models
         public virtual ICollection<BinhLuan> BinhLuans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietGioHang> ChiTietGioHangs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DanhGiaSanPham> DanhGiaSanPhams { get; set; }
         public virtual DanhMuc DanhMuc { get; set; }

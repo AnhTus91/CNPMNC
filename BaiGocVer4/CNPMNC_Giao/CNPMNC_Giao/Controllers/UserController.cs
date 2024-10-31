@@ -331,20 +331,6 @@ namespace CNPMNC_Giao.Controllers
         }
     
 
-    //[HttpPost]
-    //    public ActionResult CreateUserDetails(NguoiDung nguoiDung, HttpPostedFileBase ImageFile)
-    //    {
-    //        if (ModelState.IsValid)
-    //        {
-              
-    //            db.NguoiDungs.Add(nguoiDung);
-    //            db.SaveChanges();
-    //            return RedirectToAction("UserDetails", "User");
-    //        }
-
-    //        return View(nguoiDung);
-    //    }
-
         public ActionResult EditUserDetails()
         {
             string email = Session["email"]?.ToString();
@@ -400,6 +386,68 @@ namespace CNPMNC_Giao.Controllers
             // Nếu có lỗi, trả lại view
             return View(nguoiDung);
         }
+        //đơn hàng 
+        public ActionResult OrderHistory(int id)
+        {
+            // Kiểm tra xem người dùng có đăng nhập không
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+
+            // Lấy thông tin người dùng dựa trên id
+            var nguoiDung = db.NguoiDungs.FirstOrDefault(nd => nd.MaNguoiDung == id);
+
+            if (nguoiDung == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Lấy danh sách đơn hàng của người dùng
+            var donHangList = db.DonHangs.Where(dh => dh.MaNguoiGui == id).OrderByDescending(dh => dh.NgayDatHang).ToList();
+
+            return View(donHangList);
+        }
+        public ActionResult OrderDetails(string id)
+        {
+            // Tìm đơn hàng theo mã
+            var donHang = db.DonHangs.FirstOrDefault(dh => dh.MaDonHang == id);
+
+            if (donHang == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Lấy chi tiết đơn hàng
+            var chiTietDonHang = db.ChiTietDonHangs.Where(ct => ct.MaDonHang == id).ToList();
+
+            ViewBag.ChiTietDonHang = chiTietDonHang;
+
+            return View(donHang);
+        }
+        public ActionResult CancelOrder(string id)
+        {
+            var donHang = db.DonHangs.FirstOrDefault(dh => dh.MaDonHang == id);
+
+            if (donHang == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Chỉ cho phép hủy đơn hàng nếu trạng thái không phải là "Đang chuẩn bị" hoặc "Đang xử lý"
+            if (donHang.TrangThai == "Chờ xử lý")
+            {
+                donHang.TrangThai = "Đã hủy";
+                db.SaveChanges();
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Đơn hàng không thể hủy";
+            }
+
+            return RedirectToAction("OrderHistory", new { id = donHang.MaNguoiGui });
+        }
     }
+
 
 }

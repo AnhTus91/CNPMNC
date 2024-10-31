@@ -91,7 +91,7 @@ CREATE TABLE BaoHanh
 
 CREATE TABLE DonHang
 (
-  MaDonHang varchar(250) NOT NULL,
+  MaDonHang Varchar(20) NOT NULL,
   NgayDatHang DATE NOT NULL,
   TrangThai NVARCHAR(50) NOT NULL,
   PhiVanChuyen FLOAT NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE DonHang
 CREATE TABLE ChiTietDonHang
 (
 MaChiTietDonHang int identity(1,1) not null primary key,
-  MaDonHang Varchar(250)   NOT NULL,
+  MaDonHang Varchar(20)   NOT NULL,
   MaSanPham int  NOT NULL,
   Soluong int not null default 0,
   DonGia int not null default 0,
@@ -133,33 +133,6 @@ CREATE TABLE BinhLuan
   FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham),
   FOREIGN KEY (MaNguoiDung) REFERENCES NguoiDung(MaNguoiDung)
 );
-CREATE TABLE GioHang
-(
-    MaGioHang INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-    MaNguoiDung INT NOT NULL,
-    NgayTao DATETIME DEFAULT GETDATE(),
-    TrangThai NVARCHAR(50) DEFAULT 'Chua Thanh Toan',
-    TongTien FLOAT DEFAULT 0,
-    FOREIGN KEY (MaNguoiDung) REFERENCES NguoiDung(MaNguoiDung)
-);
-CREATE TABLE ChiTietGioHang
-(
-    MaGioHang INT NOT NULL,
-    MaSanPham INT NOT NULL,
-    SoLuong INT NOT NULL,
-    GiaBan FLOAT NOT NULL,
-    PRIMARY KEY (MaGioHang, MaSanPham),
-    FOREIGN KEY (MaGioHang) REFERENCES GioHang(MaGioHang),
-    FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
-);
-CREATE TABLE MauSac
-(
-	MaMauSac INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-    MaSanPham INT,
-	TenMau Nvarchar(50) NOT NULL,
-    SoLuong int not null default 1,
-	FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
-);
 CREATE TABLE KichCo
 (
 	MaKichCo INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
@@ -172,10 +145,38 @@ ALTER TABLE KichCo
 ADD CONSTRAINT FK_KichCo_SanPham
 FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
 ON DELETE CASCADE;
+CREATE TABLE GioHang
+(
+    MaGioHang INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    MaNguoiDung INT NOT NULL,
+    NgayTao DATETIME DEFAULT GETDATE(),
+    TrangThai NVARCHAR(50) DEFAULT 'Chua Thanh Toan',
+    TongTien FLOAT DEFAULT 0,
+    FOREIGN KEY (MaNguoiDung) REFERENCES NguoiDung(MaNguoiDung)
+);
+CREATE TABLE ChiTietGioHang
+(
+    MaGioHang INT NOT NULL,
+    MaKichCo INT NOT NULL,
+    SoLuong INT NOT NULL,
+    GiaBan FLOAT NOT NULL,
+    PRIMARY KEY (MaGioHang, MaKichCo),
+    FOREIGN KEY (MaGioHang) REFERENCES GioHang(MaGioHang),
+    FOREIGN KEY (MaKichCo) REFERENCES KichCo(MaKichCo)
+);
+CREATE TABLE MauSac
+(
+	MaMauSac INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    MaSanPham INT,
+	TenMau Nvarchar(50) NOT NULL,
+    SoLuong int not null default 1,
+	FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
+);
+
 CREATE TABLE ThanhToan
 (
     MaThanhToan INT IDENTITY(1,1) PRIMARY KEY, 
-    MaDonHang Varchar(250) NOT NULL,                      
+    MaDonHang Varchar(20) NOT NULL,                      
     PhuongThucThanhToan NVARCHAR(50) NOT NULL,   
 	NgayThanhToan DATETIME DEFAULT GETDATE(),    
     TongTien FLOAT NOT NULL,                     
@@ -185,7 +186,7 @@ CREATE TABLE ThanhToan
 CREATE TABLE HoaDon
 (
     MaHoaDon varchar(20) PRIMARY KEY,      
-    MaDonHang Varchar(250) NOT NULL,                      
+    MaDonHang Varchar(20) NOT NULL,                      
     MaNguoiDung INT NOT NULL,                    
     NgayXuatHoaDon DATETIME DEFAULT GETDATE(),   
     TongTien FLOAT NOT NULL,                     

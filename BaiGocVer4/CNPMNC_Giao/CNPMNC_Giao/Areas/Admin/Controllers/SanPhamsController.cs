@@ -72,7 +72,7 @@ namespace CNPMNC_Giao.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaSanPham,TenSanPham,GiaTienMoi,GiaTienCu,MoTa,AnhSP,MaVatLieu,MaDanhMuc,NgayTao,MaNhaCungCap")] SanPham sanPham, HttpPostedFileBase AnhSanPham)
+        public ActionResult Create(SanPham sanPham, HttpPostedFileBase AnhSanPham)
         {
             if (ModelState.IsValid)
             {
@@ -127,20 +127,62 @@ namespace CNPMNC_Giao.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaSanPham,TenSanPham,GiaTienMoi,GiaTienCu,MoTa,AnhSP,MaVatLieu,MaDanhMuc,NgayTao,MaNhaCungCap")] SanPham sanPham)
+        public ActionResult Edit([Bind(Include = "MaSanPham,TenSanPham,GiaTienMoi,GiaTienCu,MoTa,AnhSP,MaVatLieu,NgayTao,MaDanhMuc,MaNhaCungCap")]
+SanPham sanPham, HttpPostedFileBase AnhSanPham)
         {
             if (ModelState.IsValid)
             {
+                var existingProduct = db.SanPhams.AsNoTracking().FirstOrDefault(sp => sp.MaSanPham == sanPham.MaSanPham);
+                if (existingProduct == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Nếu có ảnh mới được tải lên
+                if (AnhSanPham != null && AnhSanPham.ContentLength > 0)
+                {
+                    var idImage = Guid.NewGuid().ToString();
+                    int index = AnhSanPham.FileName.IndexOf('.');
+                    string _FileName = idImage + "." + AnhSanPham.FileName.Substring(index + 1);
+                    string path = Path.Combine(Server.MapPath("~/AnhSanPham"), _FileName);
+                    AnhSanPham.SaveAs(path);
+
+                    // Xóa ảnh cũ (nếu có)
+                    if (!string.IsNullOrEmpty(existingProduct.AnhSP))
+                    {
+                        string oldPath = Path.Combine(Server.MapPath("~/AnhSanPham"), existingProduct.AnhSP);
+                        if (System.IO.File.Exists(oldPath))
+                        {
+                            System.IO.File.Delete(oldPath);
+                        }
+                    }
+
+                    sanPham.AnhSP = _FileName; // Lưu ảnh mới vào DB
+                }
+                else
+                {
+                    // Nếu không có ảnh mới, giữ lại ảnh cũ
+                    sanPham.AnhSP = existingProduct.AnhSP;
+                }
+
+                // Thiết lập Ngày Tạo nếu chưa được gán
+                if (sanPham.NgayTao == default(DateTime))
+                {
+                    sanPham.NgayTao = DateTime.Now.Date;
+                }
+
                 db.Entry(sanPham).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            // Tạo lại danh sách cho dropdown nếu ModelState không hợp lệ
             ViewBag.MaDanhMuc = new SelectList(db.DanhMucs, "MaDanhMuc", "TenDanhMuc", sanPham.MaDanhMuc);
             ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCaps, "MaNhaCungCap", "TenNhaCungCap", sanPham.MaNhaCungCap);
             ViewBag.MaVatLieu = new SelectList(db.VatLieux, "MaVatLieu", "TenVatlieu", sanPham.MaVatLieu);
+
             return View(sanPham);
         }
-
         // GET: Admin/SanPhams/Delete/5
         public ActionResult Delete(int? id)
         {

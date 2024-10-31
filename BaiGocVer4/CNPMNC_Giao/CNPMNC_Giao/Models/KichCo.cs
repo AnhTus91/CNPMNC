@@ -14,11 +14,19 @@ namespace CNPMNC_Giao.Models
     
     public partial class KichCo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KichCo()
+        {
+            this.ChiTietGioHangs = new HashSet<ChiTietGioHang>();
+        }
+    
         public int MaKichCo { get; set; }
         public Nullable<int> MaSanPham { get; set; }
         public int SoKichCo { get; set; }
         public int SoLuong { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietGioHang> ChiTietGioHangs { get; set; }
         public virtual SanPham SanPham { get; set; }
         public virtual SanPham SanPham1 { get; set; }
     }

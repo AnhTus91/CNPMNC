@@ -1,4 +1,4 @@
-﻿﻿@model List<CNPMNC_Giao.Models.SanPham>
+﻿@model List<CNPMNC_Giao.Models.SanPham>
 @{
     // Nếu ViewBag.Title không có giá trị, gán tiêu đề mặc định
     var pageTitle = ViewBag.Title ?? "Tất cả sản phẩm";
@@ -27,9 +27,12 @@
                 <div class="product-image-wrapper">
                     <div class="single-products">
                         <div class="productinfo text-center">
-                            <img src="~/images/@item.AnhSP" alt="@item.TenSanPham" style="width: 250px; height: 250px;" />
-                            <h2>@item.GiaTienMoi VND</h2>
-                            <p>@item.TenSanPham</p>
+                            <a href="@Url.Action("ChiTietSP", "Product", new { id = item.MaSanPham })">
+
+                                <img src="~/AnhSanPham/@item.AnhSP" alt="@item.TenSanPham" style="width: 250px; height: 250px;" />
+                                <h2>@item.GiaTienMoi VND</h2>
+                                <p>@item.TenSanPham</p>
+                            </a>
                             <a href="#" class="btn btn-default add-to-cart">
                                 <img src="~/images/AddCart.jpg" style="width: 20px; padding: 2px; margin-right: 2px;">Thêm vào giỏ hàng
                             </a>

@@ -1,0 +1,165 @@
+﻿@model List<CNPMNC_Giao.Models.ChiTietGioHang>
+
+<h2>Giỏ hàng của bạn</h2>
+
+<!-- Container tổng quan giỏ hàng -->
+<div class="cart-container">
+    <div class="cart-left">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng Tiền</th>
+                    <th></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.SanPham.TenSanPham</td>
+                            <td>@String.Format("{0:C}", item.GiaBan)</td>
+                            <td>
+                                <form action="@Url.Action("UpdateQuantity", "Cart")" method="post">
+                                    <input type="hidden" name="id" value="@item.MaSanPham" />
+                                    <input type="number" name="quantity" value="@item.SoLuong" min="1" />
+                                    <input type="submit" value="Cập nhật" />
+                                </form>
+                            </td>
+                            <td>@String.Format("{0:C}", item.GiaBan * item.SoLuong)</td>
+                            <td>
+                                <a href="@Url.Action("RemoveFromCart", "Cart", new { id = item.MaSanPham })" class="btn btn-danger">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr class="no-items">
+                        <td colspan="6">Giỏ hàng của bạn đang trống.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Ghi chú đơn hàng -->
+        <div class="order-notes">
+            <h4>Ghi chú đơn hàng</h4>
+            <textarea placeholder="Ghi chú"></textarea>
+            <div>
+                <input type="checkbox" id="invoice" name="invoice" />
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần tổng tiền -->
+    <div class="cart-right">
+        <div class="summary-box">
+            <h4>Tóm tắt đơn hàng</h4>
+            <p>Tạm tính: <strong>@String.Format("{0:C}", Model.Sum(x => x.GiaBan * x.SoLuong))</strong></p>
+            <p>Chi phí vận chuyển: <strong>Miễn phí</strong></p>
+            <p>Tổng tiền: <strong>@String.Format("{0:C}", Model.Sum(x => x.GiaBan * x.SoLuong))</strong></p>
+        </div>
+
+        <!-- Nút xác nhận -->
+        <a href="@Url.Action("Checkout", "Cart")" class="btn btn-success btn-confirm">Xác nhận</a>
+    </div>
+</div>
+<style>
+    .cart-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .cart-left {
+        width: 65%;
+    }
+
+    .cart-right {
+        width: 30%;
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    .summary-box {
+        font-size: 18px;
+    }
+
+        .summary-box p {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+    .order-notes {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    textarea {
+        width: 100%;
+        height: 80px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: none; /* Ngăn không cho thay đổi kích thước */
+    }
+
+    .btn-confirm {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background-color: #dd2f2c;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        cursor: pointer; /* Thay đổi con trỏ khi di chuột qua nút */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+    }
+
+        .btn-confirm:hover {
+            background-color: #c92e2b; /* Màu nền khi di chuột qua */
+        }
+
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+    }
+
+    th, td {
+        padding: 10px; /* Thêm khoảng cách bên trong ô */
+        text-align: left; /* Canh lề bên trái */
+        border: 1px solid #ddd; /* Đường viền nhẹ cho các ô */
+    }
+
+    th {
+        background-color: #f2f2f2; /* Màu nền cho tiêu đề */
+        font-weight: bold; /* Đậm chữ cho tiêu đề */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9; /* Màu nền cho hàng chẵn */
+    }
+
+    .no-items {
+        text-align: center; /* Canh giữa cho hàng không có sản phẩm */
+        color: #999; /* Màu chữ nhạt cho thông báo trống */
+    }
+</style>

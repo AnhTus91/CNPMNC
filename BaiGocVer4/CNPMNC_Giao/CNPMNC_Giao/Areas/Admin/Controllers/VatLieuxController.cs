@@ -50,6 +50,7 @@ namespace CNPMNC_Giao.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                vatLieu.NgayTao = DateTime.Now;
                 db.VatLieux.Add(vatLieu);
                 db.SaveChanges();
                 return RedirectToAction("Index");

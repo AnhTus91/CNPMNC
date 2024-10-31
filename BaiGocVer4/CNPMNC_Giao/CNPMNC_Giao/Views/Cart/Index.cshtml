@@ -1,7 +1,10 @@
-﻿﻿﻿@model List<CNPMNC_Giao.Models.ChiTietGioHang>
+﻿@model List<CNPMNC_Giao.Models.ChiTietGioHang>
 
 <h2>Giỏ hàng của bạn</h2>
-
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-warning">@TempData["Message"]</div>
+}
 <table class="table">
     <thead>
         <tr>
@@ -20,32 +23,43 @@
             foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.SanPham.TenSanPham</td>
-
-                    <td><img src="~/AnhSanPham/@item.SanPham.AnhSP" alt="@item.SanPham.TenSanPham" style="width: 100px; height: 100px;" /></td>
+                    <td>@(item.KichCo.SanPham?.TenSanPham ?? "Sản phẩm không tồn tại")</td>
+                    <td>
+                        @if (item.KichCo.SanPham?.AnhSP != null)
+                        {
+                            <img src="@item.KichCo.SanPham.AnhSP" alt="@item.KichCo.SanPham.TenSanPham" style="width: 100px; height: 100px;" />
+                        }
+                        else
+                        {
+                            <span>Không có hình ảnh</span>
+                        }
+                    </td>
                     <td>@String.Format("{0:C}", item.GiaBan)</td>
                     <td>
                         <form action="@Url.Action("UpdateQuantity", "Cart")" method="post">
-                            <input type="hidden" name="id" value="@item.MaSanPham" />
+                            <input type="hidden" name="idsp" value="@item.KichCo.MaSanPham" />
+                            <input type="hidden" name="size" value="@item.MaKichCo" /> <!-- Thêm input cho kích cỡ -->
                             <input type="number" name="quantity" value="@item.SoLuong" min="1" />
-                            <input type="submit" value="Cập nhật" />
+                            <input type="submit" value="Cập nhật" class="btn btn-primary" />
                         </form>
                     </td>
-                    @*<td>@item.SoKichCo</td>*@
+                    <td>@item.KichCo.SoKichCo</td> <!-- Hiển thị tên kích cỡ -->
                     <td>@String.Format("{0:C}", item.GiaBan * item.SoLuong)</td>
                     <td>
-                        <a href="@Url.Action("RemoveFromCart", "Cart", new { id = item.MaSanPham })" class="btn btn-danger">Xóa</a>
+                        <a href="@Url.Action("RemoveFromCart", "Cart", new { idsp = item.KichCo.MaSanPham, size = item.MaKichCo })" class="btn btn-danger">Xóa</a>
                     </td>
+
                 </tr>
             }
         }
         else
         {
             <tr>
-                <td colspan="6">Giỏ hàng của bạn đang trống.</td>
+                <td colspan="7">Giỏ hàng của bạn đang trống.</td>
             </tr>
         }
     </tbody>
 </table>
+
 <a href="@Url.Action("Index", "Product")">Quay lại danh sách sản phẩm</a>
-<a href="@Url.Action("Checkout", "Cart")" class="btn btn-success" style="justify-content:   left">Thanh toán</a>
+<a href="@Url.Action("Checkout", "Cart")" class="btn btn-success">Thanh toán</a>
