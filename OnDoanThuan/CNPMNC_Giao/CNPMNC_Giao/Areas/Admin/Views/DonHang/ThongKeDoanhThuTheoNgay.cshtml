@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CNPMNC_Giao.Models.DoanhThuTheoNgayViewModel>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<h2>Thống kê doanh thu theo ngày</h2>
+
+<canvas id="revenueChart" width="400" height="200"></canvas>
+
+<script>
+    // Prepare the data for the chart
+    const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(m => m.Ngay.ToString("yyyy-MM-dd"))));
+    const data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(m => m.TongDoanhThu)));
+
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(ctx, {
+        type: 'bar', // Bar chart to show revenue by date
+        data: {
+            labels: labels, // Dates as labels
+            datasets: [{
+                label: 'Tổng doanh thu (VND)',
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Bar color
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Tổng doanh thu (VND)',
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Ngày',
+                    }
+                }
+            }
+        }
+    });
+</script>
+

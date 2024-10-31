@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CNPMNC_Giao.Models.DonHang>
+@{
+    ViewBag.Title = "Lịch sử đơn hàng";
+}
+
+<h2>Lịch sử đơn hàng</h2>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã đơn hàng</th>
+            <th>Ngày đặt hàng</th>
+            <th>Tổng tiền</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var donHang in Model)
+        {
+            <tr>
+                <td>@donHang.MaDonHang</td>
+                <td>@donHang.NgayDatHang.ToString("dd/MM/yyyy")</td>
+                <td>@String.Format("{0:N0} VND", donHang.TongSoTien)</td>
+                <td>@donHang.TrangThai</td>
+                <td>
+                    @Html.ActionLink("Xem chi tiết", "OrderDetails", new { id = donHang.MaDonHang }, new { @class = "btn btn-info" })
+
+                    @if (donHang.TrangThai == "Chờ xử lý")
+                    {
+                        @Html.ActionLink("Hủy đơn hàng", "CancelOrder", new { id = donHang.MaDonHang }, new { @class = "btn btn-danger" })
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

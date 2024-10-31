@@ -1,0 +1,45 @@
+﻿@model List<CNPMNC_Giao.Models.SanPham>
+@{
+    // Nếu ViewBag.Title không có giá trị, gán tiêu đề mặc định
+    var pageTitle = ViewBag.Title ?? "Tất cả sản phẩm";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">@pageTitle</h1> <!-- Hiển thị tiêu đề -->
+    <!-- Dropdown để chọn danh mục -->
+    <form method="get" asp-action="Index">
+        <div class="form-group">
+            <label for="categoryId">Chọn danh mục:</label>
+            <select name="categoryId" id="categoryId" class="form-control" onchange="this.form.submit()">
+                <option value="">Tất cả danh mục</option> <!-- Lựa chọn để xem tất cả sản phẩm -->
+                @foreach (var category in ViewBag.DanhMucList)
+                {
+                    <option value="@category.MaDanhMuc" @(category.MaDanhMuc.ToString() == Request["categoryId"] ? "selected" : "")>@category.TenDanhMuc</option>
+                }
+            </select>
+        </div>
+    </form>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <a  href="@Url.Action("Details", "Product", new { id = item.MaSanPham })">
+                               
+                                <img src="~/AnhSanPham/@item.AnhSP" alt="@item.TenSanPham" style="width: 250px; height: 250px;" />
+                                <h2>@item.GiaTienMoi VND</h2>
+                                <p>@item.TenSanPham</p>
+                            </a>
+                            <a href="#" class="btn btn-default add-to-cart">
+                                <img src="~/images/AddCart.jpg" style="width: 20px; padding: 2px; margin-right: 2px;">Thêm vào giỏ hàng
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,120 @@
+﻿﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .statistics-container {
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1200px;
+    }
+
+    .statistics-header {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .statistics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .statistics-item {
+        background-color: #f7f7f7;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-left: 5px solid transparent; /* For colored left border */
+    }
+
+        .statistics-item h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #555;
+        }
+
+        .statistics-item p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .statistics-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+        }
+
+    /* Color Variations */
+    .success {
+        border-left-color: #28a745;
+    }
+    /* Green */
+    .info {
+        border-left-color: #17a2b8;
+    }
+    /* Blue */
+    .warning {
+        border-left-color: #ffc107;
+    }
+    /* Yellow */
+    .primary {
+        border-left-color: #007bff;
+    }
+    /* Dark Blue */
+    .danger {
+        border-left-color: #dc3545;
+    }
+    /* Red */
+    .revenue {
+        border-left-color: #6f42c1;
+    }
+    /* Purple */
+
+</style>
+
+<div class="statistics-container">
+    <h2 class="statistics-header">Thống kê Cửa Hàng</h2>
+    <div class="statistics-grid">
+        <div class="statistics-item success">
+            <h3>Số sản phẩm:</h3>
+            <p>@ViewBag.demSanPham</p>
+        </div>
+        <div class="statistics-item info">
+            <h3>Số user:</h3>
+            <p>@ViewBag.demUser</p>
+        </div>
+        <div class="statistics-item warning">
+            <h3>Số đơn hàng:</h3>
+            <p>@ViewBag.demDonHang</p>
+        </div>
+        <div class="statistics-item primary">
+            <h3>Thành công:</h3>
+            <p>@ViewBag.donHangThanhCong</p>
+        </div>
+        <div class="statistics-item danger">
+            <h3>Đã hủy:</h3>
+            <p>@ViewBag.donHangDaHuy</p>
+        </div>
+        <div class="statistics-item revenue">
+            <h3>Doanh thu:</h3>
+            <p>@ViewBag.doanhThu.000 vnđ</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@Scripts.Render("~/bundles/admin/jquery")
+<script>
+
+    $('.tq').addClass('active');
+</script>
