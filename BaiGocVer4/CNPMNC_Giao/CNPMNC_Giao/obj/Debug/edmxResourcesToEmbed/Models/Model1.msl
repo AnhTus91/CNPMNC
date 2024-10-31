@@ -41,7 +41,7 @@
       <EntityTypeMapping TypeName="DAPMModel.ChiTietGioHang">
         <MappingFragment StoreEntitySet="ChiTietGioHang">
           <ScalarProperty Name="MaGioHang" ColumnName="MaGioHang" />
-          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="MaKichCo" ColumnName="MaKichCo" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
           <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
         </MappingFragment>

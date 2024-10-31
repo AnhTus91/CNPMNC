@@ -17,93 +17,169 @@ namespace CNPMNC_Giao.Controllers
         // GET: Cart
         public ActionResult Index()
         {
-            var cart = Session["Cart"] as List<ChiTietGioHang>;
-            if (cart == null)
+            if (Session["UserID"] == null)
             {
-                cart = new List<ChiTietGioHang>();
-                Session["Cart"] = cart;
+                TempData["Message"] = "Bạn cần đăng nhập để xem giỏ hàng.";
+                return RedirectToAction("Login", "User");
             }
-            return View(cart);
+            // Lấy MaNguoiDung từ Session
+            var userId = (int)Session["UserID"];
+
+            // Kiểm tra xem người dùng đã đăng nhập hay chưa
+        
+
+            // Chuyển đổi userId sang int
+            if (Session["UserID"] == null)
+            {
+                TempData["Message"] = "Có lỗi xảy ra, vui lòng thử lại.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            // Lấy giỏ hàng và ánh xạ vào danh sách chi tiết giỏ hàng
+            var cartItems = db.ChiTietGioHangs
+      .Include("KichCo") // Bao gồm thông tin kích cỡ
+      .Include("KichCo.SanPham") // Bao gồm thông tin sản phẩm
+      .Where(c => c.GioHang.MaNguoiDung == userId
+                  && c.GioHang.TrangThai == "Chưa thanh toán")
+      .ToList();
+
+
+
+            // Kiểm tra nếu giỏ hàng rỗng
+            if (!cartItems.Any())
+            {
+                TempData["Message"] = "Giỏ hàng của bạn đang trống.";
+            }
+
+            return View(cartItems);
         }
 
         // Thêm sản phẩm vào giỏ hàng
-        public ActionResult AddToCart(int id, int size, int SoLuong)
+        public ActionResult AddToCart(int idsp, int size, int soLuong)
         {
-            // Tìm sản phẩm dựa trên id
-            var product = db.SanPhams.Find(id);
-            if (product == null)
+            if (Session["UserID"] == null)
             {
-                return HttpNotFound(); // Kiểm tra nếu sản phẩm không tồn tại
+                TempData["Message"] = "Bạn cần đăng nhập để xem giỏ hàng.";
+                return RedirectToAction("Login", "User");
+            }
+            // Lấy UserID từ Session
+            var userId = (int)Session["UserID"];
+
+            // Kiểm tra xem người dùng đã đăng nhập hay chưa
+          
+
+            var product = db.SanPhams.Find(idsp);
+            var kichCo = db.KichCoes.FirstOrDefault(n => n.MaSanPham == idsp && n.SoKichCo == size);
+            if (product == null || kichCo == null)
+            {
+                return HttpNotFound();
             }
 
-            // Lấy giỏ hàng từ Session, nếu chưa có thì khởi tạo mới
-            var cart = Session["Cart"] as List<ChiTietGioHang>;
+            var cart = db.GioHangs.FirstOrDefault(g => g.MaNguoiDung == userId && g.TrangThai == "Chưa thanh toán");
             if (cart == null)
             {
-                cart = new List<ChiTietGioHang>();
+                cart = new GioHang
+                {
+                    MaNguoiDung = userId,
+                    NgayTao = DateTime.Now,
+                    TrangThai = "Chưa thanh toán",
+                    TongTien = 0
+                };
+                db.GioHangs.Add(cart);
+                db.SaveChanges();
             }
 
-            // Kiểm tra sản phẩm đã có trong giỏ hàng chưa
-            var cartItem = cart.FirstOrDefault(c => c.MaSanPham == id);
+            var cartItem = db.ChiTietGioHangs.FirstOrDefault(c => c.MaGioHang == cart.MaGioHang && c.MaKichCo == kichCo.MaKichCo);
             if (cartItem != null)
             {
-                // Tăng số lượng nếu sản phẩm đã có trong giỏ hàng
-                cartItem.SoLuong += SoLuong;
+                cartItem.SoLuong += soLuong;
             }
             else
             {
-                // Thêm sản phẩm mới vào giỏ hàng
-                cart.Add(new ChiTietGioHang
+                cartItem = new ChiTietGioHang
                 {
-                    MaSanPham = product.MaSanPham,
-                    SoLuong = SoLuong,
-                    GiaBan = product.GiaTienMoi,
-
-                    SanPham = product // Liên kết sản phẩm với ChiTietGioHang
-                });
+                    MaGioHang = cart.MaGioHang,
+                    MaKichCo = kichCo.MaKichCo,
+                    SoLuong = soLuong,
+                    GiaBan = product.GiaTienMoi
+                };
+                db.ChiTietGioHangs.Add(cartItem);
             }
 
-            // Cập nhật lại giỏ hàng trong Session
-            Session["Cart"] = cart;
+            cart.TongTien = cart.ChiTietGioHangs.Sum(c => c.SoLuong * c.GiaBan);
+            db.SaveChanges();
 
-            // Chuyển hướng về trang giỏ hàng
             return RedirectToAction("Index");
         }
 
-
         // Xóa sản phẩm khỏi giỏ hàng
-        public ActionResult RemoveFromCart(int id)
+        public ActionResult RemoveFromCart(int idsp, int size)
         {
-            var cart = Session["Cart"] as List<ChiTietGioHang>;
-            var cartItem = cart.FirstOrDefault(c => c.MaSanPham == id);
+            if (Session["UserID"] == null)
+            {
+                TempData["Message"] = "Bạn cần đăng nhập để xem giỏ hàng.";
+                return RedirectToAction("Login", "User");
+            }
+            // Lấy UserID từ Session
+            var userId = (int)Session["UserID"];
+            var cart = db.GioHangs.FirstOrDefault(g => g.MaNguoiDung == userId && g.TrangThai == "Chưa thanh toán");
+            if (cart == null) return RedirectToAction("Index");
 
+            var cartItem = db.ChiTietGioHangs.FirstOrDefault(c => c.MaGioHang == cart.MaGioHang && c.MaKichCo == size && c.KichCo.MaSanPham == idsp);
             if (cartItem != null)
             {
-                cart.Remove(cartItem);
+                db.ChiTietGioHangs.Remove(cartItem);
+                db.SaveChanges();
             }
 
-            Session["Cart"] = cart;
+            cart.TongTien = cart.ChiTietGioHangs.Sum(c => c.SoLuong * c.GiaBan);
+            db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 
         // Cập nhật số lượng sản phẩm trong giỏ hàng
-        public ActionResult UpdateQuantity(int id, int quantity)
+        public ActionResult UpdateQuantity(int idsp, int size, int quantity)
         {
-            var cart = Session["Cart"] as List<ChiTietGioHang>;
-            var cartItem = cart.FirstOrDefault(c => c.MaSanPham == id);
+            if (Session["UserID"] == null)
+            {
+                TempData["Message"] = "Bạn cần đăng nhập để xem giỏ hàng.";
+                return RedirectToAction("Login", "User");
+            }
+            // Lấy UserID từ Session
+            var userId = (int)Session["UserID"];
 
+            var cart = db.GioHangs.FirstOrDefault(g => g.MaNguoiDung == userId && g.TrangThai == "Chưa thanh toán");
+            if (cart == null) return RedirectToAction("Index");
+
+            var cartItem = db.ChiTietGioHangs.FirstOrDefault(c => c.MaGioHang == cart.MaGioHang && c.MaKichCo == size && c.KichCo.MaSanPham == idsp);
             if (cartItem != null && quantity > 0)
             {
                 cartItem.SoLuong = quantity;
+                db.SaveChanges();
             }
 
-            Session["Cart"] = cart;
+            cart.TongTien = cart.ChiTietGioHangs.Sum(c => c.SoLuong * c.GiaBan);
+            db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 
         public ActionResult Checkout()
         {
-            var cart = Session["Cart"] as List<ChiTietGioHang>;
+            if (Session["UserID"] == null)
+            {
+                TempData["Message"] = "Bạn cần đăng nhập để xem giỏ hàng.";
+                return RedirectToAction("Login", "User");
+            }
+            // Lấy MaNguoiDung từ Session
+            var userId = (int)Session["UserID"];
+            var cart = db.ChiTietGioHangs
+      .Include("KichCo") // Bao gồm thông tin kích cỡ
+      .Include("KichCo.SanPham") // Bao gồm thông tin sản phẩm
+      .Where(c => c.GioHang.MaNguoiDung == userId
+                  && c.GioHang.TrangThai == "Chưa thanh toán")
+      .ToList();
             if (cart == null || !cart.Any())
             {
                 return RedirectToAction("Index", "Cart"); // Nếu giỏ hàng rỗng, chuyển về giỏ hàng
@@ -115,12 +191,26 @@ namespace CNPMNC_Giao.Controllers
             return View(cart); // Truyền giỏ hàng vào View
         }
 
+
+
+
+
         [HttpPost]
         public ActionResult ConfirmOrder(string paymentMethod, string orderOption, string TenNguoiNhanManual, string DiaChiNguoiNhanManual, string SDTNguoiNhanManual)
         {
-            // Lấy thông tin giỏ hàng từ session
-            var Cart = Session["Cart"] as List<ChiTietGioHang>;
-
+            if (Session["UserID"] == null)
+            {
+                TempData["Message"] = "Bạn cần đăng nhập để xem giỏ hàng.";
+                return RedirectToAction("Login", "User");
+            }
+            // Lấy MaNguoiDung từ Session
+            var userId = (int)Session["UserID"];
+            var Cart = db.ChiTietGioHangs
+      .Include("KichCo") // Bao gồm thông tin kích cỡ
+      .Include("KichCo.SanPham") // Bao gồm thông tin sản phẩm
+      .Where(c => c.GioHang.MaNguoiDung == userId
+                  && c.GioHang.TrangThai == "Chưa thanh toán")
+      .ToList();
             if (Cart == null || !Cart.Any())
             {
                 return RedirectToAction("Index", "Home");  // Giỏ hàng rỗng
@@ -208,7 +298,7 @@ namespace CNPMNC_Giao.Controllers
                 ChiTietDonHang chiTietDonHang = new ChiTietDonHang
                 {
                     MaDonHang = donHang.MaDonHang,
-                    MaSanPham = item.MaSanPham,
+                    MaSanPham = (int)item.KichCo.MaSanPham,
                     Soluong = item.SoLuong,
                     DonGia = (int)item.GiaBan,
                     TongTien = (int)(item.SoLuong * item.GiaBan)

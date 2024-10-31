@@ -107,7 +107,7 @@
 
 <h2>Chỉnh sửa sản phẩm</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "SanPhams", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
 {
     @Html.AntiForgeryToken()
 
@@ -118,31 +118,30 @@
         @Html.HiddenFor(model => model.MaSanPham)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TenSanPham, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.TenSanPham, "Tên Sản Phẩm", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TenSanPham, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.TenSanPham, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.TenSanPham, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
-            @Html.LabelFor(model => model.GiaTienMoi, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.GiaTienMoi, "Giá tiền mới", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.GiaTienMoi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.GiaTienMoi, new { htmlAttributes = new { @class = "form-control", type = "number", min = "1" } })
                 @Html.ValidationMessageFor(model => model.GiaTienMoi, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GiaTienCu, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.GiaTienCu, "Giá tiền Cũ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.GiaTienCu, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.GiaTienCu, new { htmlAttributes = new { @class = "form-control", type = "number", min = "1" } })
                 @Html.ValidationMessageFor(model => model.GiaTienCu, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.MoTa, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.MoTa, "Mô Tả", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
@@ -150,12 +149,14 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.AnhSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.AnhSP, "Ảnh Sản phẩm", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AnhSP, new { htmlAttributes = new { @class = "form-control" } })
+                <img src="@Url.Content("~/AnhSanPham/" + Model.AnhSP)" alt="Ảnh sản phẩm" style="max-width: 200px; max-height: 200px; display: block; margin-bottom: 10px;" />
+                <input class="form-control" accept="image/png, image/gif, image/jpeg" name="AnhSanPham" type="file" />
                 @Html.ValidationMessageFor(model => model.AnhSP, "", new { @class = "text-danger" })
             </div>
         </div>
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.MaVatLieu, "MaVatLieu", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -172,14 +173,13 @@
                 @Html.ValidationMessageFor(model => model.MaDanhMuc, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NgayTao, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NgayTao, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NgayTao, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.NgayTao, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NgayTao, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NgayTao, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
 
         <div class="form-group">
             @Html.LabelFor(model => model.MaNhaCungCap, "MaNhaCungCap", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -188,7 +188,6 @@
                 @Html.ValidationMessageFor(model => model.MaNhaCungCap, "", new { @class = "text-danger" })
             </div>
         </div>
-       
 
 
         <div class="form-group">

@@ -15,11 +15,11 @@ namespace CNPMNC_Giao.Models
     public partial class ChiTietGioHang
     {
         public int MaGioHang { get; set; }
-        public int MaSanPham { get; set; }
+        public int MaKichCo { get; set; }
         public int SoLuong { get; set; }
         public double GiaBan { get; set; }
     
         public virtual GioHang GioHang { get; set; }
-        public virtual SanPham SanPham { get; set; }
+        public virtual KichCo KichCo { get; set; }
     }
 }

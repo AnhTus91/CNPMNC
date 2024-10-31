@@ -15,7 +15,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.SanPham.TenSanPham</td>
+                <td>@item.KichCo.SanPham.TenSanPham</td>
                 <td>@item.SoLuong</td>
                 <td>@String.Format("{0:N0} VND", item.GiaBan)</td>
                 <td>@String.Format("{0:N0} VND", item.GiaBan * item.SoLuong)</td>

@@ -1,4 +1,4 @@
-﻿@model CNPMNC_Giao.Models.SanPham
+﻿@model CNPMNC_Giao.Models.ChiTietSanPhamViewModels
 @{
     ViewBag.Title = "Details";
 }
@@ -82,42 +82,41 @@
 <h1>Chi Tiết Sản Phẩm</h1>
 
 <div class="container">
-    <h2>@Model.TenSanPham</h2>
+    <h2>@Model.SanPham.TenSanPham</h2>
     <div class="product-info">
         <div class="product-images">
-            <img src="~/AnhSanPham/@Model.AnhSP" alt="@Model.TenSanPham" style="width:350px" />
+            <img src="~/AnhSanPham/@Model.SanPham.AnhSP" alt="@Model.SanPham.TenSanPham" style="width:350px" />
         </div>
 
         <div class="product-details">
-            <p class="price"><strong>Giá Mới:</strong> @Model.GiaTienMoi VND</p>
-            <p><strong>Giá Cũ:</strong> <del>@Model.GiaTienCu VND</del></p>
-            <form action="@Url.Action("AddToCart", "Cart")" method="post">
-                <input type="hidden" name="id" value="@Model.MaSanPham" />
+            <p class="price"><strong>Giá Mới:</strong> @Model.SanPham.GiaTienMoi VND</p>
+            <p><strong>Giá Cũ:</strong> <del>@Model.SanPham.GiaTienCu VND</del></p>
 
-                <div class="form-group">
-                    <label for="size">Chọn kích cỡ:</label>
-                    <select name="size" id="size" class="form-control">
-                        @foreach (var kichCo in Model.KichCoes)
-                        {
-                            <option value="@kichCo.MaKichCo">@kichCo.SoKichCo - Còn lại: @kichCo.SoLuong</option>
-                        }
-                    </select>
-                </div>
+            @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
+            {
+                <input type="hidden" name="idsp" value="@Model.SanPham.MaSanPham" />
 
-                <div class="form-group">
-                    <label for="SoLuong">Số lượng:</label>
-                    <input type="number" id="SoLuong" name="SoLuong" value="1" min="1" />
-                </div>
+                <label for="size">Kích cỡ:</label>
+                <select id="size" name="size">
+                    @foreach (var kichCo in Model.SanPham.KichCoes)
+                    {
+                        <option value="@kichCo.SoKichCo">@kichCo.SoKichCo - @kichCo.SoLuong</option>
+                    }
+                </select>
 
-                <input type="submit" value="Thêm vào giỏ hàng" class="btn btn-primary" />
-            </form>
+                <label for="soLuong">Số lượng:</label>
+                <input type="number" id="soLuong" name="SoLuong" value="1" min="1" />
+
+                <button type="submit">Thêm vào giỏ hàng</button>
+            }
+
 
             <div class="description">
                 <h3>Mô tả sản phẩm</h3>
-                <p><strong>Thương hiệu:</strong> @Model.NhaCungCap.TenNhaCungCap</p>
-                <p><strong>Mã sản phẩm:</strong> @Model.MaSanPham</p>
-                <p><strong>Chất liệu:</strong> @Model.VatLieu.TenVatlieu</p>
-                <p><strong>Mô tả:</strong> @Model.MoTa</p>
+                <p><strong>Thương hiệu:</strong> @Model.SanPham.NhaCungCap.TenNhaCungCap</p>
+                <p><strong>Mã sản phẩm:</strong> @Model.SanPham.MaSanPham</p>
+                <p><strong>Chất liệu:</strong> @Model.SanPham.VatLieu.TenVatlieu</p>
+                <p><strong>Mô tả:</strong> @Model.SanPham.MoTa</p>
             </div>
         </div>
     </div>
@@ -133,7 +132,7 @@
     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="item active">
-                @Html.Action("RecommendedItems", "Product", new { categoryId = Model.MaDanhMuc })
+                @Html.Action("RecommendedItems", "Product", new { categoryId = Model.SanPham.MaDanhMuc })
             </div>
         </div>
     </div>
