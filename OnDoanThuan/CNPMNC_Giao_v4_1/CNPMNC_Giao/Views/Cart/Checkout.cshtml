@@ -1,0 +1,110 @@
+﻿@model List<CNPMNC_Giao.Models.ChiTietGioHang>
+
+<h2>Thanh toán</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá bán</th>
+            <th>Tổng tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SanPham.TenSanPham</td>
+                <td>@item.SoLuong</td>
+                <td>@String.Format("{0:N0} VND", item.GiaBan)</td>
+                <td>@String.Format("{0:N0} VND", item.GiaBan * item.SoLuong)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Tổng cộng: @String.Format("{0:N0} VND", Model.Sum(c => c.GiaBan * c.SoLuong))</h3>
+<form action="@Url.Action("ConfirmOrder", "Cart")" method="post">
+    <div class="form-group">
+        <label for="orderOption">Chọn phương thức đặt hàng:</label>
+        <div>
+            <label>
+                <input type="radio" name="orderOption" value="true" id="useAccountInfo" checked>
+                Sử dụng thông tin tài khoản của người dùng
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="orderOption" value="false" id="useManualInfo">
+                Nhập thông tin người nhận
+            </label>
+        </div>
+    </div>
+
+    <!-- Hiển thị thông tin từ tài khoản nếu chọn "true" -->
+    <div id="accountInfoForm">
+        <div class="form-group">
+            <label for="TenNguoiNhan">Tên người nhận:</label>
+            <input hidden type="text" name="TenNguoiNhan" id="TenNguoiNhan" value="@Session["TenNguoiDung"]" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="DiaChiNguoiNhan">Địa chỉ người nhận:</label>
+            <input hidden type="text" name="DiaChiNguoiNhan" id="DiaChiNguoiNhan" value="@Session["DiaChi"]" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="SDTNguoiNhan">Số điện thoại người nhận:</label>
+            <input hidden type="text" name="SDTNguoiNhan" id="SDTNguoiNhan" value="@Session["SDT"]" class="form-control" readonly />
+        </div>
+    </div>
+
+    <!-- Form nhập thông tin người nhận (ẩn khi sử dụng thông tin tài khoản) -->
+    <div id="manualInfoForm" style="display: none;">
+        <div class="form-group">
+            <label for="TenNguoiNhanManual">Tên người nhận:</label>
+            <input type="text" name="TenNguoiNhanManual" id="TenNguoiNhanManual" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="DiaChiNguoiNhanManual">Địa chỉ người nhận:</label>
+            <input type="text" name="DiaChiNguoiNhanManual" id="DiaChiNguoiNhanManual" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="SDTNguoiNhanManual">Số điện thoại người nhận:</label>
+            <input type="tel" name="SDTNguoiNhanManual" id="SDTNguoiNhanManual" class="form-control" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Xác nhận thanh toán</button>
+</form>
+
+<script>
+    document.getElementById("useAccountInfo").addEventListener("change", function () {
+        toggleForms();
+    });
+
+    document.getElementById("useManualInfo").addEventListener("change", function () {
+        toggleForms();
+    });
+
+    function toggleForms() {
+        var useAccountInfo = document.getElementById("useAccountInfo").checked;
+        var accountInfoForm = document.getElementById("accountInfoForm");
+        var manualInfoForm = document.getElementById("manualInfoForm");
+
+        if (useAccountInfo) {
+            accountInfoForm.style.display = "block";
+            manualInfoForm.style.display = "none";
+        } else {
+            accountInfoForm.style.display = "none";
+            manualInfoForm.style.display = "block";
+        }
+    }
+
+    // Tự động kích hoạt khi trang được tải lại để hiển thị form phù hợp
+    toggleForms();
+</script>
+

@@ -1,0 +1,51 @@
+﻿﻿﻿@model List<CNPMNC_Giao.Models.ChiTietGioHang>
+
+<h2>Giỏ hàng của bạn</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Kích cỡ</th>
+            <th>Tổng tiền</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SanPham.TenSanPham</td>
+                    
+                    <td><img src="~/AnhSanPham/@item.SanPham.AnhSP" alt="@item.SanPham.TenSanPham" style="width: 100px; height: 100px;" /></td>
+                    <td>@String.Format("{0:C}", item.GiaBan)</td>
+                    <td>
+                        <form action="@Url.Action("UpdateQuantity", "Cart")" method="post">
+                            <input type="hidden" name="id" value="@item.MaSanPham" />
+                            <input type="number" name="quantity" value="@item.SoLuong" min="1" />
+                            <input type="submit" value="Cập nhật" />
+                        </form>
+                    </td>
+                    @*<td>@item.SoKichCo</td>*@
+                    <td>@String.Format("{0:C}", item.GiaBan * item.SoLuong)</td>
+                    <td>
+                        <a href="@Url.Action("RemoveFromCart", "Cart", new { id = item.MaSanPham })" class="btn btn-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>    
+                <td colspan="6">Giỏ hàng của bạn đang trống.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="@Url.Action("Index", "Product")">Quay lại danh sách sản phẩm</a>
+<a href="@Url.Action("Checkout", "Cart")" class="btn btn-success" style="justify-content:   left">Thanh toán</a>
