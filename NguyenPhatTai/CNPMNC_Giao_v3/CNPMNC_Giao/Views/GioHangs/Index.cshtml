@@ -1,0 +1,28 @@
+﻿@model CNPMNC_Giao.Models.GioHang
+
+<h2>Giỏ Hàng</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Sản Phẩm</th>
+            <th>Số Lượng</th>
+            <th>Giá</th>
+            <th>Tổng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ChiTietGioHang)
+        {
+            <tr>
+
+<img src="~/AnhSanPham/@Model.SanPham.AnhSP" alt="@Model.SanPham.TenSanPham" style="width:350px;" />                <td>@item.GiaBan VND</td>
+                <td>@(item.SoLuong * item.GiaBan) VND</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p><strong>Tổng Tiền:</strong> @Model.TongTien VND</p>
+
+<a href="@Url.Action("Index", "Home")">Tiếp tục mua sắm</a>

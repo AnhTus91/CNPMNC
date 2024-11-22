@@ -1,0 +1,19 @@
+﻿@model IEnumerable<CNPMNC_Giao.Models.SanPham>
+
+<div class="recommended-items">
+    <h2>Sản phẩm mới</h2>
+    <div class="product-list">
+        @foreach (var product in Model)
+        {
+            <div class="product-item">
+                <img src="@product.AnhSP" alt="@product.TenSanPham" />
+                <h3>@product.TenSanPham</h3>
+                <p>Giá: @product.GiaTienMoi VNĐ</p>
+                <a href="@Url.Action("ChiTietSP", "Product", new { id = product.MaSanPham })" class="btn btn-default add-to-cart">
+                    <img src="~/images/AddCart.jpg" style="width: 20px; padding: 2px; margin-right: 2px;">Thêm vào giỏ hàng
+                </a>
+            </div>
+        }
+    </div>
+</div>
+

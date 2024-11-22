@@ -1,0 +1,36 @@
+﻿@model List<CNPMNC_Giao.Models.SanPham>
+@{
+    ViewBag.Title = "Kết quả tìm kiếm";
+}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Kết quả tìm kiếm cho: <strong>@Request["keyword"]</strong></h1>
+
+    <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/AnhSanPham/" alt="@item.TenSanPham" style="width: 250px; height: 250px;" />
+                                <h2>@item.GiaTienMoi VND</h2>
+                                <p>@item.TenSanPham</p>
+                                <a href="#" class="btn btn-default add-to-cart">
+                                    <img src="~/images/AddCart.jpg" style="width: 20px; padding: 2px; margin-right: 2px;">Thêm vào giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-sm-12 text-center">
+                <h3>Không tìm thấy sản phẩm nào phù hợp với từ khóa của bạn.</h3>
+            </div>
+        }
+    </div>
+</div>

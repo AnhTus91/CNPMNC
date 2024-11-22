@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Vị trí cửa hàng";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<!-- Map display section -->
+<div id="map" style="height: 500px; width: 100%;"></div>
+
+<!-- Google Maps JavaScript API -->
+<script>
+    google.maps.importLibrary("maps");
+    google.maps.importLibrary("marker");
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=@ViewBag.ApiKey&callback=initMap" async defer></script>
+<script>
+    // Initialize the map
+    async function initMap() {
+        // Load the 'maps' and 'marker' libraries
+        const { Map } = await google.maps.importLibrary("maps");
+        const { Marker } = await google.maps.importLibrary("marker");
+
+        // Store location coordinates
+        const storeLocation = { lat: 10.766682, lng: 106.603993 }; // Update with actual coordinates
+
+        // Create a new map centered on the store location
+        const map = new Map(document.getElementById("map"), {
+            zoom: 15,
+            center: storeLocation,
+        });
+
+        // Place a marker at the store location
+        new Marker({
+            position: storeLocation,
+            map: map,
+        });
+    }
+</script>

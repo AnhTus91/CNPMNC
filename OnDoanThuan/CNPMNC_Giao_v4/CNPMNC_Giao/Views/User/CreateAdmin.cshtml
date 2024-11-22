@@ -1,0 +1,34 @@
+﻿@model CNPMNC_Giao.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Tạo tài khoản Admin";
+}
+
+<h2>Tạo tài khoản Admin</h2>
+
+@using (Html.BeginForm("CreateAdmin", "User", FormMethod.Post))
+{
+    <div>
+        <label>Email:</label>
+        @Html.TextBoxFor(m => m.TaiKhoan.Email, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>Mật khẩu:</label>
+        @Html.PasswordFor(m => m.TaiKhoan.MatKhau, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>Tên người dùng:</label>
+        @Html.TextBoxFor(m => m.TenNguoiDung, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>Địa chỉ:</label>
+        @Html.TextBoxFor(m => m.DiaChi, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>SĐT:</label>
+        @Html.TextBoxFor(m => m.SDT, new { @class = "form-control" })
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Tạo tài khoản Admin</button>
+    </div>
+}

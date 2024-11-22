@@ -1,0 +1,74 @@
+﻿@model Tuple<CNPMNC_Giao.Models.DonHang, List<CNPMNC_Giao.Models.ChiTietDonHang>>
+@{
+    ViewBag.Title = "ChiTiet";
+}
+<style>
+    .table-responsive-sm h5 {
+        font-size: 14px;
+    }
+
+    .table-responsive-sm span {
+        font-weight: bold;
+    }
+</style>
+
+
+
+<div class="table-responsive-sm">
+    <h4 class="text-center title-detail">CHI TIẾT ĐƠN HÀNG</h4>
+    <h5 class="text-sm">Họ tên người mua hàng: <span id="fullname">@Model.Item1.NguoiDung.TenNguoiDung</span></h5>
+    <h5 class="text-sm">Số điện thoại người gửi: <span id="phone">@Model.Item1.NguoiDung.SDT</span></h5>
+    <h5 class="text-sm">Số điện thoại: <span id="phone">@Model.Item1.SDTNguoiNhan</span></h5>
+    <h5 class="text-sm">Địa chỉ người nhận: <span id="address">@Model.Item1.DiaChiNguoiNhan</span></h5>
+    <h5 class="text-sm">Mã hóa đơn: <span id="idBill">@Model.Item1.MaDonHang</span></h5>
+    <h5 class="text-sm">Trạng thái đơn hàng: <span id="idBill">@Model.Item1.TrangThai</span></h5>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Giá bán</th>
+                <th scope="col">Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody id="renderItem">
+            @foreach (var item in Model.Item2)
+            {
+                <tr>
+                    <td>@item.SanPham.TenSanPham</td>
+                    <td>
+                        <img src="~/AnhSanPham/@item.SanPham.AnhSP" width="100" height="100" alt="Hình ảnh sản phẩm" />
+                    </td>
+                    <td>@item.Soluong</td>
+                    <td>@item.SanPham.GiaTienMoi.ToString("#,##0").Replace(',', '.') VNĐ</td>
+                    <td>@item.TongTien.ToString("#,##0").Replace(',', '.') VNĐ</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<h5 class="text-right">Tổng cộng: <span class="fmt" id="Total">@Model.Item1.TongTien.ToString("#,##0").Replace(',', '.').000 VNĐ</span></h5>
+
+<div>
+    <a href="/admin/donhang/">Quay lại</a>
+
+    @if (Model.Item1.TrangThai == "Đang chờ" || Model.Item1.TrangThai == "Đã duyệt" || Model.Item1.TrangThai == "Đang giao")
+    {
+        <a href="/admin/donhang/capnhat/@Model.Item1.MaDonHang"> | Cập nhật</a>
+    }
+    <a href="@Url.Action("ExportInvoice", "DonHang", new { id = Model.Item1.MaDonHang })" class="btn btn-primary">Xuất hóa đơn</a>
+</div>
+
+
+@*
+
+    đang chờ
+    đã duyệt
+    đang giao
+    thành công
+    đã hủy
+*@

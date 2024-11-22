@@ -281,9 +281,9 @@ namespace CNPMNC_Giao.Controllers
                 TongSoTien = (int)(Cart.Sum(c => c.GiaBan * c.SoLuong) + 30000),  // Tổng số tiền bao gồm phí vận chuyển
                 TienPhaiTra = (int)(Cart.Sum(c => c.GiaBan * c.SoLuong) + 30000), // Số tiền phải trả cũng bao gồm phí vận chuyển
                 MaNguoiGui = UserID,  // Thay thế bằng ID người dùng thực tế
-                SDTNguoiNhan = tenNguoiNhan,  // Giả định số điện thoại người nhận
+                SDTNguoiNhan = sdtNguoiNhan,  // Giả định số điện thoại người nhận
                 DiaChiNguoiNhan = diaChiNguoiNhan,  // Giả định địa chỉ
-                TenNguoiNhan = sdtNguoiNhan,  // Giả định tên người nhận
+                TenNguoiNhan = tenNguoiNhan,  // Giả định tên người nhận
                 HinhThucNhanHang = "Giao Hàng",
 
                 //MaVoucher = 1,// Bạn có thể thay thế bằng mã voucher nếu có

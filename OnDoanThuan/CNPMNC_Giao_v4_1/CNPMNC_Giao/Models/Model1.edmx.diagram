@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b4e03292d40a4612876ae4f7d8ca2032" Name="Diagram1">
+        <EntityTypeShape EntityType="CNPMNC_v2Model.BaoHanh" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.BinhLuan" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.ChatMessage" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.ChiTietGioHang" Width="1.5" PointX="8.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.ChucVu" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.DanhGiaSanPham" Width="1.5" PointX="5.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.DanhMuc" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.DonHang" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.GioHang" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.HoaDon" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.KichCo" Width="1.5" PointX="5.25" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.LichSuGiamGiaSanPham" Width="1.5" PointX="5.25" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.LichSuGiaSanPham" Width="1.5" PointX="5.25" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.MauSac" Width="1.5" PointX="5.25" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.NguoiDung" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.NhaCungCap" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.SanPham" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.SanPhamYeuThich" Width="1.5" PointX="8.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.TaiKhoan" Width="1.5" PointX="1.5" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.ThanhToan" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.VatLieu" Width="1.5" PointX="0.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPMNC_v2Model.VOUCHER" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__BaoHanh__MaNguoi__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__BaoHanh__MaSanPh__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__BinhLuan__MaNguo__7E37BEF6" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__BinhLuan__MaSanP__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__ChatMessa__Recei__3E1D39E1" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__ChatMessa__Sende__3D2915A8" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__ChiTietDo__MaDon__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__ChiTietDo__MaSan__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__ChiTietGi__MaGio__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__ChiTietGi__MaSan__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__NguoiDung__MaChu__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__DanhGiaSa__MaNgu__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__DanhGiaSa__MaSan__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__SanPham__MaDanhM__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__DonHang__MaNguoi__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__DonHang__MaVouch__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__HoaDon__MaDonHan__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__ThanhToan__MaDon__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__GioHang__MaNguoi__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__HoaDon__MaNguoiD__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__HoaDon__MaThanhT__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__KichCo__MaSanPha__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK_KichCo_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__LichSuGia__MaSan__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__LichSuGia__MaSan__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__MauSac__MaSanPha__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__NguoiDung__MaTai__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__SanPhamYe__MaNgu__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__SanPham__MaNhaCu__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__SanPham__MaVatLi__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPMNC_v2Model.FK__SanPhamYe__MaSan__245D67DE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

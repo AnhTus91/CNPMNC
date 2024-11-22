@@ -1,0 +1,241 @@
+﻿@model List<CNPMNC_Giao.Models.ChiTietGioHang>
+
+<h2>THUANTAIJEWELRY</h2>
+
+<div class="checkout-container">
+    <!-- Phần thông tin nhận hàng -->
+    <div class="checkout-info">
+        <h3>Thông tin nhận hàng</h3>
+        <form action="@Url.Action("XacNhanDonHang", "Cart")" method="post">
+           
+            <div class="form-group">
+                <label>Họ và tên</label>
+                <input type="text" name="hoTen" placeholder="Họ và tên" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại (tùy chọn)</label>
+                <div class="phone-input">
+                    <input type="tel" name="soDienThoai" placeholder="Số điện thoại" class="form-control" required>
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Địa chỉ</label>
+                <input type="text" name="diaChi" placeholder="Địa chỉ" class="form-control" required>
+            </div>
+
+            <div class="payment-method">
+                <h3>Thanh toán</h3>
+                <label class="radio">
+                    <input type="radio" name="phuongThucThanhToan" value="COD" checked> Thanh toán khi giao hàng (COD)
+                </label>
+                <label class="radio">
+                    <input type="radio" name="phuongThucThanhToan" value="CreditCard"> Thanh toán qua thẻ tín dụng
+                </label>
+                <label class="radio">
+                    <input type="radio" name="phuongThucThanhToan" value="Momo"> Thanh toán qua ví Momo
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-success">Đặt hàng</button>
+        </form>
+
+    </div>
+
+    <!-- Phần đơn hàng và thanh toán -->
+    <div class="order-summary">
+        <h3>Đơn hàng (1 sản phẩm)</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Giá bán</th>
+                    <th>Tổng tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.SanPham.TenSanPham</td>
+                        <td>@item.SoLuong</td>
+                        <td>@String.Format("{0:N0} VND", item.GiaBan)</td>
+                        <td>@String.Format("{0:N0} VND", item.GiaBan * item.SoLuong)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="order-total">
+            <p>Tạm tính: @String.Format("{0:N0} VND", Model.Sum(c => c.GiaBan * c.SoLuong))</p>
+            <p>Phí vận chuyển: -</p>
+            <h4>Tổng cộng: @String.Format("{0:N0} VND", Model.Sum(c => c.GiaBan * c.SoLuong))</h4>
+        </div>
+
+        <!-- Phần nhập mã giảm giá -->
+        <div class="discount">
+            <input type="text" placeholder="Nhập mã giảm giá" claSss="form-control">
+            <button class="btn btn-primary">Áp dụng</button>
+        </div>
+
+       
+       
+        <a href="#">Quay về giỏ hàng</a>
+    </div>
+</div>
+
+<style>
+    /* Tổng quan */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        color: orangered;
+    }
+    h3 {
+        color: #007bff;
+    }
+
+    /* Container chính */
+    .checkout-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Phần thông tin nhận hàng */
+    .checkout-info {
+        width: 60%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .phone-input {
+        display: flex;
+        align-items: center;
+    }
+
+        .phone-input input {
+            flex-grow: 1;
+        }
+
+        .phone-input .flag-icon {
+            margin-left: 10px;
+        }
+
+    /* Phần đơn hàng */
+    .order-summary {
+        width: 35%;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+    .order-total {
+        margin-bottom: 20px;
+    }
+
+        .order-total p {
+            font-size: 14px;
+        }
+
+        .order-total h4 {
+            font-weight: bold;
+        }
+
+        .discount input {
+            flex-grow: 1;
+            margin-right: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+    /* Phần thanh toán */
+    .payment-method {
+        margin-bottom: 15px;
+    }
+
+        .payment-method label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .payment-method .radio input {
+            margin-right: 10px;
+        }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+    }
+    .form-control {
+        padding: 8px;
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+</style>

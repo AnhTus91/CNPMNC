@@ -1,0 +1,16 @@
+﻿@model CNPMNC_Giao.Models.DonHang
+
+<h2>Cập nhật trạng thái đơn hàng</h2>
+
+<div>
+    <p>Mã đơn hàng: @Model.MaDonHang</p>
+    <p>Trạng thái hiện tại: @Model.TrangThai</p>
+
+    <div>
+        @Html.ActionLink("Duyệt", "ChapNhan", new { id = Model.MaDonHang })
+        @Html.ActionLink("Hủy", "Huy", new { id = Model.MaDonHang })
+        @Html.ActionLink("Đang giao", "GiaoHang", new { id = Model.MaDonHang })
+        @Html.ActionLink("Hoàn thành", "ThanhCong", new { id = Model.MaDonHang })
+    </div>
+</div>
+

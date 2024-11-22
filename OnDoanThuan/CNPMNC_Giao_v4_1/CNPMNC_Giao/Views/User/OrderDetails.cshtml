@@ -1,0 +1,42 @@
+﻿@model CNPMNC_Giao.Models.DonHang
+
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    var chiTietDonHang = ViewBag.ChiTietDonHang as List<CNPMNC_Giao.Models.ChiTietDonHang>;
+}
+
+<h2>Chi tiết đơn hàng - @Model.MaDonHang</h2>
+
+<p><strong>Ngày đặt hàng:</strong> @Model.NgayDatHang.ToString("dd/MM/yyyy")</p>
+<p><strong>Trạng thái:</strong> @Model.TrangThai</p>
+
+<h3>Thông tin sản phẩm:</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Tổng tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var chiTiet in chiTietDonHang)
+        {
+            <tr>
+                <td>@chiTiet.SanPham.TenSanPham</td>
+                <td>@chiTiet.Soluong</td>
+                <td>@String.Format("{0:N0} VND", chiTiet.DonGia)</td>
+                <td>@String.Format("{0:N0} VND", chiTiet.TongTien)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p><strong>Tổng tiền:</strong> @String.Format("{0:N0} VND", Model.TongSoTien)</p>
+
+@if (Model.TrangThai != "Đang chuẩn bị" && Model.TrangThai != "Đang xử lý")
+{
+    @Html.ActionLink("Hủy đơn hàng", "CancelOrder", new { id = Model.MaDonHang }, new { @class = "btn btn-danger" })
+}
+
