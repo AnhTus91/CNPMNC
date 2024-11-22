@@ -1,0 +1,51 @@
+﻿@model DAPMver1.Data.NguoiDung
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div>
+    <h4>Người Dùng @Model.TenNguoiDung</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Tên Người Dùng
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenNguoiDung)
+        </dd>
+        <dt class="col-sm-2">
+            Địa Chỉ
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+        <dt class="col-sm-2">
+            Số Điện Thoại
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sdt)
+        </dd>
+        <dt class="col-sm-2">
+            Ảnh Đại Diện
+        </dt>
+        <dd class="col-sm-10">
+           <img src="@Model.AnhDaiDien" width="100"/>
+        </dd>
+        <dt class="col-sm-2">
+            Mã Chức Vụ
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MaChucVuNavigation.MaChucVu)
+        </dd>
+        <dt class="col-sm-2">
+            Tài Khoản
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MaTaiKhoanNavigation.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <a asp-action="Index">Back to List</a>
+</div>

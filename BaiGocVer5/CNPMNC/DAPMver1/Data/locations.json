@@ -1,0 +1,10 @@
+{
+  "Hà Nội": {
+    "Ba Đình": [ "Phường 1", "Phường 2", "Phường 3" ],
+    "Cầu Giấy": [ "Phường A", "Phường B", "Phường C" ]
+  },
+  "Hồ Chí Minh": {
+    "Quận 1": [ "Phường X", "Phường Y", "Phường Z" ],
+    "Quận 3": [ "Phường M", "Phường N", "Phường O" ]
+  }
+}

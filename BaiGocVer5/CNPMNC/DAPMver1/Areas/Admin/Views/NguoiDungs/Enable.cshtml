@@ -1,0 +1,18 @@
+﻿@model DAPMver1.Data.TaiKhoan
+
+@{
+    ViewData["Title"] = "Xác nhận mở khóa tài khoản";
+}
+
+<h2>Xác nhận mở khóa tài khoản</h2>
+<p>Bạn có chắc chắn muốn mở khóa tài khoản này không?</p>
+
+<div>
+    <h4>@Model.Email</h4>
+    <form asp-action="Enable" method="post">
+        <input type="hidden" asp-for="MaTaiKhoan" />
+        <button type="submit" class="btn btn-success">Mở khóa</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+
+</div>

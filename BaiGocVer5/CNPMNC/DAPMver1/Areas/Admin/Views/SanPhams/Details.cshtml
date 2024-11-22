@@ -1,0 +1,78 @@
+﻿@model DAPMver1.Data.SanPham
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SanPham</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TenSanPham)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TenSanPham)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GiaTienMoi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GiaTienMoi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GiaTienCu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GiaTienCu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnhSp)
+        </dt>
+        <dt>
+            
+           @if (!string.IsNullOrEmpty(Model.AnhSp))
+        {
+            <img src="@Model.AnhSp" alt="Hình ảnh sản phẩm " style="width: 100px; height: auto;" />
+        }
+        else
+        {
+            <span>Không có hình ảnh</span>
+        }
+        </dt>
+
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NgayTao)
+        </dd>
+        <dt class = "col-sm-2">
+        Danh mục    </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaDanhMucNavigation.TenDanhMuc)
+        </dd>
+        <dt class = "col-sm-2">
+        Nhà cung cấp   </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaNhaCungCapNavigation.TenNhaCungCap)
+        </dd>
+        <dt class = "col-sm-2">
+         Vật liệu  </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaVatLieuNavigation.TenVatlieu)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MaSanPham">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

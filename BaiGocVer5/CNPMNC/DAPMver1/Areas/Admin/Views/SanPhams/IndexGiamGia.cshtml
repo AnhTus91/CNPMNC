@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DAPMver1.Data.LichSuGiamGiaSanPham>
+
+@{
+    ViewData["Title"] = "IndexGiamGia";
+}
+
+<h1>Lịch sử giảm giá sản phẩm</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+              Giá Giảm Cũ
+            </th>
+            <th>
+               Giá Giảm Mới
+            </th>
+            <th>
+               Ngày thay đổi
+            </th>
+            <th>
+               Tên sản phẩm
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaGiamCu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaGiamMoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayCapNhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSanPhamNavigation.TenSanPham)
+            </td>
+   
+        </tr>
+}
+    </tbody>
+</table>

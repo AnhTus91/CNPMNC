@@ -1,0 +1,26 @@
+﻿@model DAPMver1.Data.TaiKhoan
+
+@{
+    ViewData["Title"] = "Disable Account";
+}
+
+<h2>Disable Account</h2>
+
+<div>
+    <h4>Are you sure you want to disable this account?</h4>
+    <div>
+        <dl class="dl-horizontal">
+            <dt>Email</dt>
+            <dd>@Model.Email</dd>
+
+            <dt>Vai Trò</dt>
+            <dd>@(Model.VaiTro ? "Active" : "Inactive")</dd>
+        </dl>
+    </div>
+</div>
+
+<form asp-action="Disable" method="post">
+    <input type="hidden" asp-for="MaTaiKhoan" />
+    <button type="submit" class="btn btn-danger">Disable</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

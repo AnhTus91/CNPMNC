@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Xác nhận đăng ký tài khoản";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.Message
+    </div>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<p>Vui lòng nhập mã xác nhận đã được gửi đến email của bạn:</p>
+
+<form method="post">
+    <div class="form-group">
+        <label for="confirmationToken">Mã xác nhận:</label>
+        <input type="text" id="confirmationToken" name="confirmationToken" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Xác nhận</button>
+</form>

@@ -1,0 +1,96 @@
+﻿@model List<DAPMver1.Data.ChiTietGioHang>
+
+<h2>Giỏ hàng của bạn</h2>
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-warning">@TempData["Message"]</div>
+}
+<form asp-action="ApplyVoucher" method="post">
+    <div class="input-group mb-3">
+        <input type="text" name="voucherCode" class="form-control" placeholder="Nhập mã voucher">
+        <button type="submit" class="btn btn-primary">Áp dụng</button>
+    </div>
+</form>
+@if (TempData["DiscountAmount"] != null)
+{
+    var discountAmount = Convert.ToDouble(TempData["DiscountAmount"]);
+    <p class="text-success">Bạn đã được giảm: @discountAmount.ToString("N0") VNĐ</p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Kích cỡ</th>
+            <th>Tổng tiền</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@(item.MaKichCoNavigation.MaSanPhamNavigation?.TenSanPham ?? "Sản phẩm không tồn tại")</td>
+                    <td>
+                        @if (item.MaKichCoNavigation.MaSanPhamNavigation?.AnhSp != null)
+                        {
+                            <img src="@item.MaKichCoNavigation.MaSanPhamNavigation.AnhSp" alt="@item.MaKichCoNavigation.MaSanPhamNavigation.TenSanPham" style="width: 100px; height: 100px;" />
+                        }
+                        else
+                        {
+                            <span>Không có hình ảnh</span>
+                        }
+                    </td>
+                    <td>@String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", item.GiaBan)</td>
+                    <td>
+                        <form action="@Url.Action("UpdateQuantity", "Cart")" method="post">
+                            <input type="hidden" name="idsp" value="@item.MaKichCoNavigation.MaSanPham" />
+                            <input type="hidden" name="size" value="@item.MaKichCo" />
+                            <input type="number" name="quantity" value="@item.SoLuong" min="1" />
+                            <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                        </form>
+                    </td>
+                    <td>@item.MaKichCoNavigation?.SoKichCo</td> <!-- Hiển thị tên kích cỡ -->
+                    <td>@String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", item.GiaBan * item.SoLuong)</td>
+
+                    <td>
+                        <a href="@Url.Action("RemoveFromCart", "Cart", new { idsp = item.MaKichCoNavigation.MaSanPham, size = item.MaKichCo })" class="btn btn-danger">Xóa</a>
+                    </td>
+
+                </tr>
+            }
+           
+        }
+        else
+        {
+            <tr>
+                <td colspan="7">Giỏ hàng của bạn đang trống.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<p><strong>Tổng tiền: @Model.Sum(i => i.SoLuong * i.GiaBan).ToString("N0") VNĐ</strong></p>
+@if (TempData["DiscountAmount"] != null)
+{
+    double discountAmount = 0;
+    if (double.TryParse(TempData["DiscountAmount"].ToString(), out discountAmount))
+    {
+        <p class="text-success">Bạn đã được giảm: @discountAmount.ToString("N0") VNĐ</p>
+        <p><strong>Thành tiền: @((Model.Sum(i => i.SoLuong * i.GiaBan) - discountAmount).ToString("N0")) VNĐ</strong></p>
+    }
+    else
+    {
+        <p class="text-danger">Lỗi trong việc tính toán giảm giá.</p>
+    }
+}
+
+
+
+<a href="@Url.Action("Index", "Product")">Quay lại danh sách sản phẩm</a>
+<a href="@Url.Action("Checkout", "Cart")" class="btn btn-success">Thanh toán</a>

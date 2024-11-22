@@ -1,0 +1,141 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model IEnumerable<DAPMver1.Data.DonHang>
+
+<style>
+
+
+    h2 {
+        color: #333; /* Màu chữ cho tiêu đề */
+        text-align: center; /* Căn giữa tiêu đề */
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    }
+
+
+    .table {
+        width: 100%; /* Chiều rộng đầy đủ cho bảng */
+        margin-top: 20px; /* Khoảng cách trên bảng */
+        border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+    }
+
+        .table th, .table td {
+            border: 1px solid #dee2e6; /* Đường viền ô */
+            padding: 12px; /* Khoảng cách bên trong ô */
+            /*             text-align: center; /* Căn giữa nội dung bảng */ */
+        }
+
+        .table th {
+            background-color: #343a40; /* Màu nền tối cho tiêu đề bảng */
+            color: #ffffff; /* Màu chữ cho tiêu đề bảng */
+        }
+
+    .btn1 {
+        padding: 10px 15px; /* Kích thước nút */
+        border: none; /* Không có đường viền */
+        border-radius: 5px; /* Bo góc nút */
+        cursor: pointer; /* Con trỏ khi hover */
+        background-color: #17a2b8; /* Màu nền nút (có thể thay đổi theo ý muốn) */
+        color: #ffffff; /* Màu chữ */
+        text-decoration: none; /* Không có gạch chân */
+        display: inline-block; /* Để nút hiển thị đúng */
+    }
+
+
+
+    .btn-info {
+        background-color: #17a2b8; /* Màu nền cho nút Xem chi tiết */
+        color: white; /* Màu chữ cho nút */
+    }
+
+    .btn-danger {
+        background-color: #dc3545; /* Màu nền cho nút Hủy đơn hàng */
+        color: white; /* Màu chữ cho nút */
+    }
+
+    .btn:hover {
+        opacity: 0.9; /* Hiệu ứng hover cho nút */
+    }
+
+    .alert {
+        margin-top: 20px; /* Tạo khoảng cách cho thông báo */
+        padding: 15px; /* Khoảng cách bên trong thông báo */
+        border-radius: 5px; /* Bo góc cho thông báo */
+    }
+
+    .alert-success {
+        background-color: #d4edda; /* Màu nền cho thông báo thành công */
+        color: #155724; /* Màu chữ cho thông báo thành công */
+    }
+
+    .alert-danger {
+        background-color: #f8d7da; /* Màu nền cho thông báo lỗi */
+        color: #721c24; /* Màu chữ cho thông báo lỗi */
+    }
+</style>
+
+<div class="container mt-5">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+    <h2>Lịch sử mua hàng</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã đơn hàng</th>
+                <th>Ngày đặt hàng</th>
+                <th>Trạng thái</th>
+                <th>Tổng số lượng</th>
+                <th>Tổng số tiền</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.MaDonHang</td>
+                    <td>@order.NgayDatHang.ToShortDateString()</td>
+                    <td>@order.TrangThai</td>
+                    <td>@order.TongSl</td>
+                    <td>@order.TongSoTien.ToString("N0") VND</td>
+                    <td>
+                        <a asp-action="OrderDetails" asp-route-maDonHang="@order.MaDonHang" class="btn1 btn-info">Xem chi tiết</a>
+
+                        @if (order.TrangThai == "Chờ xử lý") // Kiểm tra trạng thái
+                        {
+                            <form asp-action="CancelOrder" method="post" style="display:inline;">
+                                <input type="hidden" name="maDonHang" value="@order.MaDonHang" />
+                                <button type="submit" class="btn1 btn-danger">Hủy đơn hàng</button>
+                            </form>
+                        }
+                        @if (order.TrangThai == "Đang giao") // Kiểm tra trạng thái
+                        {
+                            <form asp-action="NhanHang" method="post" style="display:inline;">
+                                <input type="hidden" name="maDonHang" value="@order.MaDonHang" />
+                                <button type="submit" class="btn1 btn-primary">Nhận hàng</button>
+                            </form>
+                        }
+                        @*   @if (order.TrangThai == "Đã nhận") // Kiểm tra trạng thái
+                    {
+                    <form asp-action="YeuCauBaoHanh" method="post">
+                    <input type="hidden" name="maBaoHanh" value="@order.MaDonHang" />
+                    <button type="submit">Yêu cầu bảo hành</button>
+                    </form>
+                    } *@
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+
+</div>

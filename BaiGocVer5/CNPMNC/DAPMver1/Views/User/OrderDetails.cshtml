@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "OrderDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model DAPMver1.Data.DonHang
+
+<style>
+
+
+    h2 {
+        font-size: 3rem; /* Increased font size */
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    table.table {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    thead {
+        background-color: #f8f9fa;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    th {
+        color: #495057;
+        font-weight: bold;
+        font-size: 1.25rem; /* Increased font size */
+        background-color: #f8f9fa;
+    }
+
+    td {
+        color: #6c757d;
+        font-size: 1.2rem; /* Increased font size */
+    }
+
+    /* Highlight row on hover */
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: white;
+        font-size: 1.2rem; /* Increased font size */
+        padding: 10px 18px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+        }
+
+    .btn1 {
+        margin-top: 10px;
+    }
+
+    .text-muted {
+        font-size: 1.2rem; /* Increased font size */
+        color: #6c757d;
+    }
+
+    .total-row {
+        font-weight: bold;
+        font-size: 1.5rem; /* Increased font size */
+        background-color: #f8f9fa;
+    }
+
+        .total-row td {
+            font-weight: bold;
+        }
+</style>
+
+<div class="container mt-5">
+    <h2>Chi tiết đơn hàng: @Model.MaDonHang</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số kích cỡ</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ChiTietDonHangs)
+            {
+                <tr>
+                    <td>@item.MaKichCoNavigation.MaSanPhamNavigation.TenSanPham</td>
+                    <td>@item.MaKichCoNavigation.SoKichCo</td>
+                    <td>@item.Soluong</td>
+                    <td>@item.DonGia.ToString("N0") VND</td>
+                    <td>@item.TongTien.ToString("N0") VND</td>
+
+                </tr>
+            }
+
+            <!-- Total Row (Optional) -->
+            <tr class="total-row">
+                <td colspan="4">Tổng cộng</td>
+                <td>@Model.ChiTietDonHangs.Sum(x => x.TongTien).ToString("N0") VND</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

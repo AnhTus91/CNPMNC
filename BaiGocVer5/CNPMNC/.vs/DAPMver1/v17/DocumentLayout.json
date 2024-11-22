@@ -1,0 +1,696 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DOANPM_TH\\DAPMver1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\cart\\ordersuccesspaypal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\cart\\ordersuccesspaypal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\services\\paypalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\services\\paypalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/ZINHDEPTRAI_SQLEXPRESS/DAPM_Trangv1/True/SqlTable/dbo.ThanhToan.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\cart\\ordersuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\cart\\ordersuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/ZINHDEPTRAI_SQLEXPRESS/DAPM_Trangv1/True/SqlTable/dbo.DonHang.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\cart\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\cart\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/ZINHDEPTRAI_SQLEXPRESS/DAPM_Trangv1/True/SqlTable/dbo.Thue.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.DonHang.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\thue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\thue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\dapmtrangv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\dapmtrangv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\dapmver1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\dapmver1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\wwwroot\\js\\admin\\contact.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\wwwroot\\js\\admin\\contact.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\areas\\admin\\controllers\\donhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\areas\\admin\\controllers\\donhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\areas\\admin\\controllers\\hoadoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\areas\\admin\\controllers\\hoadoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\areas\\admin\\hoadonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\areas\\admin\\hoadonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\areas\\admin\\views\\donhangs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\areas\\admin\\views\\donhangs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.ThanhToan.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.VOUCHER.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.HoaDon.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\user\\userdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\user\\userdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.GioHang.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\models\\chitietgiohangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\models\\chitietgiohangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\chitietgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\chitietgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\data\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\data\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|d:\\doanpm_th\\dapmver1\\dapmver1\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{784DED40-BDD5-455E-A3AE-7E05F6C75AB4}|DAPMver1\\DAPMver1.csproj|solutionrelative:dapmver1\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "dbo.VOUCHER.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.VOUCHER.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.VOUCHER.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-18T14:31:48.303Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "dbo.HoaDon.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.HoaDon.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.HoaDon.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-18T14:54:44.371Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Controllers\\CartController.cs",
+              "RelativeToolTip": "DAPMver1\\Controllers\\CartController.cs",
+              "ViewState": "AgIAABUCAAAAAAAAAAAawCgCAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:00.569Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PayPalService.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Services\\PayPalService.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Services\\PayPalService.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Services\\PayPalService.cs",
+              "RelativeToolTip": "DAPMver1\\Services\\PayPalService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwDQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderSuccessPaypal.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\OrderSuccessPaypal.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Cart\\OrderSuccessPaypal.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\OrderSuccessPaypal.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Cart\\OrderSuccessPaypal.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:36:33.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.ThanhToan [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/ZINHDEPTRAI_SQLEXPRESS/DAPM_Trangv1/True/SqlTable/dbo.ThanhToan.sql",
+              "ToolTip": "dbo.ThanhToan [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T16:34:12.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThanhToan.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\ThanhToan.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\ThanhToan.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\ThanhToan.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\ThanhToan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderSuccess.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\OrderSuccess.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Cart\\OrderSuccess.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\OrderSuccess.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Cart\\OrderSuccess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:35:39.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Cart\\Checkout.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\Checkout.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Cart\\Checkout.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAG4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:00.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.DonHang [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/ZINHDEPTRAI_SQLEXPRESS/DAPM_Trangv1/True/SqlTable/dbo.DonHang.sql",
+              "ToolTip": "dbo.DonHang [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T16:34:01.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PaymentSuccess.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\PaymentSuccess.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Cart\\PaymentSuccess.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\PaymentSuccess.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Cart\\PaymentSuccess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:00.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "dbo.DonHang.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.DonHang.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.DonHang.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-18T14:45:08.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "dbo.ThanhToan.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.ThanhToan.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.ThanhToan.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-18T14:55:12.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "dbo.Thue [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/ZINHDEPTRAI_SQLEXPRESS/DAPM_Trangv1/True/SqlTable/dbo.Thue.sql",
+              "ToolTip": "dbo.Thue [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T16:17:23.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Thue.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\Thue.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\Thue.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\Thue.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\Thue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T16:08:11.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DapmTrangv1Context.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\DapmTrangv1Context.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\DapmTrangv1Context.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\DapmTrangv1Context.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\DapmTrangv1Context.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAuwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\appsettings.json",
+              "RelativeDocumentMoniker": "DAPMver1\\appsettings.json",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\appsettings.json",
+              "RelativeToolTip": "DAPMver1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-20T15:41:01.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DAPMver1.csproj",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\DAPMver1.csproj",
+              "RelativeDocumentMoniker": "DAPMver1\\DAPMver1.csproj",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\DAPMver1.csproj",
+              "RelativeToolTip": "DAPMver1\\DAPMver1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-20T15:41:00.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Views\\DonHangs\\Index.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Areas\\Admin\\Views\\DonHangs\\Index.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Views\\DonHangs\\Index.cshtml",
+              "RelativeToolTip": "DAPMver1\\Areas\\Admin\\Views\\DonHangs\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:00.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DonHangsController.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "RelativeToolTip": "DAPMver1\\Areas\\Admin\\Controllers\\DonHangsController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAADcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:00.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "contact.js",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\contact.js",
+              "RelativeDocumentMoniker": "DAPMver1\\wwwroot\\js\\admin\\contact.js",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\contact.js",
+              "RelativeToolTip": "DAPMver1\\wwwroot\\js\\admin\\contact.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-20T15:41:01.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "DAPMver1\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Microsoft.NET.TargetFrameworkInference.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAqwKUAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-11-18T15:58:45.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DAPMver1\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAAAOoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HoaDonsController.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\HoaDonsController.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Areas\\Admin\\HoaDonsController.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\HoaDonsController.cs",
+              "RelativeToolTip": "DAPMver1\\Areas\\Admin\\HoaDonsController.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "DAPMver1\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AQIAAFQBAAAAAAAAAAAAAGIBAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserDetails.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\User\\UserDetails.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\User\\UserDetails.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\User\\UserDetails.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\User\\UserDetails.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Program.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Program.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Program.cs",
+              "RelativeToolTip": "DAPMver1\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HoaDonController.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Controllers\\HoaDonController.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Areas\\Admin\\Controllers\\HoaDonController.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Areas\\Admin\\Controllers\\HoaDonController.cs",
+              "RelativeToolTip": "DAPMver1\\Areas\\Admin\\Controllers\\HoaDonController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "DAPMver1\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-20T15:41:01.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "dbo.GioHang.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.GioHang.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/laptop_ut0ddbvf/DAPM_Trangv1/True/SqlTable/dbo.GioHang.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-18T14:37:02.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "GioHang.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\GioHang.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\GioHang.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\GioHang.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\GioHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ChiTietDonHang.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\ChiTietDonHang.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\ChiTietDonHang.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\ChiTietDonHang.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\ChiTietDonHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Voucher.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\Voucher.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\Voucher.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\Voucher.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\Voucher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ChiTietGioHangViewModel.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Models\\ChiTietGioHangViewModel.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Models\\ChiTietGioHangViewModel.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Models\\ChiTietGioHangViewModel.cs",
+              "RelativeToolTip": "DAPMver1\\Models\\ChiTietGioHangViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ChiTietGioHang.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\ChiTietGioHang.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\ChiTietGioHang.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\ChiTietGioHang.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\ChiTietGioHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DonHang.cs",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\DonHang.cs",
+              "RelativeDocumentMoniker": "DAPMver1\\Data\\DonHang.cs",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Data\\DonHang.cs",
+              "RelativeToolTip": "DAPMver1\\Data\\DonHang.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:41:01.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "DAPMver1\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\DOANPM_TH\\DAPMver1\\DAPMver1\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "DAPMver1\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAACIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:41:01.483Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

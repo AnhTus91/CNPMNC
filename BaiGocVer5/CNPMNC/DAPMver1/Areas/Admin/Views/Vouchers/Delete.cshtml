@@ -1,0 +1,70 @@
+﻿@model DAPMver1.Data.Voucher
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .container {
+        max-width: 900px;
+    }
+
+    h2 {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .btn-danger {
+        width: 48%;
+    }
+
+    .btn-secondary {
+        width: 48%;
+    }
+
+</style>
+<h2 class="text-center my-4">Xóa Voucher</h2>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="p-4 border rounded shadow-sm bg-light">
+                <h4 class="text-danger">Bạn có chắc chắn muốn xóa voucher này?</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-4">Tên Voucher</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.TenVoucher)</dd>
+
+                    <dt class="col-sm-4">Giá Trị</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.GiaTri)</dd>
+
+                    <dt class="col-sm-4">Thời Gian Bắt Đầu</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.ThoiGianBatDau)</dd>
+
+                    <dt class="col-sm-4">Thời Gian Kết Thúc</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.ThoiGianKetThuc)</dd>
+
+                    <dt class="col-sm-4">Trạng Thái</dt>
+                    <dd class="col-sm-8">
+                        @(Model.TrangThai ? "Kích Hoạt" : "Không Kích Hoạt")
+                    </dd>
+
+                    <dt class="col-sm-4">Ngày Tạo</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.NgayTao)</dd>
+
+                    <dt class="col-sm-4">Điều Kiện Áp Dụng</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DieuKienApDung)</dd>
+
+                    <dt class="col-sm-4">Số Lượng</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.SoLuong)</dd>
+                </dl>
+
+                <form asp-action="Delete" method="post" class="d-flex justify-content-between mt-4">
+                    <input type="hidden" asp-for="MaVoucher" />
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                    <a asp-action="Index" class="btn btn-secondary">Quay Lại</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

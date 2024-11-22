@@ -1,0 +1,18 @@
+﻿@model IEnumerable<DAPMver1.Data.SanPham>
+
+<div class="suggested-products">
+    <h4>Sản phẩm gợi ý</h4>
+    <table class="product-list">
+        <tr>
+        @foreach (var item in Model)
+        {
+            <td class="product-item">
+                <img src="@item.AnhSp" alt="@item.TenSanPham" style="width:150px;height:150px;" />
+                <h5>@item.TenSanPham</h5>
+                <p>Giá: @item.GiaTienMoi đ</p>
+                <a href="@Url.Action("ChiTietSP", "Product", new { maSanPham = item.MaSanPham })" class="btn btn-primary">Xem chi tiết</a>
+            </td>
+        }
+        </tr>
+    </table>
+</div>

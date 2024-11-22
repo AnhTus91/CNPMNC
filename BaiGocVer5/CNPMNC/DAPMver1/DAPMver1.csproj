@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PayPal.SDK.NETCore" Version="1.9.1.2" />
+    <PackageReference Include="PayPalCheckoutSdk" Version="1.0.4" />
+      <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\anh-nen-4k %2838%29.jpg" />
+    <None Include="wwwroot\images\ba6427b4b5-balenciaga-logo-balenciaga-svg-balenciaga-brand-logo-svg-fashion-company-svg.png" />
+    <None Include="wwwroot\images\banner.jpg" />
+    <None Include="wwwroot\images\BongTaiKimCuong.png" />
+    <None Include="wwwroot\images\BongTaiKimCuongVangY.png" />
+    <None Include="wwwroot\images\BongTaiVangTrangY.png" />
+    <None Include="wwwroot\images\brand1.jpg" />
+    <None Include="wwwroot\images\brand2.jpg" />
+    <None Include="wwwroot\images\brand3.jpg" />
+    <None Include="wwwroot\images\cs2.jpg" />
+    <None Include="wwwroot\images\DayChuyenVang18K.png" />
+    <None Include="wwwroot\images\DayChuyenVangTrangY.png" />
+    <None Include="wwwroot\images\icons\404.png" />
+    <None Include="wwwroot\images\icons\advertisement.jpg" />
+    <None Include="wwwroot\images\icons\checkout.png" />
+    <None Include="wwwroot\images\icons\email.png" />
+    <None Include="wwwroot\images\icons\facebook.png" />
+    <None Include="wwwroot\images\icons\heart.png" />
+    <None Include="wwwroot\images\icons\iconnha.jpg" />
+    <None Include="wwwroot\images\icons\iframe1.png" />
+    <None Include="wwwroot\images\icons\iframe2.png" />
+    <None Include="wwwroot\images\icons\instagram.png" />
+    <None Include="wwwroot\images\icons\jcb.png" />
+    <None Include="wwwroot\images\icons\left-arrow.png" />
+    <None Include="wwwroot\images\icons\login.png" />
+    <None Include="wwwroot\images\icons\logo.jpg" />
+    <None Include="wwwroot\images\icons\mail.png" />
+    <None Include="wwwroot\images\icons\new.jpg" />
+    <None Include="wwwroot\images\icons\Phone.jpg" />
+    <None Include="wwwroot\images\icons\rating.png" />
+    <None Include="wwwroot\images\icons\right-arrow.png" />
+    <None Include="wwwroot\images\icons\searchicon.png" />
+    <None Include="wwwroot\images\icons\share.png" />
+    <None Include="wwwroot\images\icons\shopping-cart.png" />
+    <None Include="wwwroot\images\icons\shopping.png" />
+    <None Include="wwwroot\images\icons\socials.png" />
+    <None Include="wwwroot\images\icons\user.png" />
+    <None Include="wwwroot\images\icons\visa.png" />
+    <None Include="wwwroot\images\icons\youtube.png" />
+    <None Include="wwwroot\images\LacTayVangTrang.png" />
+    <None Include="wwwroot\images\LogoBoSuuTap.jpg" />
+    <None Include="wwwroot\images\LogoJewelry.jpg" />
+    <None Include="wwwroot\images\LogoPNJ.png" />
+    <None Include="wwwroot\images\Lui.jpg" />
+    <None Include="wwwroot\images\OIP.jpg" />
+    <None Include="wwwroot\images\VongTayVang18k.png" />
+    <None Include="wwwroot\images\z5427263651064_2eab27329fd230d12d90e907ac5e5a3b.jpg" />
+    <None Include="wwwroot\images\z5531484858025_0e60d6b5ec396337bf7710e1f6b05395.jpg" />
+    <None Include="wwwroot\images\z5531841662099_e3c7a3ca23ff92697b0dcb10f2f362dd.jpg" />
+  </ItemGroup>
+
+</Project>

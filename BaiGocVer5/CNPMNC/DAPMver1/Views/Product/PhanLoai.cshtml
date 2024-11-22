@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DAPMver1.Data.SanPham>
+
+@{
+    var pageTitle = ViewBag.Title ?? "Tất cả sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var categoryId = '@Context.Request.Query["categoryId"]'; // Sử dụng Context.Request để truy cập query string
+        var selectElement = document.getElementById('categoryId');
+        if (categoryId) {
+            selectElement.value = categoryId; // Đặt giá trị đã chọn
+        }
+    });
+</script>
+<div>
+    <form method="get" asp-controller="Product" asp-action="Index">
+        <label for="categoryId">Chọn danh mục:</label>
+        <select id="categoryId" name="categoryId" onchange="this.form.submit()">
+            <option value="">Tất cả sản phẩm</option> <!-- Tùy chọn để xem tất cả sản phẩm -->
+            @foreach (var danhMuc in ViewBag.DanhMucList)
+            {
+                <option value="@danhMuc.MaDanhMuc">@danhMuc.TenDanhMuc</option>
+            }
+        </select>
+    </form>
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4">
+            <div class="product-image-wrapper">
+                <div class="single-products">
+                    <div class="productinfo text-center">
+                        <a href="@Url.Action("Details", "Product", new { id = item.MaSanPham })">
+                            <img src="@item.AnhSp" class="card-img-top" alt="@item.TenSanPham" />
+                            @*  <img src="~/Images/" alt="@item.TenSanPham" style="width: 250px; height: 250px;" /> *@
+                            <h2>@item.GiaTienMoi VND</h2>
+                            <p>@item.TenSanPham</p>
+                        </a>
+                        <a href="#" class="btn btn-default add-to-cart">
+                            <img src="~/images/AddCart.jpg" style="width: 20px; padding: 2px; margin-right: 2px;">Thêm vào giỏ hàng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

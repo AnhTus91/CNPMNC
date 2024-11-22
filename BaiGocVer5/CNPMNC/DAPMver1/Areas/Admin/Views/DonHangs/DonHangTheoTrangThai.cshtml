@@ -1,0 +1,27 @@
+﻿@model List<DAPMver1.Data.DonHang>
+
+<h2>Danh sách Đơn hàng - Trạng thái: @ViewBag.TrangThai</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã Đơn Hàng</th>
+            <th>Ngày Đặt Hàng</th>
+            <th>Trạng Thái</th>
+            <th>Tổng Tiền</th>
+            <th>Tên Người Nhận</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var donHang in Model)
+        {
+            <tr>
+                <td>@donHang.MaDonHang</td>
+                <td>@donHang.NgayDatHang</td>
+                <td>@donHang.TrangThai</td>
+                <td>@donHang.TongTien</td>
+                <td>@donHang.TenNguoiNhan</td>
+            </tr>
+        }
+    </tbody>
+</table>

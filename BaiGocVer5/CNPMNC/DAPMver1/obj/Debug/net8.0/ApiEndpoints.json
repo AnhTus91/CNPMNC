@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "DAPMver1.Controllers.LocationController",
+    "Method": "GetDistricts",
+    "RelativePath": "api/Location/GetDistricts/{provinceCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "provinceCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DAPMver1.Controllers.LocationController",
+    "Method": "GetProvinces",
+    "RelativePath": "api/Location/GetProvinces",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DAPMver1.Controllers.LocationController",
+    "Method": "GetWards",
+    "RelativePath": "api/Location/GetWards/{districtCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "districtCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

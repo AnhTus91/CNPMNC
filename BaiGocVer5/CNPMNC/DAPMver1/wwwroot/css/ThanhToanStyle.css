@@ -1,0 +1,83 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.checkout-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.checkout-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .checkout-table th, .checkout-table td {
+        text-align: left;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .checkout-table th {
+        background-color: #f8f8f8;
+        font-weight: bold;
+    }
+
+.total-amount {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.payment-method {
+    margin-bottom: 20px;
+}
+
+    .payment-method label {
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .payment-method select {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+.confirm-btn {
+    display: block;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .confirm-btn:hover {
+        background-color: #45a049;
+    }

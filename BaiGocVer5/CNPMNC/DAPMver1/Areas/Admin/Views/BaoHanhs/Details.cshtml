@@ -1,0 +1,135 @@
+﻿@model DAPMver1.Data.BaoHanh
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="text-center my-4">Chi tiết bảo hành</h1>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Thông tin bảo hành</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3 text-dark">
+                Tên người dùng
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.MaNguoiDungNavigation.TenNguoiDung)
+            </dd>
+            <dt class="col-sm-3 text-dark">
+                Mã sản phẩm
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.MaKichCoNavigation.MaSanPham)
+            </dd>
+            <dt class="col-sm-3 text-dark">
+                Ngày bảo hành
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.NgayBaoHanh)
+            </dd>
+            <dt class="col-sm-3 text-dark">
+                Ngày kết thúc
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.NgayKetThuc)
+            </dd>
+            <dt class="col-sm-3 text-dark">
+                Mô tả
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.MoTa)
+            </dd>
+            <dt class="col-sm-3 text-dark">
+                Trạng thái
+            </dt>
+            <dd class="col-sm-9">
+                @if (Model.TrangThai)
+                {
+                    <span class="badge badge-success">Còn bảo hành</span>
+                }
+                else
+                {
+                    <span class="badge badge-danger">Hết hạn</span>
+                }
+            </dd>
+
+
+        </dl>
+    </div>
+</div>
+
+<div class="mt-4 text-center">
+    @*     <a asp-action="Edit" asp-route-id="@Model?.MaBaoHanh" class="btn btn-warning btn-sm">Sửa</a>  *@
+    <a asp-action="Index" class="btn btn-secondary btn-sm">Quay lại danh sách</a>
+</div>
+
+<!-- Custom Styles -->
+<style>
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card {
+        border-radius: 8px;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .card-header {
+        border-radius: 8px 8px 0 0;
+        padding: 1rem;
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    .text-dark {
+        font-weight: 500;
+    }
+
+    .badge {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 6px 12px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+
+    .mt-4 {
+        margin-top: 2rem;
+    }
+
+    .mb-0 {
+        margin-bottom: 0;
+    }
+</style>

@@ -1,0 +1,26 @@
+﻿@model DAPMver1.Controllers.HomeController
+
+@{
+    ViewData["Title"] = "Vị trí cửa hàng";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Phần này sẽ hiển thị bản đồ -->
+<div id="map" style="height: 500px; width: 100%;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=@ViewBag.ApiKey"></script>
+<script>
+    function initMap() { 
+        var storeLocation = { lat: 10.76668223208766, lng: 106.60399297085908 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: storeLocation
+        });
+        var marker = new google.maps.Marker({
+            position: storeLocation,
+            map: map
+        });
+    }
+    window.onload = initMap;
+</script>

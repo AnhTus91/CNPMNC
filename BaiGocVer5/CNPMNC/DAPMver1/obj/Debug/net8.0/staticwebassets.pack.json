@@ -1,0 +1,829 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DAPMver1.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DAPMver1.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\Site.css",
+      "PackagePath": "staticwebassets\\Content\\Site.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\allproduct.js",
+      "PackagePath": "staticwebassets\\Content\\admin\\allproduct.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\base.css",
+      "PackagePath": "staticwebassets\\Content\\admin\\base.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Content\\admin\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Content\\admin\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\custom.css",
+      "PackagePath": "staticwebassets\\Content\\admin\\custom.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\donhang.js",
+      "PackagePath": "staticwebassets\\Content\\admin\\donhang.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\header.js",
+      "PackagePath": "staticwebassets\\Content\\admin\\header.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\index.css",
+      "PackagePath": "staticwebassets\\Content\\admin\\index.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Content\\admin\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\main.js",
+      "PackagePath": "staticwebassets\\Content\\admin\\main.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\popper.js",
+      "PackagePath": "staticwebassets\\Content\\admin\\popper.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\admin\\style.css",
+      "PackagePath": "staticwebassets\\Content\\admin\\style.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\store.css",
+      "PackagePath": "staticwebassets\\Content\\store.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\Content\\thanhtoan.css",
+      "PackagePath": "staticwebassets\\Content\\thanhtoan.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\AdminLayout.css",
+      "PackagePath": "staticwebassets\\css\\AdminLayout.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\ChiTietSPStyle.css",
+      "PackagePath": "staticwebassets\\css\\ChiTietSPStyle.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\GioHangStyle.css",
+      "PackagePath": "staticwebassets\\css\\GioHangStyle.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\HomeStyle.css",
+      "PackagePath": "staticwebassets\\css\\HomeStyle.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\ThanhToanStyle.css",
+      "PackagePath": "staticwebassets\\css\\ThanhToanStyle.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\XacNhanThanhToan.css",
+      "PackagePath": "staticwebassets\\css\\XacNhanThanhToan.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\prettyPhoto.css",
+      "PackagePath": "staticwebassets\\css\\prettyPhoto.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\price-range.css",
+      "PackagePath": "staticwebassets\\css\\price-range.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\Academic-English-Course-Syllabus-980x551.png",
+      "PackagePath": "staticwebassets\\images\\Academic-English-Course-Syllabus-980x551.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\BongTaiKimCuong.png",
+      "PackagePath": "staticwebassets\\images\\BongTaiKimCuong.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\BongTaiKimCuongVangY.png",
+      "PackagePath": "staticwebassets\\images\\BongTaiKimCuongVangY.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\BongTaiVangTrangY.png",
+      "PackagePath": "staticwebassets\\images\\BongTaiVangTrangY.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\DayChuyenVang18K.png",
+      "PackagePath": "staticwebassets\\images\\DayChuyenVang18K.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\DayChuyenVangTrangY.png",
+      "PackagePath": "staticwebassets\\images\\DayChuyenVangTrangY.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\LacTayVangTrang.png",
+      "PackagePath": "staticwebassets\\images\\LacTayVangTrang.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\LogoBoSuuTap.jpg",
+      "PackagePath": "staticwebassets\\images\\LogoBoSuuTap.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\LogoJewelry.jpg",
+      "PackagePath": "staticwebassets\\images\\LogoJewelry.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\LogoPNJ.png",
+      "PackagePath": "staticwebassets\\images\\LogoPNJ.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\Lui.jpg",
+      "PackagePath": "staticwebassets\\images\\Lui.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\OIP.jpg",
+      "PackagePath": "staticwebassets\\images\\OIP.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\VongTayVang18k.png",
+      "PackagePath": "staticwebassets\\images\\VongTayVang18k.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\anh-nen-4k (38).jpg",
+      "PackagePath": "staticwebassets\\images\\anh-nen-4k (38).jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\anh-trai-dep-Viet-Nam.jpg",
+      "PackagePath": "staticwebassets\\images\\anh-trai-dep-Viet-Nam.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\avtr.png",
+      "PackagePath": "staticwebassets\\images\\avtr.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\ba6427b4b5-balenciaga-logo-balenciaga-svg-balenciaga-brand-logo-svg-fashion-company-svg.png",
+      "PackagePath": "staticwebassets\\images\\ba6427b4b5-balenciaga-logo-balenciaga-svg-balenciaga-brand-logo-svg-fashion-company-svg.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\bong-tai-bac-dinh-da.png",
+      "PackagePath": "staticwebassets\\images\\bong-tai-bac-dinh-da.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\bong-tai-vang-10k-dinh-da-ecz.png",
+      "PackagePath": "staticwebassets\\images\\bong-tai-vang-10k-dinh-da-ecz.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\brand1.jpg",
+      "PackagePath": "staticwebassets\\images\\brand1.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\brand2.jpg",
+      "PackagePath": "staticwebassets\\images\\brand2.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\brand3.jpg",
+      "PackagePath": "staticwebassets\\images\\brand3.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\chevron-down.svg",
+      "PackagePath": "staticwebassets\\images\\chevron-down.svg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\cs2.jpg",
+      "PackagePath": "staticwebassets\\images\\cs2.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\404.png",
+      "PackagePath": "staticwebassets\\images\\icons\\404.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\Phone.jpg",
+      "PackagePath": "staticwebassets\\images\\icons\\Phone.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\advertisement.jpg",
+      "PackagePath": "staticwebassets\\images\\icons\\advertisement.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\checkout.png",
+      "PackagePath": "staticwebassets\\images\\icons\\checkout.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\email.png",
+      "PackagePath": "staticwebassets\\images\\icons\\email.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\facebook.png",
+      "PackagePath": "staticwebassets\\images\\icons\\facebook.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\heart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\heart.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\iconnha.jpg",
+      "PackagePath": "staticwebassets\\images\\icons\\iconnha.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\iframe1.png",
+      "PackagePath": "staticwebassets\\images\\icons\\iframe1.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\iframe2.png",
+      "PackagePath": "staticwebassets\\images\\icons\\iframe2.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\instagram.png",
+      "PackagePath": "staticwebassets\\images\\icons\\instagram.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\jcb.png",
+      "PackagePath": "staticwebassets\\images\\icons\\jcb.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\left-arrow.png",
+      "PackagePath": "staticwebassets\\images\\icons\\left-arrow.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\login.png",
+      "PackagePath": "staticwebassets\\images\\icons\\login.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\icons\\logo.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\mail.png",
+      "PackagePath": "staticwebassets\\images\\icons\\mail.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\new.jpg",
+      "PackagePath": "staticwebassets\\images\\icons\\new.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\rating.png",
+      "PackagePath": "staticwebassets\\images\\icons\\rating.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\right-arrow.png",
+      "PackagePath": "staticwebassets\\images\\icons\\right-arrow.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\searchicon.png",
+      "PackagePath": "staticwebassets\\images\\icons\\searchicon.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\share.png",
+      "PackagePath": "staticwebassets\\images\\icons\\share.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\shopping-cart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\shopping-cart.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\shopping.png",
+      "PackagePath": "staticwebassets\\images\\icons\\shopping.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\socials.png",
+      "PackagePath": "staticwebassets\\images\\icons\\socials.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\user.png",
+      "PackagePath": "staticwebassets\\images\\icons\\user.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\visa.png",
+      "PackagePath": "staticwebassets\\images\\icons\\visa.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\icons\\youtube.png",
+      "PackagePath": "staticwebassets\\images\\icons\\youtube.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\nhan-bach-kim.png",
+      "PackagePath": "staticwebassets\\images\\nhan-bach-kim.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\nhan-vang-18k.png",
+      "PackagePath": "staticwebassets\\images\\nhan-vang-18k.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\vong-tay-vang-trang-10k.png",
+      "PackagePath": "staticwebassets\\images\\vong-tay-vang-trang-10k.png"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5207857958937_1a72151d681e58a735a206abe7f453e6.jpg",
+      "PackagePath": "staticwebassets\\images\\z5207857958937_1a72151d681e58a735a206abe7f453e6.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5279390464548_1b13bb74ed25fc9132f0ca8a97a4a651.jpg",
+      "PackagePath": "staticwebassets\\images\\z5279390464548_1b13bb74ed25fc9132f0ca8a97a4a651.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5279390487629_c5682bd55857689618a9c0e0e6d955a2.jpg",
+      "PackagePath": "staticwebassets\\images\\z5279390487629_c5682bd55857689618a9c0e0e6d955a2.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5284442767732_f572882241b9a15ca53252eb7106cedb.jpg",
+      "PackagePath": "staticwebassets\\images\\z5284442767732_f572882241b9a15ca53252eb7106cedb.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5427263651064_2eab27329fd230d12d90e907ac5e5a3b.jpg",
+      "PackagePath": "staticwebassets\\images\\z5427263651064_2eab27329fd230d12d90e907ac5e5a3b.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5531484858025_0e60d6b5ec396337bf7710e1f6b05395.jpg",
+      "PackagePath": "staticwebassets\\images\\z5531484858025_0e60d6b5ec396337bf7710e1f6b05395.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5531841662099_e3c7a3ca23ff92697b0dcb10f2f362dd.jpg",
+      "PackagePath": "staticwebassets\\images\\z5531841662099_e3c7a3ca23ff92697b0dcb10f2f362dd.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\images\\z5996654154099_7fb23027385c719fcc60a62d9e7b1ebd.jpg",
+      "PackagePath": "staticwebassets\\images\\z5996654154099_7fb23027385c719fcc60a62d9e7b1ebd.jpg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\admin\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\contact.js",
+      "PackagePath": "staticwebassets\\js\\admin\\contact.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\gmaps.js",
+      "PackagePath": "staticwebassets\\js\\admin\\gmaps.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\html5shiv.js",
+      "PackagePath": "staticwebassets\\js\\admin\\html5shiv.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\admin\\jquery.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\jquery.prettyPhoto.js",
+      "PackagePath": "staticwebassets\\js\\admin\\jquery.prettyPhoto.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\jquery.scrollUp.min.js",
+      "PackagePath": "staticwebassets\\js\\admin\\jquery.scrollUp.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\main.js",
+      "PackagePath": "staticwebassets\\js\\admin\\main.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\admin\\price-range.js",
+      "PackagePath": "staticwebassets\\js\\admin\\price-range.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\lib\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\lib\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\lib\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\lib\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\lib\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\CNTT\\DAPMver1\\DAPMver1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DAPMver1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DAPMver1.props",
+      "PackagePath": "build\\DAPMver1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DAPMver1.props",
+      "PackagePath": "buildMultiTargeting\\DAPMver1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DAPMver1.props",
+      "PackagePath": "buildTransitive\\DAPMver1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

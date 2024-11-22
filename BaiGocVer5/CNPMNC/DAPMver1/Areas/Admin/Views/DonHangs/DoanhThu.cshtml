@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DAPMver1.Models.DoanhThuStatisticsViewModel>
+
+@{
+    ViewData["Title"] = "DoanhThu";
+}
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<h2>@ViewData["Title"]</h2>
+
+<canvas id="doanhThuChart" width="400" height="200"></canvas>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Lấy đối tượng canvas cho biểu đồ
+        var ctx = document.getElementById('doanhThuChart').getContext('2d');
+
+        // Chuẩn bị dữ liệu cho biểu đồ từ Model
+      
+        const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(m => m.NgayDatHang.ToString("dd/MM/yyyy"))));
+        const data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(m => m.SoDonHang)));
+        // Cấu hình biểu đồ Chart.js
+        var doanhThuChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Doanh Thu',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+               
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Doanh Thu (VND)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Danh Mục'
+                        }
+                    }
+                
+                
+                }
+            }
+        });
+    });
+</script>

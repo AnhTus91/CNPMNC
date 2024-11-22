@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DAPMver1.Data.HoaDon>
+
+@{
+    ViewBag.Title = "Quản Lý Hóa Đơn";
+}
+
+<h2>Quản Lý Hóa Đơn</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã Hóa Đơn</th>
+            <th>Mã Đơn Hàng</th>
+            <th>Ngày Tạo Hóa Đơn</th>
+            <th>Tổng Tiền</th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaHoaDon</td>
+                <td>@item.MaDonHang</td>
+                <td>@item.NgayXuatHoaDon</td>
+                <td>@item.TongTien</td>
+                <td>
+                    @Html.ActionLink("Xuất Hóa Đơn", "Export", new { id = item.MaHoaDon, maDonHang = item.MaDonHang }, new { @class = "btn btn-primary" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

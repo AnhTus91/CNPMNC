@@ -1,0 +1,110 @@
+﻿@model DAPMver1.Data.Voucher
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    dl dt {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    dl dd {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+</style>
+<h1 class="text-center my-4">Voucher Details</h1>
+
+<div class="card mx-auto shadow-lg" style="width: 60%;">
+    <div class="card-header bg-primary text-white">
+        <h4 class="text-center mb-0">Thông Tin Voucher</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.TenVoucher)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.TenVoucher)
+            </dd>
+
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.GiaTri)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.GiaTri) VND
+            </dd>
+
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.ThoiGianBatDau)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.ThoiGianBatDau)
+            </dd>
+
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.ThoiGianKetThuc)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.ThoiGianKetThuc)
+            </dd>
+
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </dt>
+            <dd class="col-sm-8">
+                @(Model.TrangThai ? "Kích Hoạt" : "Không Kích Hoạt")
+            </dd>
+
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.NgayTao)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.NgayTao)
+            </dd>
+
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.DieuKienApDung)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.DieuKienApDung) VND
+            </dd>
+
+            <dt class="col-sm-4 text-secondary">
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.SoLuong) cái
+            </dd>
+        </dl>
+    </div>
+    <div class="card-footer text-center">
+        <div class="d-flex justify-content-center gap-2">
+            <a asp-action="Edit" asp-route-id="@Model?.MaVoucher" class="btn btn-warning w-50">
+                Sửa
+            </a>
+            <a asp-action="Index" class="btn btn-secondary w-50">
+                Quay lại danh sách
+            </a>
+        </div>
+    </div>
+</div>

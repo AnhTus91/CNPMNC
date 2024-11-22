@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DAPMver1.Data.BaoCaoNguoiDung>
+@{
+    ViewData["Title"] = "Quản Lý Báo Cáo";
+}
+
+
+<h2>Quản Lý Báo Cáo</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Người Dùng</th>
+            <th>Ngày Gửi</th>
+            <th>Trạng Thái</th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model)
+        {
+            <tr>
+                <td>@report.MaNguoiDungNavigation?.TenNguoiDung</td>
+                <td>@(report.NgayTao.HasValue ? report.NgayTao.Value.ToString("dd/MM/yyyy") : "N/A")</td>
+                <td>@(report.TrangThai == 1 ? "Đã phản hồi" : "Chưa phản hồi")</td>
+                <td>
+                    <a asp-action="RespondReport" asp-controller="BaoCao" asp-area="Admin" asp-route-id="@report.MaBaoCao" class="btn btn-primary">Phản hồi</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

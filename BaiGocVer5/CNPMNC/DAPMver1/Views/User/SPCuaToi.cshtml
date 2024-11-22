@@ -1,0 +1,144 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<DonHangWithBaoHanhViewModel>
+
+<h2>Sản phẩm của tôi</h2>
+<form asp-action="SPCuaToi" method="get">
+    <input type="text" name="searchTerm" value="@ViewData["SearchTerm"]" placeholder="Tìm kiếm đơn hàng..." />
+    <button type="submit">Tìm kiếm</button>
+</form>
+@foreach (var item in Model)
+{
+    <div class="donhang">
+        <h3>Đơn hàng: @item.DonHang.MaDonHang</h3>
+        <p><strong>Ngày đặt hàng:</strong> @item.DonHang.NgayDatHang.ToString("dd/MM/yyyy")</p>
+        <p><strong>Địa chỉ nhận hàng:</strong> @item.DonHang.DiaChiNguoiNhan</p>
+     
+            <div>
+                 <p>Loại đơn hàng: @item.LoaiDonHang</p>
+                @if (item.IsSpecial)
+                {
+                    <p><b>Đây là đơn hàng đặc biệt!</b></p>
+                }
+            </div>
+        
+
+        <h4>Bảo hành</h4>
+        <ul>
+            @foreach (var baoHanh in item.BaoHanhList)
+            {
+                <li>
+                    <strong>Bảo hành sản phẩm: </strong>@baoHanh.MaKichCoNavigation?.MaSanPhamNavigation?.TenSanPham
+
+                    <br />
+                    Trạng thái:
+                    @if (baoHanh.TrangThai)
+                    {
+                        <span style="color: green;">Còn thời hạn</span>
+                    }
+                    else
+                    {
+                        <span style="color: red;">Hết thời hạn</span>
+                    } <br />
+                    <strong>Ngày bắt đầu: </strong>@baoHanh.NgayBaoHanh
+                    <br />
+                    <strong>Ngày kết thúc: </strong>@baoHanh.NgayKetThuc.ToString("dd/MM/yyyy")
+                </li>
+            }
+        </ul>
+    </div>
+}
+<style>
+    /* General styling for the whole page */
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Container for all order details */
+    .donhang {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 1000px;
+        transition: box-shadow 0.3s ease;
+    }
+
+        .donhang:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading for each order */
+        .donhang h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph for displaying order information */
+        .donhang p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #555;
+        }
+
+            /* Highlight for order status */
+            .donhang p span.status {
+                font-weight: bold;
+                color: #27ae60; /* Green color for 'Confirmed' or 'Received' */
+            }
+
+        /* Styling for warranty section */
+        .donhang h4 {
+            font-size: 20px;
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* List styling for warranty items */
+        .donhang ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+            .donhang ul li {
+                background-color: #ecf0f1;
+                border-radius: 5px;
+                padding: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+                .donhang ul li:hover {
+                    background-color: #dfe6e9;
+                }
+
+                /* Warranty item details */
+                .donhang ul li span {
+                    font-weight: bold;
+                    color: #34495e;
+                }
+
+        /* Styling for empty warranty message */
+        .donhang p {
+            font-style: italic;
+            color: #e74c3c; /* Red color for 'No warranty' */
+            margin-top: 10px;
+        }
+
+</style>

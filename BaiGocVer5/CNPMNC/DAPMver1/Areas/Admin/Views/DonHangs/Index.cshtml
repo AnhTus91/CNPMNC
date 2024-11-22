@@ -1,0 +1,161 @@
+﻿@model IEnumerable<DAPMver1.Data.DonHang>
+
+@{
+    ViewData["Title"] = "Danh sách đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="text-center text-primary mb-4">Danh sách đơn hàng</h1>
+<div class="mb-3">
+    <label for="statusFilter">Lọc theo trạng thái:</label>
+    <form method="get" action="@Url.Action("Index")">
+        <label for="trangThai">Chọn trạng thái:</label>
+        <select id="trangThai" name="trangThai">
+            @foreach (var item in ViewBag.TrangThaiList as List<SelectListItem>)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+        <button type="submit">Lọc</button>
+    </form>
+
+</div>
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Mã Đơn Hàng</th>
+            <th>Tên khách hàng</th>
+            <th>SDT</th>
+            <th>Ngày đặt hàng</th>
+            <th>Trạng thái</th>
+            <th>Tổng tiền</th>
+            <th>Hình thức nhận hàng</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaDonHang</td>
+                <td>@item.TenNguoiNhan</td>
+                <td>@item.SdtnguoiNhan</td>
+                <td>@item.NgayDatHang.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton@item.MaDonHang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @item.TrangThai
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton@item.MaDonHang">
+                            <a class="dropdown-item" href="#" data-id="@item.MaDonHang" data-trangthai="Chờ xử lý">Chờ xử lý</a>
+                            <a class="dropdown-item" href="#" data-id="@item.MaDonHang" data-trangthai="Đang chuẩn bị">Đang chuẩn bị</a>
+                            <a class="dropdown-item" href="#" data-id="@item.MaDonHang" data-trangthai="Đang giao">Đang giao</a>
+                            <a class="dropdown-item" href="#" data-id="@item.MaDonHang" data-trangthai="Đã hủy">Hủy</a>
+                        </div>
+                    </div>
+                </td>
+                <td>@item.TongSoTien.ToString("#,##0").Replace(',', '.') VNĐ</td>
+                <td>@item.HinhThucNhanHang</td>
+           
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.MaDonHang" class="btn btn-info btn-sm">Chi tiết</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Custom styling -->
+<style>
+    table {
+        border-collapse: separate;
+        border-spacing: 0 1rem;
+    }
+
+    th, td {
+        vertical-align: middle;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    .dropdown-toggle::after {
+        display: none; /* Remove dropdown arrow */
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+
+        .btn-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+
+    .table-bordered {
+        border: 1px solid #dee2e6;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+</style>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+<script type="text/javascript">
+    // JavaScript để chọn trạng thái mặc định
+    document.addEventListener("DOMContentLoaded", function () {
+        var selectedTrangThai = '@ViewBag.SelectedTrangThai'; // Lấy giá trị SelectedTrangThai từ ViewBag
+
+        // Kiểm tra và chọn đúng option trong dropdown
+        if (selectedTrangThai) {
+            var selectElement = document.getElementById("trangThai");
+            for (var i = 0; i < selectElement.options.length; i++) {
+                if (selectElement.options[i].value === selectedTrangThai) {
+                    selectElement.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+
+    $(document).on('click', '.dropdown-item', function () {
+        var trangThai = $(this).data('trangthai');
+        var maDonHang = $(this).data('id');
+
+        $.ajax({
+            url: '/admin/donhang/capnhattrangthai', // URL tới phương thức CapNhatTrangThai
+            type: 'POST',
+            data: { id: maDonHang, trangThai: trangThai },
+            success: function (response) {
+                if (response.success) {
+                    alert("Trạng thái đã được cập nhật thành công!");
+                    location.reload(); // Reload lại trang để cập nhật thông tin
+                } else {
+                    alert(response.message); // Hiển thị thông báo lỗi nếu trạng thái không thể cập nhật
+                }
+            },
+            error: function () {
+                alert("Lỗi khi cập nhật trạng thái.");
+            }
+        });
+    });
+</script>

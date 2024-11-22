@@ -1,0 +1,25 @@
+﻿@model List<DAPMver1.Data.DonHang>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ma Don Hang</th>
+            <th>Trang Thai</th>
+            <th>Ngay Dat Hang</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var donHang in Model)
+        {
+            <tr>
+                <td>@donHang.MaDonHang</td>
+                <td>@donHang.TrangThai</td>
+                <td>@donHang.NgayDatHang</td>
+                <td>
+                    <button class="btn btn-primary" onclick="updateStatus('@donHang.MaDonHang')">Cập nhật trạng thái</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
